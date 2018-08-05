@@ -1,0 +1,86 @@
+/* Main */
+
+:root {
+  --content-color: rgb(19, 141, 117);
+  --content-dark-color: rgb(14, 106, 88);
+}
+
+.main {
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Content */
+.content {
+  font-size: 1rem;
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.content h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.content h2 {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+.content h3 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.content h4 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.content h5 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.content h6 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.content p {
+  margin: 0 0 5px 0
+}
+
+.content a {
+  color: var(--content-color);
+}
+
+.content a:hover {
+  color: var(--content-dark-color);
+  text-decoration: none;
+}
+
+.content b {
+
+}
+
+/*** Non-Tablet Screens ***/
+@media all and (min-width: 800px) {
+  .main {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: var(--sidebar-width);
+  }
+  
+  .content {
+    max-width: 800px;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .no-sidebar.main {
+    margin-left: 0;
+  }
+}

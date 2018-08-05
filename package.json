@@ -1,0 +1,35 @@
+{
+  "name": "brothergilburt",
+  "version": "1.0.0",
+  "description": "My personal website and custom vuepress theme.",
+  "main": "README.md",
+  "scripts": {
+    "build": "vuepress build ./src",
+    "dev": "vuepress dev ./src",
+    "test": "karma start"
+  },
+  "author": "Perry Kaufman",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^0.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-jasmine-html-reporter": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-phantomjs-shim": "^1.5.0",
+    "karma-webpack": "^3.0.0",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.11.0"
+  }
+}

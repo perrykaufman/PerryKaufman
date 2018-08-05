@@ -1,0 +1,25 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/* Baseline Styles */
+html, body {
+  box-sizing: border-box;
+  color: rgb(26, 26, 26);
+  font-family: 'source sans pro', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  min-width: 320px;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* Page */
+.page {
+  padding-top: var(--header-height);
+}
+
+/* Footer */
+

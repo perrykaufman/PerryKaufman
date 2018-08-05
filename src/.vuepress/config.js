@@ -1,0 +1,61 @@
+module.exports = {
+  title: 'Perry Kaufman',
+  description: 'a simple web dev reference',
+  markdown: {
+    anchor: {
+      permalink: false,
+      permalinkBefore: false
+    }
+  },
+  themeConfig: {
+    nav: [{
+        title: 'Home',
+        path: '/'
+      },
+      {
+        title: 'Reference',
+        path: '/reference/'
+      },
+      {
+        title: 'Projects',
+        path: '/projects/'
+      },
+      {
+        title: 'About',
+        path: '/about/'
+      }
+    ],
+    sidebar: {
+      '/reference/': {
+        title: 'Reference',
+        items: [{
+            base: '/reference/',
+            title: '',
+            children: [
+              ''
+            ]
+          },
+          {
+            base: '/reference/',
+            title: 'Core',
+            children: [
+              'html',
+              'css',
+              'javascript'
+            ]
+          },
+          {
+            base: '/reference/',
+            title: 'JavaScript Frameworks',
+            children: ['vue']
+          },
+          {
+            base: '/reference/',
+            title: 'Source Control',
+            children: ['git']
+          }
+        ]
+      }
+    }
+  }
+}

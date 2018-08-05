@@ -1,0 +1,97 @@
+/* Header */
+:root {
+  --header-height: 3rem;
+}
+
+.header {
+  align-items: center;
+  background: var(--nav-background-color);
+  border-bottom: 2px solid var(--nav-border-color);
+  display: flex;
+  height: var(--header-height);
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header-title>a {
+  color: var(--nav-symbol-color);
+  text-decoration: none;
+}
+
+.header-nav {
+  display: none;
+}
+
+.menu-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 48px;
+  position: relative;
+  overflow: hidden;
+  text-indent: 10000px;
+  width: 3em;
+  white-space: nowrap;
+}
+
+.menu-icon:hover::before {
+  background: var(--nav-hover-color);
+  box-shadow: 0 10px 0 var(--nav-hover-color);
+}
+
+.menu-icon:hover::after {
+  background: var(--nav-hover-color);
+}
+
+.menu-icon::before {
+  background: var(--nav-symbol-color);
+  box-shadow: 0 10px 0 var(--nav-symbol-color);
+  content: '';
+  height: 5px;
+  left: 15%;
+  position: absolute;
+  top: 11.5px;
+  transition: all .15s ease-in-out;
+  width: 70%;
+}
+
+.menu-icon::after {
+  background: var(--nav-symbol-color);
+  bottom: 11.5px;
+  content: '';
+  height: 5px;
+  left: 15%;
+  position: absolute;
+  transition: all .15s ease-in-out;
+  width: 70%;
+}
+
+.menu-icon.sidebar-open::before {
+  box-shadow: none;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.menu-icon.sidebar-open::after {
+  bottom: 50%;
+  height: 4px;
+  transform: translateY(50%) rotate(45deg);
+}
+
+/*** Non-Tablet Screens ***/
+@media all and (min-width: 800px) {
+  .menu-icon {
+    display: none;
+  }
+}
