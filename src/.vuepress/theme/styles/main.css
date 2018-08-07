@@ -5,16 +5,26 @@
   --content-dark-color: rgb(14, 106, 88);
 }
 
-.main {
+.main-wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
   height: calc(100vh - var(--header-height));
   overflow-y: auto;
   position: relative;
+}
+
+.main {
+  flex: 1;
+  max-width: 100%;
+  width: 800px;
 }
 
 /* Content */
 .content {
   font-size: 1rem;
   padding: 5px 15px;
+  max-width: 800px;
   width: 100%;
 }
 
@@ -67,20 +77,13 @@
 
 /*** Non-Tablet Screens ***/
 @media all and (min-width: 800px) {
-  .main {
-    align-items: center;
-    display: flex;
-    flex-flow: column nowrap;
+  .main-wrapper {
     margin-left: var(--sidebar-width);
-  }
-  
-  .content {
-    max-width: 800px;
   }
 }
 
 @media all and (min-width: 1000px) {
-  .no-sidebar.main {
+  .no-sidebar.main-wrapper {
     margin-left: 0;
   }
 }

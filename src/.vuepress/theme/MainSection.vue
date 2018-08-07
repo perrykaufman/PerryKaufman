@@ -1,9 +1,11 @@
 <template>
-  <div class="main" :class="{'no-sidebar': !isSidebar}">
+  <div class="main-wrapper" :class="{'no-sidebar': !isSidebar}">
     <sidebar-menu :sidebar="sidebar"/>
-    <Content/>
+    <main class="main">
+      <Content/>
+    </main>
     <footer>
-
+      {{this.$site.themeConfig.footer}}
     </footer>
   </div>
 </template>

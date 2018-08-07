@@ -25,6 +25,7 @@ module.exports = {
         path: '/about/'
       }
     ],
+    footer: 'Site made by Perry Kaufman using Vuepress, 2018.',
     sidebar: {
       '/reference/': {
         title: 'Reference',
@@ -51,7 +52,7 @@ module.exports = {
           },
           {
             base: '/reference/',
-            title: 'Source Control',
+            title: 'Version Control',
             children: ['git']
           }
         ]
