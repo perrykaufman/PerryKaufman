@@ -20,6 +20,16 @@
   top: var(--header-height);
   transition: all .25s ease-in-out;
   width: var(--sidebar-width);
+  z-index: 2;
+}
+
+.sidebar-mask {
+  background: rgb(0,0,0,0.1);
+  height: calc(100% - var(--header-height));
+  left: 0;
+  position: fixed;
+  top: var(--header-height);
+  width: 100%;
   z-index: 1;
 }
 

@@ -1,22 +1,25 @@
 <template>
   <div class="main-wrapper" :class="{'no-sidebar': !isSidebar, 'sidebar-open': sidebarOpen}">
+    <sidebar-mask/>
     <sidebar-menu :sidebar="sidebar"/>
     <main class="main">
       <Content/>
     </main>
-    <footer>
-      {{this.$site.themeConfig.footer}}
-    </footer>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from './Footer.vue';
 import store from './store.js'
 import { processSidebar } from "./util.js";
+import SidebarMask from './SidebarMask';
 import SidebarMenu from "./SidebarMenu.vue";
 
 export default {
   components: {
+    Footer,
+    SidebarMask,
     SidebarMenu
   },
   computed: {
