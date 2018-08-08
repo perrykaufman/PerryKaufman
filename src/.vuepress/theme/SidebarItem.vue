@@ -6,7 +6,7 @@
 
 <script>
 import { isPage } from "./util.js";
-import EventBus from './EventBus.js';
+import store from './store.js';
 
 export default {
   props: {
@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     closeSidebar() {
-      EventBus.$emit('close-sidebar');
+      store.$emit('close-sidebar');
     }
   }
 };

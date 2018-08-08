@@ -11,30 +11,13 @@
 </template>
 
 <script>
-import EventBus from './EventBus.js'
+import store from './store.js'
 import { processSidebar } from "./util.js";
 import SidebarMenu from "./SidebarMenu.vue";
 
 export default {
   components: {
     SidebarMenu
-  },
-  data() {
-    return {
-      sidebarOpen: false
-    };
-  },
-  created() {
-    EventBus.$on('close-sidebar', this.closeSidebar);
-    EventBus.$on('toggle-sidebar', this.toggleSidebar);
-  },
-  methods: {
-    closeSidebar() {
-      this.sidebarOpen = false;
-    },
-    toggleSidebar() {
-      this.sidebarOpen = !this.sidebarOpen;
-    }
   },
   computed: {
     isSidebar() {
@@ -48,6 +31,9 @@ export default {
         this.$site.pages,
         this.$page
       );
+    },
+    sidebarOpen() {
+      return store.sidebarOpen;
     }
   }
 };

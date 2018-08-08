@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import EventBus from './EventBus.js';
+import store from './store.js';
 import {isPage, isParentPage} from './util.js';
 
 export default {
@@ -15,11 +15,6 @@ export default {
       type: Object
     }
   },
-  data() {
-    return {
-
-    }
-  },
   computed: {
     isCurrent() {
       return isPage(this.item.link, this.$page) || isParentPage(this.item.link, this.$page);
@@ -27,7 +22,7 @@ export default {
   },
   methods: {
     closeSidebar() {
-      EventBus.$emit('close-sidebar');
+      store.$emit('close-sidebar');
     }
   }
 }

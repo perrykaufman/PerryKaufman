@@ -10,28 +10,21 @@
 </template>
 
 <script>
-import EventBus from './EventBus';
+import store from './store.js';
 import NavigationMenu from './NavigationMenu.vue';
 
 export default {
   components: {
     NavigationMenu
   },
-  data() {
-    return {
-      sidebarOpen: false
+  methods: {
+    toggle() {
+      store.$emit('toggle-sidebar');
     }
   },
-  created() {
-    EventBus.$on('close-sidebar', this.closeSidebar);
-  },
-  methods: {
-    closeSidebar() {
-      this.sidebarOpen = false;
-    },
-    toggle() {
-      this.sidebarOpen = !this.sidebarOpen;
-      EventBus.$emit('toggle-sidebar');
+  computed: {
+    sidebarOpen() {
+      return store.sidebarOpen;
     }
   }
 }
