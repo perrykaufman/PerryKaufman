@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <header-section @toggleSidebar="toggleSidebar()"/>
-    <main-section :class="{'sidebar-open': sidebarOpen}" />
+    <header-section />
+    <main-section />
   </div>
 </template>
 
@@ -13,16 +13,6 @@ export default {
   components: {
     HeaderSection,
     MainSection
-  },
-  data() {
-    return {
-      sidebarOpen: false
-    }
-  },
-  methods: {
-    toggleSidebar() {
-      this.sidebarOpen = !this.sidebarOpen;
-    }
   }
 }
 </script>

@@ -1,11 +1,12 @@
 <template>
   <li class="sidebar-item" :class="{current: isCurrent}">
-    <router-link class="sidebar-link" :to="item.link">{{item.title}}</router-link>
+    <router-link class="sidebar-link" :to="item.link" @click.native="closeSidebar">{{item.title}}</router-link>
   </li>
 </template>
 
 <script>
-import {isPage} from './util.js';
+import { isPage } from "./util.js";
+import EventBus from './EventBus.js';
 
 export default {
   props: {
@@ -13,15 +14,19 @@ export default {
       required: true,
       type: Object,
       validator(item) {
-        return typeof item.title == 'string'
-          && typeof item.link == 'string';
+        return typeof item.title == "string" && typeof item.link == "string";
       }
     }
   },
   computed: {
-      isCurrent() {
-        return isPage(this.item.link, this.$page);
-      }
+    isCurrent() {
+      return isPage(this.item.link, this.$page);
     }
-}
+  },
+  methods: {
+    closeSidebar() {
+      EventBus.$emit('close-sidebar');
+    }
+  }
+};
 </script>

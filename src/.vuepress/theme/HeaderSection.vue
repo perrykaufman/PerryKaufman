@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import EventBus from './EventBus';
 import NavigationMenu from './NavigationMenu.vue';
 
 export default {
@@ -21,10 +22,16 @@ export default {
       sidebarOpen: false
     }
   },
+  created() {
+    EventBus.$on('close-sidebar', this.closeSidebar);
+  },
   methods: {
+    closeSidebar() {
+      this.sidebarOpen = false;
+    },
     toggle() {
       this.sidebarOpen = !this.sidebarOpen;
-      this.$emit('toggleSidebar');
+      EventBus.$emit('toggle-sidebar');
     }
   }
 }
