@@ -5,12 +5,12 @@
     <main class="main">
       <Content/>
     </main>
-    <Footer />
+    <footer-section />
   </div>
 </template>
 
 <script>
-import Footer from './Footer.vue';
+import FooterSection from './FooterSection.vue';
 import store from './store.js'
 import { processSidebar } from "./util.js";
 import SidebarMask from './SidebarMask';
@@ -18,7 +18,7 @@ import SidebarMenu from "./SidebarMenu.vue";
 
 export default {
   components: {
-    Footer,
+    FooterSection,
     SidebarMask,
     SidebarMenu
   },
