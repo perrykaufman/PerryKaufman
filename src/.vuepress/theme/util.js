@@ -96,16 +96,16 @@ export function isGroupArray(config) {
 /*
  * Creates a grouped sidebar array from a config and array of pages.
  */
-export function processGroupArray(config, pages) {
+export function processGroupArray(config, pages, dir) {
   const sidebar = [];
   config.forEach((group) => {
     const title = group.title;
 
     const base = group.base;
     let groupPathArray = group.children;
-    if (base) {
+    if (dir || base) {
       groupPathArray = groupPathArray.map((path) => {
-        return resolvePath(base, path);
+        return resolvePath(dir, base, path);
       });
     }
     const link = base;
@@ -131,12 +131,14 @@ export function isPathArray(config) {
 /*
  * Generates an array of sidebar elements from a config and array of pages.
  */
-export function processPathArray(config, pages) {
+export function processPathArray(config, pages, dir) {
   const sidebar = [];
   config.forEach((configPath) => {
-    const page = getPage(configPath, pages);
+    let path = configPath;
+    if (dir) path = resolvePath(dir, path);
+    const page = getPage(path, pages);
 
-    if (!page) throw new Error(`Error: Sidebar path '${configPath}' was not found.`);
+    if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
 
     sidebar.push({
       title: page.title,
@@ -167,9 +169,11 @@ export function processSidebar(config, pages, page) {
 
   const directories = getPathDirectories(page.path);
 
+  let dir;
   let pathConfig;
 
   directories.some((current)=> {
+    dir = current;
     pathConfig = config[current];
     return pathConfig;
   });
@@ -177,13 +181,13 @@ export function processSidebar(config, pages, page) {
   if (pathConfig && pathConfig.items && isGroupArray(pathConfig.items)) {
     return {
       title: pathConfig.title,
-      items: processGroupArray(pathConfig.items, pages)
+      items: processGroupArray(pathConfig.items, pages, dir)
     };
   }
   if (pathConfig && pathConfig.items && isPathArray(pathConfig.items)) {
     return {
       title: pathConfig.title,
-      items: processPathArray(pathConfig.items, pages)
+      items: processPathArray(pathConfig.items, pages, dir)
     };
   }
 

@@ -30,14 +30,12 @@ module.exports = {
       '/reference/': {
         title: 'Reference',
         items: [{
-            base: '/reference/',
             title: '',
             children: [
               ''
             ]
           },
           {
-            base: '/reference/',
             title: 'Core',
             children: [
               'html',
@@ -46,12 +44,10 @@ module.exports = {
             ]
           },
           {
-            base: '/reference/',
             title: 'JavaScript Frameworks',
             children: ['vue']
           },
           {
-            base: '/reference/',
             title: 'Version Control',
             children: ['git']
           }
