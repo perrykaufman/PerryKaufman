@@ -1,4 +1,4 @@
-export const PATH_RE = /\/([A-Z0-9\-!$'~_%()*+,;=:@]+\/)*/i;
+export const PATH_RE = /^\/([A-Z0-9\-!$'~_%()*+,;=:@]+\/)*/i;
 export const EXT_RE = /\.(html|md)$/;
 export const END_SLASH = /\/$/;
 export const START_SLASH = /^\//;
@@ -36,6 +36,8 @@ export function resolvePath(...paths) {
     const accTest = END_SLASH.test(acc);
     const curTest = START_SLASH.test(cur);
 
+    if (!cur) return acc;
+
     if (accTest && curTest) {
       return acc + cur.substring(1);
     }
@@ -44,6 +46,23 @@ export function resolvePath(...paths) {
     }
     return acc + '/' + cur;
   }, '/');
+}
+
+export function getPathDirectories(path) {
+	const dir = [];
+  let match = path.match(PATH_RE);
+  if (match) {
+    path = match[0]
+  	dir.push(path);
+  }
+  
+  while (match && match[1]) {
+  	path = path.replace(new RegExp(match[1] + '$'), '');
+    dir.push(path);
+    match = path.match(PATH_RE);
+  }
+  
+  return dir;
 }
 
 export function getPage(pagePath, pages) {
@@ -103,7 +122,7 @@ export function processGroupArray(config, pages) {
  * Checks if every element of an array is a string.
  */
 export function isPathArray(config) {
-  if (!config || (config instanceof Array)) return false;
+  if (!config || !(config instanceof Array)) return false;
   return config.every((cur) => {
     return typeof cur == 'string';
   });
@@ -145,10 +164,16 @@ export function processSidebar(config, pages, page) {
       items: processPathArray(config, pages)
     };
   }
-  //TODO: Should check for more than just the longest path.
-  const path = getPath(page.path);
 
-  const pathConfig = config[path];
+  const directories = getPathDirectories(page.path);
+
+  let pathConfig;
+
+  directories.some((current)=> {
+    pathConfig = config[current];
+    return pathConfig;
+  });
+  
   if (pathConfig && pathConfig.items && isGroupArray(pathConfig.items)) {
     return {
       title: pathConfig.title,
