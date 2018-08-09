@@ -1,5 +1,11 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+:root {
+  --gray-color: rgba(0,0,0,0.10);
+}
+
 
 /* Baseline Styles */
 html, body {

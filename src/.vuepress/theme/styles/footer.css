@@ -1,5 +1,5 @@
 .footer {
-  background: rgb(0,0,0,0.10);
+  background: var(--gray-color);
   font-style: italic;
   padding: 10px 5px 5px 5px;
   text-align: center;

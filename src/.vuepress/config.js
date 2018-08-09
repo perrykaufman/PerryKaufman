@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Perry Kaufman',
-  description: 'a simple web dev reference',
+  description: 'my personal website',
   markdown: {
     anchor: {
       permalink: false,
@@ -25,7 +25,7 @@ module.exports = {
         path: '/about/'
       }
     ],
-    footer: 'Site made by Perry Kaufman using Vuepress, 2018.',
+    footer: 'Created by Perry Kaufman with Vuepress. 2018.',
     sidebar: {
       '/reference/': {
         title: 'Reference',

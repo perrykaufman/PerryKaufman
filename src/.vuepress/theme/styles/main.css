@@ -3,6 +3,7 @@
 :root {
   --content-color: rgb(19, 141, 117);
   --content-dark-color: rgb(14, 106, 88);
+  --content-code-color: rgb(2, 18, 15);
 }
 
 .main-wrapper {
@@ -73,6 +74,14 @@
 
 .content b {
 
+}
+
+.content code {
+  background: var(--gray-color);
+  border-radius: 5px;
+  display: block;
+  font-family: 'Space Mono', monospace;
+  padding: 10px;
 }
 
 /*** Non-Tablet Screens ***/
