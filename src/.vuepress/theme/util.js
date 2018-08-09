@@ -96,20 +96,20 @@ export function isGroupArray(config) {
 /*
  * Creates a grouped sidebar array from a config and array of pages.
  */
-export function processGroupArray(config, pages, dir) {
+export function processGroupArray(config, pages, base) {
   const sidebar = [];
   config.forEach((group) => {
     const title = group.title;
 
-    const base = group.base;
+    base = resolvePath(base, group.base);
     let groupPathArray = group.children;
-    if (dir || base) {
+    /*if (dir || base) {
       groupPathArray = groupPathArray.map((path) => {
         return resolvePath(dir, base, path);
       });
     }
-    const link = base;
-    const children = processPathArray(groupPathArray, pages);
+    const link = base;*/
+    const children = processPathArray(groupPathArray, pages, base);
     sidebar.push({
       title,
       children
@@ -131,11 +131,11 @@ export function isPathArray(config) {
 /*
  * Generates an array of sidebar elements from a config and array of pages.
  */
-export function processPathArray(config, pages, dir) {
+export function processPathArray(config, pages, base) {
   const sidebar = [];
   config.forEach((configPath) => {
     let path = configPath;
-    if (dir) path = resolvePath(dir, path);
+    if (base) path = resolvePath(base, path);
     const page = getPage(path, pages);
 
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
