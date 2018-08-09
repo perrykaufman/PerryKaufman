@@ -1,5 +1,11 @@
+/* Variables */
 .footer {
-  background: var(--gray-color);
+  --footer-background-color: var(--gray-background);
+}
+
+/* Footer */
+.footer {
+  background: var(--footer-background-color);
   font-style: italic;
   padding: 10px 5px 5px 5px;
   text-align: center;

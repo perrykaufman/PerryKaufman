@@ -1,11 +1,17 @@
 /* Variables */
-:root {
-  --nav-background-color: rgb(26, 188, 156);
-  --nav-border-color: rgba(0,0,0,0.15);
-  --nav-symbol-color: rgb(7, 53, 44);
-  --nav-hover-color: rgb(2, 18, 15);
+.menu-nav {
+  /*Block colors*/
+  --nav-background-color: var(--green-background);
+  --nav-border-color: var(--gray-background); /*Change to 0.15?*/
+
+  /*Font colors*/
+  --nav-symbol-color: var(--dark-green-font);
+  --nav-hover-color: var(--darker-green-font);
+
+  /* Sizes */
   --sub-icon-size: .75em;
 }
+
 
 /* Nav */
 .menu-item {

@@ -1,10 +1,18 @@
-/* Main */
+/* Variables */
 
-:root {
-  --content-color: rgb(19, 141, 117);
-  --content-dark-color: rgb(14, 106, 88);
-  --content-code-color: rgb(2, 18, 15);
+.main {
+  /*Block colors*/
+  --content-code-color: var(--gray-background);
+
+  /*Font colors*/
+  --content-color: var(--light-green-font);
+  --content-dark-color: var(--green-font);
+
+  /*Fonts*/
+  --content-code-font: var(--mono-font);
 }
+
+/* Main */
 
 .main-wrapper {
   align-items: center;
@@ -77,10 +85,11 @@
 }
 
 .content code {
-  background: var(--gray-color);
+  background: var(--content-code-color);
   border-radius: 5px;
   display: block;
-  font-family: 'Space Mono', monospace;
+  font-family: var(--content-code-font), monospace;
+  overflow-x: auto;
   padding: 10px;
 }
 

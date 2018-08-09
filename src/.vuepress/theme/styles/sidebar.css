@@ -1,17 +1,25 @@
 /* Variables */
 
 :root {
-  --sidebar-background-color: rgb(230, 255, 247);
-  --sidebar-symbol-color: rgb(7, 53, 44);
-  --sidebar-hover-color: rgb(19, 141, 117);
+  /*Sizes*/
   --sidebar-width: 80%;
+}
+
+.sidebar {
+  /*Block colors*/
+  --sidebar-background-color: var(--light-green-background);
+  --sidebar-shadow-color: var(--gray-background);
+  
+  /*Font colors*/
+  --sidebar-symbol-color: var(--dark-green-font);
+  --sidebar-hover-color: var(--lighter-green-font);
 }
 
 /* Sidebar */
 
 .sidebar {
   background: var(--sidebar-background-color);
-  box-shadow: 5px 0 5px rgba(0,0,0,0.15);
+  box-shadow: 5px 0 5px var(--sidebar-shadow-color);
   font-size: 1.5rem;
   height: calc(100% - var(--header-height));
   left: calc(-1 * var(--sidebar-width));
@@ -24,7 +32,7 @@
 }
 
 .sidebar-mask {
-  background: rgb(0,0,0,0.1);
+  background: var(--sidebar-shadow-color);
   height: calc(100% - var(--header-height));
   left: 0;
   position: fixed;
