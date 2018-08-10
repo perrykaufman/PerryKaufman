@@ -90,26 +90,21 @@ export function isGroupArray(config) {
   if (!config || !(config instanceof Array)) return false;
   return config.every((cur) => {
     return cur instanceof Object;
-  }, true);
+  });
 }
 
 /*
  * Creates a grouped sidebar array from a config and array of pages.
  */
-export function processGroupArray(config, pages, base) {
+export function processGroupArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((group) => {
     const title = group.title;
 
-    base = resolvePath(base, group.base);
+    if (group.base) base = resolvePath(base, group.base);
     let groupPathArray = group.children;
-    /*if (dir || base) {
-      groupPathArray = groupPathArray.map((path) => {
-        return resolvePath(dir, base, path);
-      });
-    }
-    const link = base;*/
-    const children = processPathArray(groupPathArray, pages, base);
+    
+    const children = processPathArray(groupPathArray, pages, root, base);
     sidebar.push({
       title,
       children
@@ -131,11 +126,11 @@ export function isPathArray(config) {
 /*
  * Generates an array of sidebar elements from a config and array of pages.
  */
-export function processPathArray(config, pages, base) {
+export function processPathArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((configPath) => {
     let path = configPath;
-    if (base) path = resolvePath(base, path);
+    if (base) path = resolvePath(root, base, path);
     const page = getPage(path, pages);
 
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
@@ -157,23 +152,23 @@ export function processSidebar(config, pages, page) {
   if (config.items && isGroupArray(config.items)) {
     return {
       title: config.title,
-      items: processGroupArray(config.items, pages)
+      items: processGroupArray(config.items, pages, '/', config.base)
     };
   }
   if (config.items && isPathArray(config.items)) {
     return {
       title: config.title,
-      items: processPathArray(config, pages)
+      items: processPathArray(config, pages, '/', config.base)
     };
   }
 
   const directories = getPathDirectories(page.path);
 
-  let dir;
+  let root;
   let pathConfig;
 
   directories.some((current)=> {
-    dir = current;
+    root = current;
     pathConfig = config[current];
     return pathConfig;
   });
@@ -181,13 +176,13 @@ export function processSidebar(config, pages, page) {
   if (pathConfig && pathConfig.items && isGroupArray(pathConfig.items)) {
     return {
       title: pathConfig.title,
-      items: processGroupArray(pathConfig.items, pages, dir)
+      items: processGroupArray(pathConfig.items, pages, root, pathConfig.base)
     };
   }
   if (pathConfig && pathConfig.items && isPathArray(pathConfig.items)) {
     return {
       title: pathConfig.title,
-      items: processPathArray(pathConfig.items, pages, dir)
+      items: processPathArray(pathConfig.items, pages, root, pathConfig.base)
     };
   }
 
@@ -195,13 +190,13 @@ export function processSidebar(config, pages, page) {
   if (defaultConfig && defaultConfig.items && isGroupArray(defaultConfig.items)) {
     return {
       title: defaultConfig.items,
-      items: processGroupArray(defaultConfig.items, pages)
+      items: processGroupArray(defaultConfig.items, pages, '/', defaultConfig.base)
     };
   }
   if (defaultConfig && defaultConfig.items && isPathArray(defaultConfig.items)) {
     return {
       title: defaultConfig.items,
-      items: processPathArray(defaultConfig.items, pages)
+      items: processPathArray(defaultConfig.items, pages, '/', defaultConfig.base)
     };
   }
 
