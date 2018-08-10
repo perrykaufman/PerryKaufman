@@ -81,7 +81,13 @@
 }
 
 .content b {
-  font-weight: 600l
+  font-weight: 600;
+}
+
+.content img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 
 .content code {
