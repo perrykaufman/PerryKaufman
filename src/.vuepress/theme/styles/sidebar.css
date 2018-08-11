@@ -5,7 +5,7 @@
   --sidebar-width: 80%;
 }
 
-.sidebar {
+.sidebar, .sidebar-mask {
   /*Block colors*/
   --sidebar-background-color: var(--light-green-background);
   --sidebar-shadow-color: var(--gray-background);
@@ -32,7 +32,7 @@
 }
 
 .sidebar-mask {
-  background: var(--sidebar-shadow-color);
+  background-color: var(--sidebar-shadow-color);
   height: calc(100% - var(--header-height));
   left: 0;
   position: fixed;
