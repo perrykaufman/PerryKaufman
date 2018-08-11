@@ -31,6 +31,9 @@ export function getPath(pagePath) {
   return path ? path[0] : null;
 }
 
+/*
+ * Combines an array of partial paths into a single path.
+ */
 export function resolvePath(...paths) {
   return paths.reduce((acc, cur) => {
     const accTest = END_SLASH.test(acc);
@@ -48,6 +51,9 @@ export function resolvePath(...paths) {
   }, '/');
 }
 
+/*
+ * Returns an array of all the directories in a path, starting with the deepest directory and ending with the root "/".
+ */
 export function getPathDirectories(path) {
 	const dir = [];
   let match = path.match(PATH_RE);
@@ -65,12 +71,18 @@ export function getPathDirectories(path) {
   return dir;
 }
 
+/*
+ * Returns the page with the given path in the pages array.
+ */
 export function getPage(pagePath, pages) {
   return pages.find((element) => {
     return isPage(pagePath, element);
   });
 }
 
+/*
+ * Returns true if a path belongs to a given page, false otherwise.
+ */
 export function isPage(pagePath, page) {
   return pagePath.replace(EXT_RE, '') === page.path.replace(EXT_RE, '');
 }
@@ -130,7 +142,7 @@ export function processPathArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((configPath) => {
     let path = configPath;
-    if (base) path = resolvePath(root, base, path);
+    if (root || base) path = resolvePath(root, base, path);
     const page = getPage(path, pages);
 
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
