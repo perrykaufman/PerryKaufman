@@ -1,15 +1,30 @@
-<menu-config> = null || <menu-items>
+# Menu Configuration
 
-<menu-items> = [<menu-item> || <menu-sub-item>, ...]
+The menu config is null/undefined if no menu. Otherwise, a menu is made up of **menu items** and **sub-menu items**.
 
-<menu-item> = {title: <title (optional)>, path: <path>}
+```
+<menu-config> = null || [<menu-item> || <menu-sub-item>, ...]
+```
 
-<title> = <string> (e.g. "Title of Page")
+## Menu Item
 
-<path> = <string> (e.g. "/path/to/page)
+A **menu item** is an object with an optional title and a path indicating the location of the page (e.g. "/path/to/page). If no title is provided, the title of the page is used instead.
 
-<sub-menu-item> = {title: <title (optional)>, base: <base>, children: <children>}
+```
+<menu-item> = {
+    title: <string> (optional),
+    path: <string>
+  }
+```
 
-<base> = <string> (e.g. "/a/path/")
+## Sub-Menu Item
 
-<children> = <menu-items>
+A **sub-menu item** is an object with an optional title, a base path, and an array of children. If no title is provided, the title of the index page in the folder inciated by the base path will be used (e.g. "/a/path/"). The base must be a path indicating a folder with an index page. The children array contains **menu items**. The base path will be applied to each **menu item**.
+
+```
+<sub-menu-item> = {
+    title: <string> (optional),
+    base: <string>,
+    children: [<menu-item>, ...]
+  }
+```
