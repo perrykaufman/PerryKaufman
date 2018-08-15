@@ -33,7 +33,7 @@ A **sidebar object** specifies the title, optional base, and **sidebar items**. 
 
 ## Sidebar Items
 
-The **sidebar items** can either be an array of groups, or an array of paths. A group specifies a set of pages to be displayed together with a title.
+The **sidebar items** can either be an array of **groups**, or an array of **paths**. A group specifies a set of pages to be displayed together with a title.
 
 A **group** can have an optional base to specify a shared directory for the pages in the group. The children property specifies **path array** for the group.
 
