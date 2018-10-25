@@ -28,7 +28,7 @@ html, body {
   box-sizing: border-box;
   color: var(--black-font);
   font-family: var(--sans-font), sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   min-width: 320px;
   padding: 0;

@@ -3,6 +3,7 @@
 .main {
   /*Block colors*/
   --content-code-color: var(--gray-background);
+  --content-table-color: var(--gray-background);
 
   /*Font colors*/
   --content-color: var(--light-green-font);
@@ -39,7 +40,7 @@
 
 .content h1 {
   font-size: 2em;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .content h2 {
@@ -80,8 +81,12 @@
   text-decoration: none;
 }
 
-.content b {
+.content b, .content strong {
   font-weight: 600;
+}
+
+.content blockquote {
+  font-style: italic;
 }
 
 .content img {
@@ -97,6 +102,23 @@
   font-family: var(--content-code-font), monospace;
   overflow-x: auto;
   padding: 10px;
+}
+
+.content table {
+  border-collapse: collapse;
+}
+
+.content th {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.content tr:nth-of-type(even) {
+  background-color: var(--content-table-color);
+}
+
+.content td {
+  padding: 5px 20px 5px 0px;
 }
 
 /*** Non-Tablet Screens ***/
