@@ -116,8 +116,8 @@
   background-color: var(--content-table-color);
 }
 
-.content td {
-  padding: 5px 20px 5px 0px;
+.content td, .content th {
+  padding: 5px 10px 5px 10px;
 }
 
 /*** Non-Tablet Screens ***/
