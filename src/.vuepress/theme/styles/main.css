@@ -19,8 +19,7 @@
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  height: calc(100vh - var(--header-height));
-  overflow-y: auto;
+  min-height: calc(100vh - var(--header-height));
   position: relative;
 }
 
