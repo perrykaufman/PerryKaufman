@@ -54,14 +54,16 @@ _January 2017 - May 2018_
 * J2EE
 * Jasmine
 * JUnit
+* Webpack
+* npm
 
 #### Novice
 * C/C++
-* Node.js/npm
+* Node.js
 * C#/.NET
 * PHP
 
-### Other Knowledge and Skills
+### Knowledge and Skills
 * Object-Oriented design principles
 * Common data structures and sorting algorithms
 * Agile development principles

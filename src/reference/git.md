@@ -1,15 +1,19 @@
 # Git
 
-## Common Commands
+## Cheatsheet
 
-`git commit -a -m "..."` commits new changes to the local repository. The **-a** option stages modified files (but not new files) and the **-m** option allows the commit message to be specified.
+`git add .` stages all changed files (new, modified, or deleted).
 
-`git status`
+`git commit -a -m "<message>"` commits new changes to the local repository. The **-a** option stages modified files (but not new files) and the **-m** option allows the commit message to be specified.
 
-`git push`
+`git status` shows the working tree status
 
-`git pull`
+`git push` TODO
 
-## External Resources
+`git pull` TODO
+
+## Resources
 
 * [Git Pro Book](https://git-scm.com/book/en/v2)
+* [Git Documentation](https://git-scm.com/docs)
+* [Academind Git/GitHub Videos](https://www.youtube.com/watch?v=_OZVJpLHUaI&list=PL55RiY5tL51poFMpbva1IqfO-pylwSNsN)
