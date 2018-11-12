@@ -3,7 +3,8 @@
 .main {
   /*Block colors*/
   --content-code-color: var(--gray-background);
-  --content-table-color: var(--gray-background);
+  --content-table-color1: var(--light-gray-background);
+  --content-table-color2: var(--gray-background);
 
   /*Font colors*/
   --content-color: var(--light-green-font);
@@ -68,7 +69,7 @@
 }
 
 .content p {
-  margin: 0 0 5px 0
+  margin: 0 0 5px 10px;
 }
 
 .content a {
@@ -121,8 +122,12 @@
   font-size: 1.2em;
 }
 
+.content tr:nth-of-type(odd) {
+  background-color: var(--content-table-color1);
+}
+
 .content tr:nth-of-type(even) {
-  background-color: var(--content-table-color);
+  background-color: var(--content-table-color2);
 }
 
 .content td, .content th {
