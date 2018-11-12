@@ -8,9 +8,9 @@
 
 `git status` shows the working tree status
 
-`git push` TODO
+`git push` push changes to remote repository (defaults to origin)
 
-`git pull` TODO
+`git pull` pull changes from remote repository (defaults to origin)
 
 ## Resources
 
