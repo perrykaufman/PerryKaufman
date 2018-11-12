@@ -44,7 +44,7 @@ module.exports = {
             ]
           },
           {
-            title: 'JavaScript Frameworks',
+            title: 'JS Frameworks',
             children: ['vue']
           },
           {
