@@ -44,21 +44,21 @@
 
 .content h2 {
   font-size: 1.6em;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
 .content h3 {
-  font-size: 1.4em;
-  margin: 0;
+  font-size: 1.2em;
+  margin: 0 0 2px 0;
 }
 
 .content h4 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
 }
 
 .content h5 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -103,13 +103,22 @@
   padding: 10px;
 }
 
+.content p code {
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.content ol, .content ul {
+  margin: 0 0 10px 0
+}
+
 .content table {
   border-collapse: collapse;
 }
 
 .content th {
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .content tr:nth-of-type(even) {
@@ -117,7 +126,8 @@
 }
 
 .content td, .content th {
-  padding: 5px 10px 5px 10px;
+  padding: 5px;
+  vertical-align: top;
 }
 
 /*** Non-Tablet Screens ***/
