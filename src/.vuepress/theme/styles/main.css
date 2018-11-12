@@ -22,6 +22,7 @@
   flex-flow: column nowrap;
   min-height: calc(100vh - var(--header-height));
   position: relative;
+  transition: all .25s ease-in-out;
 }
 
 .main {
