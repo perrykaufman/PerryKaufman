@@ -39,6 +39,12 @@ Work in progress.
 
   Add staged changes to previous commit.
 
+* **Undo Commit(s)**
+
+  `git reset --hard <commit>`
+
+  Resets working tree, index, and head to specified commit.
+
 * **Status**
 
   `git status`
