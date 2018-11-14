@@ -2,21 +2,42 @@
 
 ## Cheatsheet
 
+Work in progress.
+
 ### Local Repository
 
-* **Staging**
+* **Stage**
 
-  `git add .`
+  `git add <file>`
 
-  Stage all changed files (new, modified, or deleted).
+  Stage specified files.
+  * If a **period(.)** is specified, all changes are staged.
+
+* **Unstage**
+
+  `git reset HEAD <file>`
+
+  Unstage specified files.
+
+* **Unmodify**
+
+  `git checkout -- <file>`
+
+  Reset a file to the previous commit.
 
 * **Commit**
 
   `git commit -a -m "<message>"`
 
   Commit new changes to the local repository.
-  * **-a** option stages modified files (but not new files).
-  * **-m** option allows the commit message to be specified.
+  * **-a** stages modified files (but not new files).
+  * **-m** allows the commit message to be specified.
+
+* **Amend Commit**
+
+  `git commit --amend`
+
+  Add staged changes to previous commit.
 
 * **Status**
 
@@ -24,34 +45,88 @@
 
   Shows the working tree status.
 
-### Remote Repository
+* **Commit History**
 
-* **Push**
+  `git log`
 
-  `git push <repository>`
-
-  Push changes to remote repository (defaults to origin)
-
-* **Pull**
-
-  `git pull <repository>`
-
-  Pull changes from remote repository (defaults to origin) and integrate with local repository.
+  Shows commit history.
 
 ### Branching
 
-* **Switch**
+* **Show**
 
-  `git checkout <branch>`
+  `git branch -v`
 
-  Switch to another branch.
+  Lists all branchs.
+  * **-v** shows last commit for each branch.
 
 * **Create**
 
-  `git checkout -b <branch>`
+  `git branch <branch>`
 
   Create a new branch.
-  * **-b** flag creates the branch.
+
+* **Create and Checkout**
+
+  `git checkout -b <branch>`
+
+  Create a and switch to a new branch.
+  * **-b** specifies branch creation.
+
+* **Checkout**
+
+  `git checkout <branch>`
+
+  Swtich to a specified branch.
+
+* **Delete**
+
+  `git branch -d <branch>`
+
+  Delete specified branch.
+  * Will only delete if work has been merged.
+
+* **Merge**
+
+  `git merge <branch>`
+
+  Merge a specified branch current branch.
+  * In the event of a **merge conflict**, each conflict should be resolved and then the file staged. When all files are staged, a commit will finalize the merge.
+
+### Remote Repository
+
+* **Clone**
+
+  `git clone <url>`
+
+  Create a copy of a remote repository.
+
+* **Show**
+
+  `git remote -v`
+
+  Shows existing remote repositories.
+  * **-v** shows remote urls.
+
+* **Fetch**
+
+  `git fetch <remote>`
+
+  Fetchs new data from remote repository to local repository.
+
+* **Pull**
+
+  `git pull <repository> <branch>`
+
+  Fetch remote repository and merge with local branch.
+  * The repository and branch default to origin and master respectively.
+
+* **Push**
+
+  `git push <repository> <branch>`
+
+  Push changes to remote repository.
+  * The repository and branch default to origin and master respectively.
 
 ## Resources
 
