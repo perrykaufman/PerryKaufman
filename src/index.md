@@ -1,6 +1,6 @@
 # Welcome!
 
-My name is **Perry Kaufman** and I created this website to showcase some of my projects and to help organize reference material for languages and technologies I am learning. I made this website using a custom theme for [Vuepress](https://vuepress.vuejs.org/): a static site generator powered by Vue.js.
+My name is **Perry Kaufman** and I created this website to showcase some of my projects and to help organize reference material for languages and technologies I am learning. I made this website using a custom theme for [Vuepress](https://vuepress.vuejs.org/): a static site generator powered by Vue.
 
 ## About Me
 
@@ -47,10 +47,11 @@ _January 2017 - May 2018_
 
 #### Intermediate
 * Vue.js
+* jQuery
 * SQL
 * XML
 * Firebase
-* SOAP/REST
+* REST
 * J2EE
 * Jasmine
 * JUnit
