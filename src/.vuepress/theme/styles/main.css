@@ -119,11 +119,12 @@
 }
 
 .content th {
-  text-align: left;
+  background-color: var(--white-background);
   font-size: 1.2em;
+  text-align: left;
 }
 
-.content tr:nth-of-type(odd) {
+.content tr {
   background-color: var(--content-table-color1);
 }
 
