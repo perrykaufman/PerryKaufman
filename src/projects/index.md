@@ -6,6 +6,7 @@ Project | Description
 ---|---
 **[This Website!](https://github.com/BrotherGilburt/PerryKaufman)** | I created my website using a static site generator called Vuepress! Each page is made up of Vue components from the custom theme I created.
 **[Clean Slate Theme](https://github.com/BrotherGilburt/cleanslate)** | A responsive Wordpress theme created for the Clean Slate program of YWCA McLean County. Supports the WooCommerce plugin to allow for ecommerce. 
+**[React List](https://jsfiddle.net/pdkaufm/d0jrsfvt/)** | A list application made with React.js and SCSS. My first project using React.
 **[Drag and Drop List](https://jsfiddle.net/pdkaufm/5ocmvktr/)** | A list application that allows items to be added, removed, and reordered. If the list is long enough to create a scroll bar, the page can be pulled by dragging an item to the top or bottom of the page.
 **[Guild Wars 2 Achievement Point Calculator](https://jsfiddle.net/pdkaufm/v5kaps0c/)** | Uses account data from the Guild Wars 2 API to calculate the total achievement points earned by an account.
 **[Chat UI](https://jsfiddle.net/pdkaufm/gjy2jdfk/)** | A simple chat application with a "chatbot" that repeats whatever the user says. The chatbot could easily be substituted with code receiving/sending responses to a server.
