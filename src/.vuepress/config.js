@@ -19,10 +19,6 @@ module.exports = {
       {
         title: 'Projects',
         path: '/projects/'
-      },
-      {
-        title: 'Test',
-        path: '/test/'
       }
     ],
     footer: 'Created by Perry Kaufman with Vuepress. 2018.',
