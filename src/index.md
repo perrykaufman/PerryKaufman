@@ -59,6 +59,7 @@ _January 2017 - May 2018_
 * npm
 
 #### Novice
+* React.js
 * C/C++
 * Node.js
 * C#/.NET
