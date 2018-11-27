@@ -41,7 +41,6 @@ _January 2017 - May 2018_
 * JavaScript (ES6)
 * HTML
 * CSS
-* SASS
 * JSON
 * Markdown
 
@@ -50,6 +49,7 @@ _January 2017 - May 2018_
 * jQuery
 * SQL
 * XML
+* SASS
 * Firebase
 * REST
 * J2EE
