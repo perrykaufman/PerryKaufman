@@ -57,6 +57,7 @@ _January 2017 - May 2018_
 * JUnit
 * Webpack
 * npm
+* Regular Expressions
 
 #### Novice
 * React.js

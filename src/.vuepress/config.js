@@ -28,20 +28,17 @@ module.exports = {
         items: [{
             title: '',
             children: [
-              ''
-            ]
-          },
-          {
-            title: 'Core',
-            children: [
+              '',
               'html',
               'css',
-              'javascript'
             ]
           },
           {
-            title: 'JS Frameworks',
-            children: ['vue']
+            title: 'JavaScript',
+            children: [
+              'javascript',
+              'vue'
+            ]
           },
           {
             title: 'Version Control',
