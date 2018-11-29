@@ -135,7 +135,6 @@ Work in progress.
   * The repository and branch default to origin and master respectively.
 
 ## Resources
-
 * [Git Pro Book](https://git-scm.com/book/en/v2)
 * [Git Documentation](https://git-scm.com/docs)
 * [Academind Git YouTube Tutorials](https://www.youtube.com/watch?v=_OZVJpLHUaI&list=PL55RiY5tL51poFMpbva1IqfO-pylwSNsN)
