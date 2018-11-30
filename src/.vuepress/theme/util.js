@@ -111,12 +111,13 @@ export function isGroupArray(config) {
 export function processGroupArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((group) => {
+    let groupBase = base
     const title = group.title;
 
-    if (group.base) base = resolvePath(base, group.base);
+    if (group.base) groupBase = resolvePath(base, group.base);
     let groupPathArray = group.children;
     
-    const children = processPathArray(groupPathArray, pages, root, base);
+    const children = processPathArray(groupPathArray, pages, root, groupBase);
     sidebar.push({
       title,
       children
