@@ -1,4 +1,4 @@
-# JavaScript
+# Vanilla
 
 (Work in progress)
 

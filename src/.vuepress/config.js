@@ -35,8 +35,9 @@ module.exports = {
           },
           {
             title: 'JavaScript',
+            base: 'javascript',
             children: [
-              'javascript',
+              'vanilla',
               'vue'
             ]
           },
