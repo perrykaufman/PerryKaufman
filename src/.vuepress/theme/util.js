@@ -1,4 +1,4 @@
-export const PATH_RE = /^\/([A-Z0-9\-!$'~_%()*+,;=:@]+\/)*/i;
+export const PATH_RE = /^\/([^\/]+\/)*/;
 export const EXT_RE = /\.(html|md)$/;
 export const END_SLASH = /\/$/;
 export const START_SLASH = /^\//;
@@ -63,7 +63,8 @@ export function getPathDirectories(path) {
   }
   
   while (match && match[1]) {
-  	path = path.replace(new RegExp(match[1] + '$'), '');
+  	path = path.replace(match[1], '');
+    
     dir.push(path);
     match = path.match(PATH_RE);
   }
@@ -90,8 +91,10 @@ export function isPage(pagePath, page) {
 export function isParentPage(basePath, page) {
   /*if (!END_SLASH.test(basePath) || !START_SLASH.test(basePath)) {
     throw new Error(`basePath "${basePath}" does not start and end with a slash(/).`);
-  }
-  return (new RegExp('^' + basePath).test(page.path));*/
+  }*/
+  //const isBase = new RegExp('^' + basePath)
+  //
+  //return isBase.test(page.path);
   return basePath === getPath(page.path);
 }
 
@@ -111,12 +114,11 @@ export function isGroupArray(config) {
 export function processGroupArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((group) => {
-    let groupBase = base
-    const title = group.title;
 
-    if (group.base) groupBase = resolvePath(base, group.base);
-    let groupPathArray = group.children;
-    
+    const title = group.title;
+    const groupBase = base ? resolvePath(base, group.base) : group.base;
+    const groupPathArray = group.children;
+
     const children = processPathArray(groupPathArray, pages, root, groupBase);
     sidebar.push({
       title,
@@ -144,8 +146,9 @@ export function processPathArray(config, pages, root, base) {
   config.forEach((configPath) => {
     let path = configPath;
     if (root || base) path = resolvePath(root, base, path);
+    
     const page = getPage(path, pages);
-
+    
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
 
     sidebar.push({
