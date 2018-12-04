@@ -19,10 +19,11 @@ export default {
     NavigationItem,
     NavigationGroup
   },
-  computed: {
-    menu() {
-      return processMenu(this.$site.themeConfig.nav, this.$site.pages);
-    }
+  data() {
+    return { menu: null }
+  },
+  created() {
+    this.menu = processMenu(this.$site.themeConfig.nav, this.$site.pages);
   }
 }
 </script>
