@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import store from './store.js'
 import {processMenu} from './util.js';
 import NavigationItem from './NavigationItem.vue';
 import NavigationGroup from './NavigationGroup.vue';
@@ -20,7 +21,9 @@ export default {
     NavigationGroup
   },
   data() {
-    return { menu: null }
+    return {
+      menu: null
+    }
   },
   created() {
     this.menu = processMenu(this.$site.themeConfig.nav, this.$site.pages);

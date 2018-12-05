@@ -27,7 +27,7 @@ export function isEmpty(item) {
  */
 export function getPath(pagePath) {
   const path = PATH_RE.exec(pagePath);
-  //if(path) throw new Error(`Error in getPath: pagePath '${pagePath}' is not a valid path.`);
+
   return path ? path[0] : null;
 }
 
@@ -88,14 +88,12 @@ export function isPage(pagePath, page) {
   return pagePath.replace(EXT_RE, '') === page.path.replace(EXT_RE, '');
 }
 
-export function isParentPage(basePath, page) {
-  /*if (!END_SLASH.test(basePath) || !START_SLASH.test(basePath)) {
-    throw new Error(`basePath "${basePath}" does not start and end with a slash(/).`);
-  }*/
-  //const isBase = new RegExp('^' + basePath)
-  //
-  //return isBase.test(page.path);
-  return basePath === getPath(page.path);
+export function isParentPage(pagePath, page) {
+  if (pagePath == '/') return false;
+
+  const isBase = new RegExp('^' + getPath(pagePath));
+  
+  return isBase.test(page.path);
 }
 
 /*
@@ -167,8 +165,7 @@ export function findSidebar(sidebars, page) {
   
   let sidebar;
   directories.some((path)=> {
-    sidebar = sidebars[path];
-    return sidebar;
+    return sidebar = sidebars[path];
   });
   sidebar = sidebar ? sidebar : sidebars[DEFAULT]
 
@@ -220,51 +217,7 @@ export function processSidebar(config, pages) {
 
   if (isEmpty(sidebars)) throw new Error("Error: Unable to parse sidebar config.");
 
-  console.log(sidebars["/reference/"])
-
   return sidebars;
-
-  /*const directories = getPathDirectories(page.path);
-
-  let root;
-  let pathConfig;
-
-  directories.some((current) => {
-    root = current;
-    pathConfig = config[current];
-    return pathConfig;
-  });*/
-  
-  /*if (pathConfig && pathConfig.items && isGroupArray(pathConfig.items)) {
-    return {
-      title: pathConfig.title,
-      items: processGroupArray(pathConfig.items, pages, root, pathConfig.base)
-    };
-  }
-  if (pathConfig && pathConfig.items && isPathArray(pathConfig.items)) {
-    return {
-      title: pathConfig.title,
-      items: processPathArray(pathConfig.items, pages, root, pathConfig.base)
-    };
-  }
-
-  const defaultConfig = config[DEFAULT];
-  if (defaultConfig && defaultConfig.items && isGroupArray(defaultConfig.items)) {
-    return {
-      title: defaultConfig.items,
-      items: processGroupArray(defaultConfig.items, pages, '/', defaultConfig.base)
-    };
-  }
-  if (defaultConfig && defaultConfig.items && isPathArray(defaultConfig.items)) {
-    return {
-      title: defaultConfig.items,
-      items: processPathArray(defaultConfig.items, pages, '/', defaultConfig.base)
-    };
-  }
-
-  return {items: []};*/
-
-  //throw new Error('Invalid sidebar config. Must be an array of paths, array of groups, or an object of path sidebar pairs.');
 }
 
 
@@ -306,7 +259,7 @@ export function processMenuItems(config, pages) {
       };
     }
 
-    throw new Error('Invalid menu item.');
+    throw new Error('Error: Invalid menu item.');
   });
 }
 
