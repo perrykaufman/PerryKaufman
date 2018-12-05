@@ -12,7 +12,7 @@
 <script>
 import FooterSection from './FooterSection.vue';
 import store from './store.js'
-import { processSidebar } from "./util.js";
+import { processSidebar, findSidebar } from "./util.js";
 import SidebarMask from './SidebarMask';
 import SidebarMenu from "./SidebarMenu.vue";
 
@@ -22,6 +22,11 @@ export default {
     SidebarMask,
     SidebarMenu
   },
+  data() {
+    return {
+      sidebars: {}
+    }
+  },
   computed: {
     isSidebar() {
       return (
@@ -29,15 +34,14 @@ export default {
       );
     },
     sidebar() {
-      return processSidebar(
-        this.$site.themeConfig.sidebar,
-        this.$site.pages,
-        this.$page
-      );
+      return findSidebar(this.sidebars, this.$page);
     },
     sidebarOpen() {
       return store.sidebarOpen;
     }
+  },
+  created() {
+    this.sidebars = processSidebar(this.$site.themeConfig.sidebar, this.$site.pages)
   }
 };
 </script>

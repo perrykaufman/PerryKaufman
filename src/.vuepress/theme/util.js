@@ -160,36 +160,82 @@ export function processPathArray(config, pages, root, base) {
   return sidebar;
 }
 
+export function findSidebar(sidebars, page) {
+  if (!sidebars) return { items: [] }
+  
+  const directories = getPathDirectories(page.path);
+  
+  let sidebar;
+  directories.some((path)=> {
+    sidebar = sidebars[path];
+    return sidebar;
+  });
+  sidebar = sidebar ? sidebar : sidebars[DEFAULT]
+
+  if (sidebar) return sidebar;
+  return { items: [] };
+}
+
 /*
  * Process a Sidebar configuration.
  */
-export function processSidebar(config, pages, page) {
-  if (!config) return {items: []};
+export function processSidebar(config, pages) {
+  if (!config) return null;
+
+  const sidebars = {}
+
   if (config.items && isGroupArray(config.items)) {
-    return {
+    sidebars[DEFAULT] = {
       title: config.title,
       items: processGroupArray(config.items, pages, '/', config.base)
     };
+
+    return sidebars;
   }
-  if (config.items && isPathArray(config.items)) {
-    return {
+  else if (config.items && isPathArray(config.items)) {
+    sidebars[DEFAULT] = {
       title: config.title,
       items: processPathArray(config, pages, '/', config.base)
-    };
+    }
+    return sidebars;
+  }
+  else {
+    const configPaths = Object.entries(config)
+
+    configPaths.forEach(([path, sidebar]) => {
+      const root = (path == DEFAULT) ? '/' : path
+      
+      if (isGroupArray(sidebar.items))
+        sidebars[path] = {
+          title: sidebar.title,
+          items: processGroupArray(sidebar.items, pages, root, sidebar.base)
+        }
+      else if (isPathArray(sidebar.items))
+        sidebars[path] = {
+          title: sidebar.title,
+          items: processPathArray(sidebar.items, pages, root, sidebar.base)
+        }
+    })
   }
 
-  const directories = getPathDirectories(page.path);
+  if (isEmpty(sidebars)) throw new Error("Error: Unable to parse sidebar config.");
+
+  console.log(sidebars["/reference/"])
+
+  return sidebars;
+
+  /*const directories = getPathDirectories(page.path);
 
   let root;
   let pathConfig;
 
-  directories.some((current)=> {
+  directories.some((current) => {
     root = current;
     pathConfig = config[current];
     return pathConfig;
-  });
+  });*/
   
-  if (pathConfig && pathConfig.items && isGroupArray(pathConfig.items)) {
+  /*if (pathConfig && pathConfig.items && isGroupArray(pathConfig.items)) {
     return {
       title: pathConfig.title,
       items: processGroupArray(pathConfig.items, pages, root, pathConfig.base)
@@ -216,7 +262,7 @@ export function processSidebar(config, pages, page) {
     };
   }
 
-  return {items: []};
+  return {items: []};*/
 
   //throw new Error('Invalid sidebar config. Must be an array of paths, array of groups, or an object of path sidebar pairs.');
 }
