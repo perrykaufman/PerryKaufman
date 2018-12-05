@@ -1,4 +1,4 @@
-export const PATH_RE = /^\/([^\/]+\/)*/;
+export const DIR_RE = /^\/([^\/]+\/)*/;
 export const EXT_RE = /\.(html|md)$/;
 export const END_SLASH = /\/$/;
 export const START_SLASH = /^\//;
@@ -25,8 +25,8 @@ export function isEmpty(item) {
 /*
  * Returns the path for a given page. (i.e. the path without the filename).
  */
-export function getPath(pagePath) {
-  const path = PATH_RE.exec(pagePath);
+export function getDirectory(pagePath) {
+  const path = DIR_RE.exec(pagePath);
 
   return path ? path[0] : null;
 }
@@ -56,7 +56,7 @@ export function resolvePath(...paths) {
  */
 export function getPathDirectories(path) {
 	const dir = [];
-  let match = path.match(PATH_RE);
+  let match = path.match(DIR_RE);
   if (match) {
     path = match[0]
   	dir.push(path);
@@ -66,7 +66,7 @@ export function getPathDirectories(path) {
   	path = path.replace(match[1], '');
     
     dir.push(path);
-    match = path.match(PATH_RE);
+    match = path.match(DIR_RE);
   }
   
   return dir;
@@ -91,7 +91,7 @@ export function isPage(pagePath, page) {
 export function isParentPage(pagePath, page) {
   if (pagePath == '/') return false;
 
-  const isBase = new RegExp('^' + getPath(pagePath));
+  const isBase = new RegExp('^' + getDirectory(pagePath));
   
   return isBase.test(page.path);
 }
@@ -164,7 +164,7 @@ export function findSidebar(sidebars, page) {
   const directories = getPathDirectories(page.path);
   
   let sidebar;
-  directories.some((path)=> {
+  directories.some((path) => {
     return sidebar = sidebars[path];
   });
   sidebar = sidebar ? sidebar : sidebars[DEFAULT]
