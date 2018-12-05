@@ -118,6 +118,7 @@ export function processGroupArray(config, pages, root, base) {
     const groupPathArray = group.children;
 
     const children = processPathArray(groupPathArray, pages, root, groupBase);
+    if (children.length == 0) return
     sidebar.push({
       title,
       children
@@ -186,15 +187,12 @@ export function processSidebar(config, pages) {
       title: config.title,
       items: processGroupArray(config.items, pages, '/', config.base)
     };
-
-    return sidebars;
   }
   else if (config.items && isPathArray(config.items)) {
     sidebars[DEFAULT] = {
       title: config.title,
-      items: processPathArray(config, pages, '/', config.base)
+      items: processPathArray(config.items, pages, '/', config.base)
     }
-    return sidebars;
   }
   else {
     const configPaths = Object.entries(config)
@@ -285,5 +283,5 @@ export function processMenu(config, pages) {
   if (config instanceof Array) {
     return processMenuItems(config, pages);
   }
-  throw new Error('Invalid menu config. Must be array of menu items.');
+  throw new Error('Error: Invalid menu config. Must be array of menu items.');
 }
