@@ -10,8 +10,6 @@ git add -A
 git commit -m 'deploy'
 
 git push -f https://github.com/BrotherGilburt/brothergilburt.github.io.git master
-
-cd -
 ```
 
 If update does not work:
