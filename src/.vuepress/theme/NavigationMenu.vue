@@ -11,7 +11,7 @@
 
 <script>
 import store from './store.js'
-import {processMenu} from './util.js';
+import {processNav} from './scripts/nav.js';
 import NavigationItem from './NavigationItem.vue';
 import NavigationGroup from './NavigationGroup.vue';
 
@@ -26,7 +26,7 @@ export default {
     }
   },
   created() {
-    this.menu = processMenu(this.$site.themeConfig.nav, this.$site.pages);
+    this.menu = processNav(this.$site.themeConfig.nav, this.$site.pages);
   }
 }
 </script>

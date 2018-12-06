@@ -6,7 +6,7 @@
 
 <script>
 import store from './store.js';
-import {isPage, isParentPage} from './util.js';
+import {isPage, isParentPage} from './scripts/util.js';
 
 export default {
   props: {

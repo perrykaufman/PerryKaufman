@@ -12,7 +12,7 @@
 <script>
 import FooterSection from './FooterSection.vue';
 import store from './store.js'
-import { processSidebar, findSidebar } from "./util.js";
+import { processSidebar, findSidebar } from "./scripts/sidebar.js";
 import SidebarMask from './SidebarMask';
 import SidebarMenu from "./SidebarMenu.vue";
 
