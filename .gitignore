@@ -5,4 +5,4 @@ node_modules/
 .vscode/
 
 # vuepress build output
-.vuepress/dist
+src/.vuepress/dist/
