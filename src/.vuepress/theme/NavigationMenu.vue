@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import store from './store.js'
+import store from './store'
 import {processNav} from './scripts/nav.js';
 import NavigationItem from './NavigationItem.vue';
 import NavigationGroup from './NavigationGroup.vue';

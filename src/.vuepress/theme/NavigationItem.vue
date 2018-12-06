@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import store from './store.js';
+import store from './store';
 import {isPage, isParentPage} from './scripts/util.js';
 
 export default {

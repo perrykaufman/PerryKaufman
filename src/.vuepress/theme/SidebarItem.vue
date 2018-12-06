@@ -6,7 +6,7 @@
 
 <script>
 import { isPage } from "./scripts/util.js";
-import store from './store.js';
+import store from './store';
 
 export default {
   props: {

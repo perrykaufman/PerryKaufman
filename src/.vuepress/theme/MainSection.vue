@@ -11,7 +11,7 @@
 
 <script>
 import FooterSection from './FooterSection.vue';
-import store from './store.js'
+import store from './store'
 import { processSidebar, findSidebar } from "./scripts/sidebar.js";
 import SidebarMask from './SidebarMask';
 import SidebarMenu from "./SidebarMenu.vue";

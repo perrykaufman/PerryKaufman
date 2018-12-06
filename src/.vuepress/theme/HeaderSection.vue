@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import store from './store.js';
+import store from './store';
 import NavigationMenu from './NavigationMenu.vue';
 
 export default {
