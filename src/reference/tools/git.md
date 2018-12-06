@@ -2,7 +2,7 @@
 
 ## Cheatsheet
 
-Work in progress.
+(Work in progress)
 
 ### Local Repository
 
