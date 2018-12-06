@@ -30,8 +30,7 @@ module.exports = {
             children: [
               '',
               'html',
-              'css',
-              'regex'
+              'css'
             ]
           },
           {
@@ -43,8 +42,9 @@ module.exports = {
             ]
           },
           {
-            title: 'Version Control',
-            children: ['git']
+            title: 'Tools',
+            base: 'tools',
+            children: ['git', 'regex']
           }
         ]
       }
