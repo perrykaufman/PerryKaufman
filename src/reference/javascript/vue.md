@@ -1,4 +1,4 @@
-# Vue
+# Vue.js
 
 (Work in progress)
 
