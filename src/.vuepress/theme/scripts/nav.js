@@ -30,7 +30,7 @@ export function processNavItems(config, pages) {
       const currentPage = util.getPage(element.base, pages);
 
       const title = element.title || currentPage.title;
-      const link = element.base;
+      const link = util.resolveBase(element.base);
       let menuChildren = element.children.map((child) => {
         const title = child.title;
         const path = util.resolvePath(element.base, child.path);
