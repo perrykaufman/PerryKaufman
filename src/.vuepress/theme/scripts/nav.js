@@ -13,12 +13,12 @@ export function processNav(config, pages) {
 
 export function processNavItems(config, pages) {
   return config.map((element) => {
-    if (element.path) {
+    if (element.path || element.path == '') {
       //item on menu without submenu
-      const currentPage = util.getPage(element.path, pages);
+      const page = util.getPage(util.resolvePath(element.path), pages);
 
-      const title = element.title || currentPage.title;
-      const link = currentPage.path;
+      const title = element.title || page.title;
+      const link = page.path;
 
       return {
         title,
