@@ -54,14 +54,11 @@ export function resolveBase(...paths) {
   if (paths.length > 1) base = resolvePath(...paths)
   else if (paths.length == 1) base  = paths[0]
   else return '/'
-  
-  const start = START_SLASH.test(base)
-  const end = END_SLASH.test(base)
-  
-  if (start && end) return base
-  else if (start) return base + '/'
-  else if (end) return '/' + base
-  return '/' + base + '/' 
+
+  if (!START_SLASH.test(base)) base = '/' + base;
+  if (!END_SLASH.test(base)) base = base + '/';
+
+  return base;
 }
 
 /*
