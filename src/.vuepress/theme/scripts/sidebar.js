@@ -75,7 +75,6 @@ export function findSidebar(sidebars, page) {
   directories.some((path) => {
     return sidebar = sidebars[path];
   });
-  sidebar = sidebar ? sidebar : sidebars[DEFAULT]
 
   if (sidebar) return sidebar;
   return { items: [] };
@@ -105,15 +104,17 @@ export function processSidebar(config, pages) {
     const configPaths = Object.entries(config)
 
     configPaths.forEach(([path, sidebar]) => {
-      const root = (path == DEFAULT) ? '/' : path
+      const root = (path === DEFAULT) ? '/' : util.resolveBase(path)
       
+      console.log(root)
+
       if (isGroupArray(sidebar.items))
-        sidebars[path] = {
+        sidebars[root] = {
           title: sidebar.title,
           items: processGroupArray(sidebar.items, pages, root, sidebar.base)
         }
       else if (isPathArray(sidebar.items))
-        sidebars[path] = {
+        sidebars[root] = {
           title: sidebar.title,
           items: processPathArray(sidebar.items, pages, root, sidebar.base)
         }
