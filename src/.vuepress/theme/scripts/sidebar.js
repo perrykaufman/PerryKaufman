@@ -21,7 +21,7 @@ export function processGroupArray(config, pages, root, base) {
   config.forEach((group) => {
 
     const title = group.title;
-    const groupBase = base ? util.resolvePath(base, group.base) : group.base;
+    const groupBase = base ? util.resolveBase(base, group.base) : group.base;
     const groupPathArray = group.children;
 
     const children = processPathArray(groupPathArray, pages, root, groupBase);
