@@ -50,8 +50,8 @@ export function resolvePath(...paths) {
 }
 
 export function resolveBase(base) {
-  const start = START_SLASH.test(cur)
-  const end = END_SLASH.test(acc)
+  const start = START_SLASH.test(base)
+  const end = END_SLASH.test(base)
   
   if (start && end) return base
   else if (start) return base + '/'
