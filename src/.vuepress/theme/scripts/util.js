@@ -89,7 +89,7 @@ export function isPage(pagePath, page) {
 export function isParentPage(pagePath, page) {
   if (pagePath == '/') return false;
 
-  const isBase = new RegExp('^' + getDirectory(pagePath));
+  const isBase = new RegExp('^' + pagePath);
   
   return isBase.test(page.path);
 }

@@ -55,7 +55,7 @@ export function processNavItems(config, pages) {
 
 export function processNavSubItems(config, pages) {
   return config.map((element) => {
-    const currentPage = getPage(element.path, pages);
+    const currentPage = util.getPage(element.path, pages);
 
     const title = element.title || currentPage.title;
     const link = currentPage.path;
