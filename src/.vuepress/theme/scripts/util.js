@@ -49,6 +49,16 @@ export function resolvePath(...paths) {
   }, '/');
 }
 
+export function resolveBase(base) {
+  const start = START_SLASH.test(cur)
+  const end = END_SLASH.test(acc)
+  
+  if (start && end) return base
+  else if (start) return base + '/'
+  else if (end) return '/' + base
+  return '/' + base + '/' 
+}
+
 /*
  * Returns an array of all the directories in a path, starting with the deepest directory and ending with the root "/".
  */
