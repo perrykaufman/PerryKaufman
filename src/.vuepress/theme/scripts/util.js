@@ -33,10 +33,11 @@ export function getDirectory(pagePath) {
  */
 export function resolvePath(...paths) {
   return paths.reduce((acc, cur) => {
+    
+    if (!cur) return acc;
+
     const accTest = END_SLASH.test(acc);
     const curTest = START_SLASH.test(cur);
-
-    if (!cur) return acc;
 
     if (accTest && curTest) {
       return acc + cur.substring(1);
