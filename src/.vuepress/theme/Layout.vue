@@ -17,6 +17,6 @@ export default {
 }
 </script>
 
-<style src="./styles/index.css">
+<style src="./styles/index.styl">
 
 </style>
