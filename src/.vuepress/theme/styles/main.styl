@@ -1,0 +1,130 @@
+@import fonts 
+@import colors
+
+@import header
+@import sidebar
+
+/* Variables */
+
+/*Block colors*/
+content-code-color = gray-background
+content-table-color1 = light-gray-background
+content-table-color2 = gray-background
+
+/*Font colors*/
+content-color = light-green-font
+content-dark-color = green-font
+
+/*Fonts*/
+content-code-font = mono-font
+
+/* Main */
+
+.main-wrapper
+  align-items: center
+  display: flex
+  flex-flow: column nowrap
+  min-height: "calc(100vh - %s)" % header-height
+  position: relative
+  transition: all .25s ease-in-out
+
+.main
+  flex: 1
+  max-width: 100%
+  width: 800px
+
+/* Content */
+.content
+  font-size: 1rem
+  padding: 5px 15px
+  max-width: 800px
+  width: 100%
+
+  h1
+    font-size: 2em
+    margin: 0 0 10px 0
+
+  h2
+    font-size: 1.6em
+    margin: 0 0 5px 0
+
+  h3
+    font-size: 1.2em
+    margin: 0 0 2px 0
+
+  h4
+    font-size: 1em
+    margin: 0
+
+  h5
+    font-size: 1em
+    margin: 0
+
+  .content h6
+    font-size: 1em
+    margin: 0
+
+  p
+    margin: 0 0 5px 10px;
+
+    code
+      display: inline-block
+      padding: 0 3px
+      vertical-align: bottom
+
+  a
+    color: content-color
+    &:hover
+      color: content-dark-color
+      text-decoration: none
+
+  b
+  strong
+    font-weight: 600
+
+  blockquote
+    font-style: italic
+
+  img
+    display: block
+    margin: auto
+    max-width: 100%
+
+  code
+    background: content-code-color
+    border-radius: 5px
+    display: block
+    font-family: content-code-font, monospace
+    overflow-x: auto
+    padding: 10px
+
+  ol
+  ul
+    margin: 0 0 10px 0
+
+  table
+    border-collapse: collapse
+
+  th
+    background-color: white-background
+    font-size: 1.2em
+    text-align: left
+
+  tr
+    background-color: content-table-color1
+    &:nth-of-type(even)
+      background-color: content-table-color2
+
+  td
+  th
+    padding: 5px
+    vertical-align: top
+
+/*** Non-Tablet Screens ***/
+@media all and (min-width: 800px)
+  .main-wrapper
+    margin-left: sidebar-static-width
+
+@media all and (min-width: 1000px)
+  .no-sidebar.main-wrapper
+    margin-left: 0

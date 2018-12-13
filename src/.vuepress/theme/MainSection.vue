@@ -46,5 +46,5 @@ export default {
 };
 </script>
 
-<style src="./styles/main.css" />
+<style src="./styles/main.styl" />
 
