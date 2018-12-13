@@ -1,0 +1,97 @@
+@import header
+
+/* Variables */
+:root /* TODO: REMOVE THIS */
+  --sidebar-width: 80%
+
+/*Sizes*/
+sidebar-width = 80%
+
+/*Block colors*/
+sidebar-background-color = light-green-background
+sidebar-shadow-color = gray-background
+
+/*Font colors*/
+sidebar-symbol-color = dark-green-font
+sidebar-hover-color = lighter-green-font
+
+/* Sidebar */
+.sidebar
+  background: sidebar-background-color
+  box-shadow: 5px 0 5px sidebar-shadow-color
+  font-size: 1.5rem
+  height: 100% - header-height
+  left: -1 * sidebar-width
+  overflow-y: auto
+  position: fixed
+  top: header-height
+  transition: all .25s ease-in-out
+  width: sidebar-width
+  z-index: 2
+
+.sidebar-mask
+  background-color: sidebar-shadow-color
+  height: 100% - header-height
+  left: 0
+  position: fixed
+  top: header-height
+  width: 100%
+  z-index: 1
+
+.sidebar-open .sidebar
+  left: 0
+
+/* Sidebar Nav */
+
+.sidebar-header
+  font-size: 1.4em
+  margin: 0
+
+.sidebar-group-header
+  font-size: 1.05em
+  margin: 0
+
+.sidebar-list
+  color: sidebar-symbol-color
+  list-style: none
+  margin: 0
+  padding-left: 5px
+
+.sidebar-list-wrapper
+  padding: 10px
+
+.sidebar-link
+  color: sidebar-symbol-color
+  text-decoration: none
+
+  &:hover
+    color: sidebar-hover-color
+
+.sidebar-sub-list
+  list-style: none
+  padding-left: 20px
+
+.current
+  > .sidebar-link
+    text-decoration: underline
+
+/*** Non-Mobile ***/
+
+sidebar-static-width = 320px
+
+@media all and (min-width: 400px)
+  :root /* TODO: REMOVE THIS */
+    --sidebar-width: 320px
+
+  .sidebar
+    width: sidebar-static-width
+
+/*** Non-Tablet ***/
+
+@media all and (min-width: 800px)
+  .sidebar
+    left: 0
+
+@media all and (min-width: 1000px)
+  .no-sidebar .sidebar
+    left: -1 * sidebar-static-width
