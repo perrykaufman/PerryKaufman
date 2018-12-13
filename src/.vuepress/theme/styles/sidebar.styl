@@ -1,8 +1,4 @@
-@import 'header'
-
-/* sizes */
-sidebar-width = 80%
-sidebar-static-width = 320px
+@import 'palette'
 
 /* block colors */
 sidebar-background-color = light-green-background
@@ -14,70 +10,70 @@ sidebar-hover-color = lighter-green-font
 
 /* sidebar */
 .sidebar
-  background: sidebar-background-color
-  box-shadow: 5px 0 5px sidebar-shadow-color
-  font-size: 1.5rem
-  height: 100% - header-height
-  left: -1 * sidebar-width
-  overflow-y: auto
-  position: fixed
-  top: header-height
-  transition: all .25s ease-in-out
-  width: sidebar-width
-  z-index: 2
+  background sidebar-background-color
+  box-shadow 5px 0 5px sidebar-shadow-color
+  font-size 1.5rem
+  height 100% - header-height
+  left -1 * sidebar-width
+  overflow-y auto
+  position fixed
+  top header-height
+  transition all .25s ease-in-out
+  width sidebar-width
+  z-index 2
 
 .sidebar-mask
-  background-color: sidebar-shadow-color
-  height: 100% - header-height
-  left: 0
-  position: fixed
-  top: header-height
-  width: 100%
-  z-index: 1
+  background-color sidebar-shadow-color
+  height 100% - header-height
+  left 0
+  position fixed
+  top header-height
+  width 100%
+  z-index 1
 
 .sidebar-open .sidebar
-  left: 0
+  left 0
 
 /* sidebar nav */
 .sidebar-header
-  font-size: 1.4em
-  margin: 0
+  font-size 1.4em
+  margin 0
 
 .sidebar-group-header
-  font-size: 1.05em
-  margin: 0
+  font-size 1.05em
+  margin 0
 
 .sidebar-list
-  color: sidebar-symbol-color
-  list-style: none
-  margin: 0
-  padding-left: 5px
+  color sidebar-symbol-color
+  list-style none
+  margin 0
+  padding-left 5px
 
 .sidebar-list-wrapper
-  padding: 10px
+  padding 10px
 
 .sidebar-link
-  color: sidebar-symbol-color
-  text-decoration: none
+  color sidebar-symbol-color
+  text-decoration none
   &:hover
-    color: sidebar-hover-color
+    color sidebar-hover-color
 
 .sidebar-sub-list
-  list-style: none
-  padding-left: 20px
+  list-style none
+  padding-left 20px
 
 .current > .sidebar-link
-    text-decoration: underline
+    text-decoration underline
 
 /* media */
 @media all and (min-width: 400px)
   .sidebar
-    width: sidebar-static-width
+    left -1 * sidebar-static-width
+    width sidebar-static-width
 
-@media all and (min-width: 800px)
+@media all and (min-width: 1000px)
   .sidebar
     left: 0
 
-@media all and (min-width: 1000px)
   .no-sidebar .sidebar
-    left: -1 * sidebar-static-width
+    left -1 * sidebar-static-width

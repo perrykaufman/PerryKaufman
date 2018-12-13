@@ -1,7 +1,4 @@
-@import 'colors'
-
-/* sizes */
-header-height = 3rem
+@import 'palette'
 
 /* block colors */
 header-background-color = green-background
@@ -20,13 +17,14 @@ header-hover-color = darker-green-font
   height header-height
   flex-flow row nowrap
   justify-content space-between
+  min-width: min-page-width
   position fixed
   top 0
   width 100%
   z-index 2
 
 .header-title
-  font-size 2rem
+  font-size 1.8rem
   margin 0
   padding-left 5px
 
@@ -88,6 +86,10 @@ header-hover-color = darker-green-font
     transform translateY(50%) rotate(45deg)
 
 /* media */
-@media all and (min-width: 800px)
+@media all and (min-width: 400px)
+  .header-title
+    font-size 2rem
+
+@media all and (min-width: 1000px)
   .menu-icon
     display none
