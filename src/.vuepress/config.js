@@ -10,20 +10,20 @@ module.exports = {
   themeConfig: {
     nav: [{
         title: 'Home',
-        path: '/'
+        path: ''
       },
       {
         title: 'Reference',
-        path: '/reference/'
+        path: 'reference/'
       },
       {
         title: 'Projects',
-        path: '/projects/'
+        path: 'projects/'
       }
     ],
     footer: 'Created by Perry Kaufman with Vuepress. 2018.',
     sidebar: {
-      '/reference/': {
+      'reference/': {
         title: 'Reference',
         items: [{
             title: '',
@@ -46,7 +46,10 @@ module.exports = {
           {
             title: 'Tools',
             base: 'tools',
-            children: ['git', 'regex']
+            children: [
+              'git',
+              'regex'
+            ]
           }
         ]
       }
