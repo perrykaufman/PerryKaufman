@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style src="./styles/footer.css" />
+<style src="./styles/footer.styl" />
