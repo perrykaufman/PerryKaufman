@@ -1,105 +1,93 @@
-@import colors
+@import 'colors'
 
-/* Variables */
-:root {
-  /*Sizes*/
-  --header-height: 3rem
-}
-
-/* Sizes */
+/* sizes */
 header-height = 3rem
 
-/*Block colors*/
+/* block colors */
 header-background-color = green-background
 header-border-color = gray-background
  
-/*Font colors*/
+/* font colors */
 header-symbol-color = dark-green-font
 header-hover-color = darker-green-font
 
-/* Header */
+/* header */
 .header
-  align-items: center
-  background: header-background-color
-  border-bottom: 2px solid header-border-color
-  display: flex
-  height: header-height
-  flex-flow: row nowrap
-  justify-content: space-between
-  position: fixed
-  top: 0
-  width: 100%
-  z-index: 2
+  align-items center
+  background header-background-color
+  border-bottom 2px solid header-border-color
+  display flex
+  height header-height
+  flex-flow row nowrap
+  justify-content space-between
+  position fixed
+  top 0
+  width 100%
+  z-index 2
 
 .header-title
-  font-size: 2rem
-  margin: 0
-  padding-left: 5px
+  font-size 2rem
+  margin 0
+  padding-left 5px
 
 .header-title
   > a
-    color: header-symbol-color
-    text-decoration: none
-  
-  &:hover
-    > a
-      color: header-hover-color
+    color header-symbol-color
+    text-decoration none
+  &:hover > a
+      color header-hover-color
 
 .header-nav
-  display: none
+  display none
 
+/* menu icon */
 .menu-icon
-  background: transparent
-  border: none
-  cursor: pointer
-  display: block
-  height: 48px
-  position: relative
-  overflow: hidden
-  text-indent: 10000px
-  width: 3em
-  white-space: nowrap
-
+  background transparent
+  border none
+  cursor pointer
+  display block
+  height 48px
+  position relative
+  overflow hidden
+  text-indent 10000px
+  width 3em
+  white-space nowrap
   &::before
-    background: header-symbol-color
-    box-shadow: 0 10px 0 header-symbol-color
-    content: ''
-    height: 5px
-    left: 15%
-    position: absolute
-    top: 11.5px
-    transition: all .15s ease-in-out
-    width: 70%
-
+    background header-symbol-color
+    box-shadow 0 10px 0 header-symbol-color
+    content ''
+    height 5px
+    left 15%
+    position absolute
+    top 11.5px
+    transition all .15s ease-in-out
+    width 70%
   &::after
-    background: header-symbol-color
-    bottom: 11.5px
-    content: ''
-    height: 5px
-    left: 15%
-    position: absolute
-    transition: all .15s ease-in-out
-    width: 70%
-  
+    background header-symbol-color
+    bottom 11.5px
+    content ''
+    height 5px
+    left 15%
+    position absolute
+    transition all .15s ease-in-out
+    width 70%
   &:hover
     &::before
-      background: header-hover-color
-      box-shadow: 0 10px 0 header-hover-color
+      background header-hover-color
+      box-shadow 0 10px 0 header-hover-color
     &::after
-      background: header-hover-color
-
+      background header-hover-color
   &.sidebar-open::before
-    box-shadow: none
-    height: 4px
-    top: 50%
-    transform: translateY(-50%) rotate(-45deg)
-
+    box-shadow none
+    height 4px
+    top 50%
+    transform translateY(-50%) rotate(-45deg)
   &.sidebar-open::after
-    bottom: 50%
-    height: 4px
-    transform: translateY(50%) rotate(45deg)
+    bottom 50%
+    height 4px
+    transform translateY(50%) rotate(45deg)
 
-/*** Non-Tablet Screens ***/
+/* media */
 @media all and (min-width: 800px)
   .menu-icon
-    display: none
+    display none

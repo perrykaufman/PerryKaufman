@@ -1,17 +1,17 @@
-@import colors
+@import 'colors'
 
-/*Block colors*/
+/* block colors */
 nav-background-color = green-background
-nav-border-color = gray-background /*Change to 0.15?*/
+nav-border-color = gray-background
 
-/*Font colors*/
+/* font colors */
 nav-symbol-color = dark-green-font
 nav-hover-color = darker-green-font
 
-/* Sizes */
+/* sizes */
 sub-icon-size = .75em
 
-/* Nav */
+/* nav */
 .menu-item
   align-items: center
   border-bottom: 1px solid nav-border-color
@@ -28,13 +28,11 @@ sub-icon-size = .75em
   text-decoration: none
   transition: all .07s ease-in-out
   width: 100%
-
   &:hover
     color: nav-hover-color
 
-.current>
-    .menu-link
-      text-decoration: underline
+.current > .menu-link
+  text-decoration: underline
 
 .menu-list
   background: nav-background-color
@@ -54,7 +52,6 @@ sub-icon-size = .75em
 .menu-sub-list-open
   .menu-sub-list
     max-height: 1000px
-
   .sub-menu-icon::after
     transform: translate(-50%, -25%) rotate(-135deg)
 
@@ -71,7 +68,6 @@ sub-icon-size = .75em
   text-indent: 10000px
   white-space: nowrap
   width: sub-icon-size * 4
-
   &::after
     background: transparent
     border-right: 2px solid nav-symbol-color
@@ -85,13 +81,12 @@ sub-icon-size = .75em
     transition: all .25s ease-in-out
     top: 50%
     width: sub-icon-size
-
   &:hover::after
     background: transparent
     border-right: 2px solid nav-hover-color
     border-bottom: 2px solid nav-hover-color
 
-/** Non-Tablet Screens **/
+/* media */
 @media all and (min-width: 1000px)
   .header-nav.menu-nav
     display: block
@@ -106,16 +101,16 @@ sub-icon-size = .75em
   .menu-group
     position: relative
 
-  .menu-list>.menu-item,
-  .menu-group>.menu-item
+  .menu-list > .menu-item
+  .menu-group > .menu-item
     border-bottom: none
 
-  .menu-item,
+  .menu-item
   .menu-group
     margin-right: 10px
     width: initial
 
-  .menu-group>.menu-item
+  .menu-group > .menu-item
     margin-right: 0
 
   .menu-link
