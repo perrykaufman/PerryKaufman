@@ -1,0 +1,131 @@
+@import colors
+
+/*Block colors*/
+nav-background-color = green-background
+nav-border-color = gray-background /*Change to 0.15?*/
+
+/*Font colors*/
+nav-symbol-color = dark-green-font
+nav-hover-color = darker-green-font
+
+/* Sizes */
+sub-icon-size = .75em
+
+/* Nav */
+.menu-item
+  align-items: center
+  border-bottom: 1px solid nav-border-color
+  display: flex
+  flex-flow: row nowrap
+
+.menu-link
+  color: nav-symbol-color
+  display: block
+  flex: 1
+  font-weight: 600
+  padding: 5px
+  position: relative
+  text-decoration: none
+  transition: all .07s ease-in-out
+  width: 100%
+
+  &:hover
+    color: nav-hover-color
+
+.current>
+    .menu-link
+      text-decoration: underline
+
+.menu-list
+  background: nav-background-color
+  font-size: 1.5rem
+  list-style: none
+  margin: 0
+  padding: 0
+
+.menu-sub-list
+  list-style: none
+  margin: 0
+  max-height: 0
+  padding: 0 0 0 10%
+  overflow: hidden
+  transition: all .25s ease-in-out
+
+.menu-sub-list-open
+  .menu-sub-list
+    max-height: 1000px
+
+  .sub-menu-icon::after
+    transform: translate(-50%, -25%) rotate(-135deg)
+
+.sub-menu-icon
+  background-color: transparent
+  border: none
+  cursor: pointer
+  display: block
+  height: 3em
+  overflow: hidden
+  margin: 0
+  padding: 0
+  position: relative
+  text-indent: 10000px
+  white-space: nowrap
+  width: sub-icon-size * 4
+
+  &::after
+    background: transparent
+    border-right: 2px solid nav-symbol-color
+    border-bottom: 2px solid nav-symbol-color
+    content: ''
+    display: block
+    height: sub-icon-size
+    left: 50%
+    position: absolute
+    transform: translate(-50%, -75%) rotate(45deg)
+    transition: all .25s ease-in-out
+    top: 50%
+    width: sub-icon-size
+
+  &:hover::after
+    background: transparent
+    border-right: 2px solid nav-hover-color
+    border-bottom: 2px solid nav-hover-color
+
+/** Non-Tablet Screens **/
+@media all and (min-width: 1000px)
+  .header-nav.menu-nav
+    display: block
+
+  .sidebar-menu.menu-nav
+    display: none
+
+  .menu-list
+    display: flex
+    flex-flow: row nowrap
+
+  .menu-group
+    position: relative
+
+  .menu-list>.menu-item,
+  .menu-group>.menu-item
+    border-bottom: none
+
+  .menu-item,
+  .menu-group
+    margin-right: 10px
+    width: initial
+
+  .menu-group>.menu-item
+    margin-right: 0
+
+  .menu-link
+    width: initial
+  
+  .sub-menu-icon
+    width: 30px
+
+  .menu-sub-list
+    background: nav-background-color
+    padding-right: 10px
+    position: absolute
+    right: 0

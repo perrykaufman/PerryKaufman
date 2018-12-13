@@ -31,4 +31,4 @@ export default {
 }
 </script>
 
-<style src="./styles/nav.css" />
+<style src="./styles/nav.styl" />
