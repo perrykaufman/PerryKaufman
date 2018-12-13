@@ -50,10 +50,10 @@ export function resolvePath(...paths) {
 }
 
 export function resolveBase(...paths) {
-  let base
-  if (paths.length > 1) base = resolvePath(...paths)
-  else if (paths.length == 1) base  = paths[0]
-  else return '/'
+  let base;
+  if (paths.length > 1) base = resolvePath(...paths);
+  else if (paths.length == 1) base = paths[0];
+  else return '/';
 
   if (!START_SLASH.test(base)) base = '/' + base;
   if (!END_SLASH.test(base)) base = base + '/';

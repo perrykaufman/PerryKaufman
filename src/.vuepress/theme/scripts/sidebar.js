@@ -25,7 +25,7 @@ export function processGroupArray(config, pages, root, base) {
     const groupPathArray = group.children;
 
     const children = processPathArray(groupPathArray, pages, root, groupBase);
-    if (children.length == 0) return
+    if (children.length == 0) return;
     sidebar.push({
       title,
       children
@@ -105,8 +105,6 @@ export function processSidebar(config, pages) {
 
     configPaths.forEach(([path, sidebar]) => {
       const root = (path === DEFAULT) ? '/' : util.resolveBase(path)
-      
-      console.log(root)
 
       if (isGroupArray(sidebar.items))
         sidebars[root] = {

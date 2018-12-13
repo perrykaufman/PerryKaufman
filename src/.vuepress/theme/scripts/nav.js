@@ -35,18 +35,11 @@ export function processNavItems(config, pages) {
         const title = child.title;
         const path = util.resolvePath(element.base, child.path);
 
-        return {
-          title,
-          path
-        };
+        return {title, path};
       });
       const children = processNavSubItems(menuChildren, pages);
 
-      return {
-        title,
-        link,
-        children
-      };
+      return {title, link, children};
     }
 
     throw new Error('Error: Invalid menu item.');
@@ -60,9 +53,6 @@ export function processNavSubItems(config, pages) {
     const title = element.title || currentPage.title;
     const link = currentPage.path;
 
-    return {
-      title,
-      link
-    };
+    return {title, link};
   });
 }
