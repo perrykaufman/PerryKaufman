@@ -30,4 +30,4 @@ export default {
 }
 </script>
 
-<style src="./styles/header.css" />
+<style src="./styles/header.styl" />
