@@ -38,7 +38,7 @@
 
 * `/$/` End of input
 
-**Source**: [Eloquent JavaScript](https://eloquentjavascript.net/09_regexp.html#h_ErccPg/l98)
+*Source: [Eloquent JavaScript](https://eloquentjavascript.net/09_regexp.html#h_ErccPg/l98)*
 
 ## Examples
 

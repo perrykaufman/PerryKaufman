@@ -2,8 +2,6 @@
 
 ## Cheatsheet
 
-(Work in progress)
-
 ### Local Repository
 
 * **Stage**
