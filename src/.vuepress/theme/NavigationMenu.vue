@@ -35,7 +35,6 @@ export default {
   },
   computed: {
     classes() {
-      console.log(this.type)
       return {'menu-nav': true, [this.type + '-menu']: true}
     },
     isSidebar() {
