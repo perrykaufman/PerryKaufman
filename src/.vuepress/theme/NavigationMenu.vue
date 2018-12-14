@@ -1,8 +1,8 @@
 <template>
-  <nav class="menu-nav">
+  <nav :class="classes">
     <ul class="menu-list">
       <template v-for="item in menu">
-        <navigation-group v-if="item.children" :group="item"/>
+        <navigation-group v-if="item.children" :group="item" :sidebar="isSidebar"/>
         <navigation-item v-else :item="item"/>
       </template>
     </ul>
@@ -20,9 +20,26 @@ export default {
     NavigationItem,
     NavigationGroup
   },
+  props: {
+    type: {
+      required: true,
+      validator(value) {
+        return value === 'sidebar' || value === 'header'
+      }
+    }
+  },
   data() {
     return {
       menu: null
+    }
+  },
+  computed: {
+    classes() {
+      console.log(this.type)
+      return {'menu-nav': true, [this.type + '-menu']: true}
+    },
+    isSidebar() {
+      return this.type === 'sidebar'
     }
   },
   created() {

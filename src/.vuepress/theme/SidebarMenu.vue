@@ -1,6 +1,6 @@
 <template>
   <aside class="sidebar">
-    <navigation-menu class="sidebar-menu"/>
+    <navigation-menu :type="'sidebar'"/>
     <div class="sidebar-list-wrapper">
       <h2 class="sidebar-header" v-if="sidebar.title">{{sidebar.title}}</h2>
     <ul class="sidebar-list">

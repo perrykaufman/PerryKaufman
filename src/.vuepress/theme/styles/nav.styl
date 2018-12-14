@@ -86,20 +86,18 @@ sub-icon-size = .75em
     border-right 2px solid nav-hover-color
     border-bottom 2px solid nav-hover-color
 
-/* media */
-@media all and (min-width 1000px)
-  .header-nav.menu-nav
-    display block
-
-  .sidebar-menu.menu-nav
+/* header menu */
+.header-menu
+  &.menu-nav
     display none
-
   .menu-list
     display flex
     flex-flow row nowrap
 
   .menu-group
     position relative
+    &:hover .menu-sub-list
+      max-height 1000px
 
   .menu-list > .menu-item
   .menu-group > .menu-item
@@ -115,12 +113,17 @@ sub-icon-size = .75em
 
   .menu-link
     width initial
-  
-  .sub-menu-icon
-    width 30px
 
   .menu-sub-list
     background nav-background-color
     padding-right 10px
     position absolute
     right 0
+
+/* media */
+@media all and (min-width 1000px)
+  .header-menu.menu-nav
+    display block
+
+  .sidebar-menu.menu-nav
+    display none

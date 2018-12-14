@@ -4,7 +4,7 @@
         <router-link to="/">{{$site.title}}</router-link>
       </h1>
     <button class="menu-icon" @click="toggle()" :class="{'sidebar-open': sidebarOpen}">Toggle Menu</button>
-    <navigation-menu class="header-nav"/>
+    <navigation-menu :type="'header'"/>
   </header>
   
 </template>
