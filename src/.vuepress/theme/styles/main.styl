@@ -23,14 +23,13 @@ content-code-font = mono-font
 
 .main
   flex 1
-  max-width 100%
-  width 800px
+  max-width 1350px
+  width 100%
 
 /* content */
 .content
   font-size 1rem
   padding 5px 15px
-  max-width 800px
   width 100%
 
   h1
@@ -59,7 +58,6 @@ content-code-font = mono-font
 
   p
     margin 0 0 5px 10px;
-
     code
       display inline-block
       padding 0 3px
@@ -94,6 +92,7 @@ content-code-font = mono-font
   ol
   ul
     margin 0 0 10px 0
+    padding 0 0 0 25px
 
   table
     border-collapse collapse
@@ -114,9 +113,28 @@ content-code-font = mono-font
     vertical-align top
 
 /* media */
+@media all and (min-width 600px)
+  .main
+    width 90%
+/*
+  .content
+    font-size 1rem*/
+
+@media all and (min-width 800px)
+  .main
+    width 80%
+  /*
+  .content
+    font-size 1.1rem*/
+
 @media all and (min-width 1000px)
   .main-wrapper
     margin-left sidebar-static-width
-
-  &.no-sidebar
-    margin-left 0
+    &.no-sidebar
+      margin-left 0
+  
+  .main
+    width 70%
+  /*
+  .content
+    font-size 1.2rem*/
