@@ -38,9 +38,8 @@ module.exports = {
             base: 'javascript',
             children: [
               'vanilla',
-              'node',
-              'react',
-              'vue'
+              'frameworks',
+              'node'
             ]
           },
           {
