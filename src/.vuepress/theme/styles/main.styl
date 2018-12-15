@@ -19,16 +19,17 @@ content-code-font = mono-font
   flex-flow column nowrap
   min-height 'calc(100vh - %s)' % header-height
   position relative
-  transition all .25s ease-in-out
 
 .main
   flex 1
   max-width 1350px
+  transition all .25s ease-in-out
   width 100%
 
 /* content */
 .content
   font-size 1rem
+  margin auto
   padding 5px 15px
   width 100%
 
@@ -114,27 +115,21 @@ content-code-font = mono-font
 
 /* media */
 @media all and (min-width 600px)
-  .main
-    width 90%
-/*
   .content
-    font-size 1rem*/
+    width 90%
 
 @media all and (min-width 800px)
-  .main
-    width 80%
-  /*
   .content
-    font-size 1.1rem*/
+    width 80%
 
-@media all and (min-width 1000px)
-  .main-wrapper
+@media all and (min-width 1000px)  
+  .main
+    width 'calc(100% - %s)' % sidebar-static-width
     margin-left sidebar-static-width
-    &.no-sidebar
+  
+  .no-sidebar
+    .main
       margin-left 0
   
-  .main
-    width 70%
-  /*
   .content
-    font-size 1.2rem*/
+    width 90%
