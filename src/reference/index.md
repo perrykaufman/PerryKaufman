@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to my reference material. I use this portion of my site mostly to store information/resources about various languages/tools so I can reference them later.
+Welcome to my reference material. I use this portion of my site mostly to store cheatsheets and resources for the various languages and tools I have learned how to use.
 
 ## Resources
 * [MDN Web Docs](https://developer.mozilla.org/en-US/): In depth guides and documentation.
