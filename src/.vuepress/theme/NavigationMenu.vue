@@ -2,7 +2,7 @@
   <nav :class="classes">
     <ul class="menu-list">
       <template v-for="item in menu">
-        <navigation-group v-if="item.children" :group="item" :sidebar="isSidebar"/>
+        <navigation-group v-if="item.children" :group="item" :sidebar="isSidebar" :type="type"/>
         <navigation-item v-else :item="item"/>
       </template>
     </ul>
