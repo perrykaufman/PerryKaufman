@@ -1,7 +1,5 @@
 # Node.js
 
-(Work in progress)
-
 ## Guides
 * [Eloquent JavaScript](https://eloquentjavascript.net/20_node.html)
 
