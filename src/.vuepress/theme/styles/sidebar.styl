@@ -1,12 +1,13 @@
 @import 'palette'
 
 /* block colors */
-sidebar-background-color = light-green-background
-sidebar-shadow-color = gray-background
+sidebar-background-color = primary-color-lightest
+sidebar-shadow-color = gray-color
 
 /* font colors */
-sidebar-symbol-color = dark-green-font
-sidebar-hover-color = lighter-green-font
+sidebar-heading-color = secondary-color-darkest
+sidebar-symbol-color = secondary-color-darker
+sidebar-hover-color = secondary-color-dark
 
 sidebar-shadow(shadow)
   if shadow
@@ -42,10 +43,12 @@ sidebar-shadow(shadow)
 
 /* sidebar nav */
 .sidebar-header
+  color sidebar-heading-color
   font-size 1.2em
   margin 0
 
 .sidebar-group-header
+  color sidebar-heading-color
   font-size 1em
   margin 0
 

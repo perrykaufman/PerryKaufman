@@ -1,13 +1,16 @@
 @import 'palette'
 
 /* block colors */
-content-code-color = gray-background
-content-table-color1 = light-gray-background
-content-table-color2 = gray-background
+content-code-color = gray-color
+content-table-color-1 = gray-color-light
+content-table-color-2 = gray-color
 
 /* font colors */
-content-color = light-green-font
-content-dark-color = green-font
+content-anchor-color = secondary-color-dark
+content-anchor-color-hover = secondary-color-darker
+content-heading-color-1 = black-color
+content-heading-color-2 = primary-color-darker
+content-heading-color-3 = primary-color-darkest
 
 /* fonts */
 content-code-font = mono-font
@@ -34,14 +37,18 @@ content-code-font = mono-font
   width 100%
 
   h1
-    font-size 2em
-    margin 0 0 10px 0
+    color content-heading-color-1
+    font-size 2.2em
+    margin 0 0 20px 0
 
   h2
+    border-bottom 1px solid gray-color
+    color content-heading-color-2
     font-size 1.6em
     margin 0 0 5px 0
 
   h3
+    color content-heading-color-3
     font-size 1.2em
     margin 0 0 2px 0
 
@@ -65,9 +72,9 @@ content-code-font = mono-font
       vertical-align bottom
 
   a
-    color content-color
+    color content-anchor-color
     &:hover
-      color content-dark-color
+      color content-anchor-color-hover
       text-decoration none
 
   b
@@ -99,14 +106,14 @@ content-code-font = mono-font
     border-collapse collapse
 
   th
-    background-color white-background
+    background-color white-color
     font-size 1.2em
     text-align left
 
   tr
-    background-color content-table-color1
+    background-color content-table-color-1
     &:nth-of-type(even)
-      background-color content-table-color2
+      background-color content-table-color-2
 
   td
   th

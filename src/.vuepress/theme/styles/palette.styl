@@ -5,20 +5,29 @@
 sans-font = 'Source Sans Pro'
 mono-font = 'Space Mono'
 
-/* block colors */
-white-background = rgb(251, 252, 252)
-gray-background = rgba(0,0,0,0.10)
-light-gray-background = rgba(0,0,0,0.02)
-green-background = rgb(31, 223, 185 )
-light-green-background = rgb(230, 255, 247)
+/* basic colors */
+black-color = rgb(26, 26, 26)
+gray-color = rgba(0,0,0,0.10)
+gray-color-light = rgba(0,0,0,0.02)
+white-color = rgb(251, 252, 252)
 
-/* font colors */
-black-font = rgb(26, 26, 26)
-lighter-green-font = rgb(19, 141, 117)
-light-green-font = rgb(19, 141, 117)
-green-font = rgb(14, 106, 88)
-dark-green-font = rgb(7, 53, 44)
-darker-green-font = rgb(2, 18, 15)
+/* primary colors */
+primary-color = rgb(31, 223, 185)
+primary-color-light = lighten(primary-color, 33%)
+primary-color-lighter = lighten(primary-color-light, 33%)
+primary-color-lightest = lighten(primary-color-lighter, 33%)
+primary-color-dark = darken(primary-color, 33%)
+primary-color-darker = darken(primary-color-dark, 33%)
+primary-color-darkest = darken(primary-color-darker, 33%)
+
+/* secondary colors */
+secondary-color = primary-color + 120deg
+secondary-color-light = lighten(secondary-color, 33%)
+secondary-color-lighter = lighten(secondary-color-light, 33%)
+secondary-color-lightest = lighten(secondary-color-lighter, 33%)
+secondary-color-dark = darken(secondary-color, 33%)
+secondary-color-darker = darken(secondary-color-dark, 33%)
+secondary-color-darkest = darken(secondary-color-darker, 33%)
 
 /* sizes */
 header-height = 3rem
