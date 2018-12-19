@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   title: 'Perry Kaufman',
   description: 'my personal website',
@@ -5,6 +7,14 @@ module.exports = {
     anchor: {
       permalink: false,
       permalinkBefore: false
+    }
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        'projects': path.resolve(__dirname, '../projects'),
+        'styles': path.resolve(__dirname, './theme/styles')
+      }
     }
   },
   themeConfig: {
