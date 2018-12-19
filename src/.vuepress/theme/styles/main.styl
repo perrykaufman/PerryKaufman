@@ -65,7 +65,7 @@ content-code-font = mono-font
     margin 0
 
   p
-    margin 0 0 5px 10px;
+    margin 0 0 5px 0;
     code
       display inline-block
       padding 0 3px
@@ -121,15 +121,7 @@ content-code-font = mono-font
     vertical-align top
 
 /* media */
-@media all and (min-width 600px)
-  .content
-    width 90%
-
-@media all and (min-width 800px)
-  .content
-    width 80%
-
-@media all and (min-width 1000px)  
+@media all and (min-width 1200px)  
   .main
     width 'calc(100% - %s)' % sidebar-static-width
     margin-left sidebar-static-width
@@ -137,6 +129,3 @@ content-code-font = mono-font
   .no-sidebar
     .main
       margin-left 0
-  
-  .content
-    width 90%
