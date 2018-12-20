@@ -6,3 +6,4 @@ Welcome to my reference material. I use this portion of my site mostly to store 
 * [MDN Web Docs](https://developer.mozilla.org/en-US/): In depth guides and documentation.
 * [W3 Schools](https://www.w3schools.com/): Basic introductory guides for web developement. Also has helpful examples and reference material.
 * [Alligator.io](https://alligator.io/): Front-end Web development blog.
+* [Optimizilla](http://optimizilla.com/): A basic and free image compression tool.
