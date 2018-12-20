@@ -2,7 +2,7 @@
   <article class="project-card">
     <a class="card-image" :href="url" target="_blank">
       <picture >
-        <img v-if="image" :src="require('projects/images/' + image + '.png')" alt="project-preview-image" />
+        <img v-if="image" :src="require('projects/images/' + image + '.png')" :alt="title.toLowerCase() + ' preview image'" />
       </picture>
     </a>
     <header class="card-header">
