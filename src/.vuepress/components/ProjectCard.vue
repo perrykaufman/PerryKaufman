@@ -1,12 +1,14 @@
 <template>
   <article class="project-card">
-    <a class="card-image" :href="url">
+    <a class="card-image" :href="url" target="_blank">
       <picture >
         <img v-if="image" :src="require('projects/images/' + image + '.png')" alt="project-preview-image" />
       </picture>
     </a>
     <header class="card-header">
-      <h1 class="card-heading"><a :href="url">{{title}}</a></h1>
+      <a class="card-heading" :href="url" target="_blank">
+        <h1 >{{title}}</h1>
+      </a>
       <span v-if="keywords && keywords.length > 0" class="card-keywords">{{keywords.join(', ')}}</span>
     </header>
     <p class="card-content">
@@ -54,6 +56,7 @@ export default {
 
   .project-card
     background gray-color
+    box-shadow 3px 3px 5px gray-color-dark
     border-radius 5px
     display grid
     font-size 1em
@@ -74,18 +77,22 @@ export default {
       min-width 0
 
     .card-heading
-      overflow hidden
-      text-overflow ellipsis
-      white-space nowrap
-      font-size 1.2em
-      margin 0
-      a
+      display block
+      text-decoration none
+      h1
         color primary-color-dark
-        &:hover
-          color primary-color-darker
+        font-size 1.2em
+        margin 0
+        overflow hidden
+        text-decoration underline
+        text-overflow ellipsis
+        white-space nowrap
+      &:hover h1
+        color primary-color-darker
+        text-decoration none
 
     .card-keywords
-      color secondary-color-darker
+      color secondary-color-dark
       font-size .8em
       font-style italic
     

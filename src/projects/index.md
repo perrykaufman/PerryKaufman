@@ -8,7 +8,7 @@ Below are some of the projects I have worked on with links to either github repo
     :url="'https://github.com/perrykaufman/PerryKaufman'"
     :image="'personalwebsite'"
     :keywords="['vue.js', 'stylus', 'grid', 'webpack']"
-    :description="'I created my website using a static site generator called Vuepress! Each page is made up of Vue components from the custom theme I created.'" />
+    :description="'I created this website using a static site generator called Vuepress! Each page is made up of Vue components from the custom theme I created.'" />
 
   <ProjectCard
     :title="'Clean Slate Theme'"
