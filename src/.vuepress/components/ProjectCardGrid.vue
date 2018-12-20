@@ -1,5 +1,5 @@
 <template>
-  <div class="project-card-wrapper">
+  <div class="project-card-grid">
     <form class="project-card-filter" @submit.prevent>
       <input v-model.trim="input" type="text" placeholder="search projects"/>
     </form>
@@ -103,7 +103,7 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/palette.styl'
 
-  .project-card-wrapper
+  .project-card-grid
     display grid
     font-size 1em
     gap 10px
@@ -128,21 +128,21 @@ export default {
 
 
   @media all and (min-width 450px)
-    .project-card-wrapper
+    .project-card-grid
       grid-template-columns 1fr 1fr
     
     .project-card-filter
       grid-column span 2
 
   @media all and (min-width 950px)
-    .project-card-wrapper
+    .project-card-grid
       grid-template-columns 1fr 1fr 1fr
     
     .project-card-filter
       grid-column span 3
 
   @media all and (min-width 1350px)
-    .project-card-wrapper
+    .project-card-grid
       grid-template-columns 1fr 1fr 1fr 1fr
 
     .project-card-filter
