@@ -56,12 +56,12 @@ export default {
 
   .project-card
     background gray-color
-    box-shadow 3px 3px 5px gray-color-dark
     border-radius 5px
+    box-shadow 3px 3px 5px gray-color-darker
     display grid
     font-size 1em
     grid auto-flow max-content / 1fr
-    gap card-padding
+    grid-gap card-padding * .5
     margin 0
     padding card-padding
     width 100%
@@ -84,6 +84,7 @@ export default {
         font-size 1.2em
         margin 0
         overflow hidden
+        text-align center
         text-decoration underline
         text-overflow ellipsis
         white-space nowrap
@@ -93,8 +94,10 @@ export default {
 
     .card-keywords
       color secondary-color-dark
+      display block
       font-size .8em
       font-style italic
+      text-align center
     
     .card-content
       align-self start

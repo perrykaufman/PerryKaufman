@@ -1,7 +1,7 @@
 <template>
   <div class="project-card-grid">
     <form class="project-card-filter" @submit.prevent>
-      <input v-model.trim="input" type="text" placeholder="search projects"/>
+      <input v-model.trim="input" type="text" placeholder="filter projects"/>
     </form>
     <ProjectCard v-for="card in displayedCards"
       :key="card.key"
