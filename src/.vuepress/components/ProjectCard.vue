@@ -1,11 +1,12 @@
 <template>
   <article class="project-card">
-    <picture class="card-image">
-      <img v-if="image" :src="require('projects/images/' + image + '.png')" alt="project-preview-image" />
-    </picture>
-    
+    <a class="card-image" :href="url">
+      <picture >
+        <img v-if="image" :src="require('projects/images/' + image + '.png')" alt="project-preview-image" />
+      </picture>
+    </a>
     <header class="card-header">
-      <h1 class="card-heading">{{title}}</h1>
+      <h1 class="card-heading"><a :href="url">{{title}}</a></h1>
       <span v-if="keywords && keywords.length > 0" class="card-keywords">{{keywords.join(', ')}}</span>
     </header>
     <p class="card-content">
@@ -18,6 +19,10 @@
 export default {
   props: {
     title: {
+      required: true,
+      type: String
+    },
+    url: {
       required: true,
       type: String
     },
@@ -52,7 +57,7 @@ export default {
     border-radius 5px
     display grid
     font-size 1em
-    grid "top" min-content "middle" min-content "bottom" 1fr / 1fr
+    grid auto-flow max-content / 1fr
     gap card-padding
     margin 0
     padding card-padding
@@ -60,23 +65,32 @@ export default {
   
     .card-image
       align-self start
-      grid-area top
+      display block
+      img
+        margin 0
 
     .card-header
       align-self center
-      grid-area middle
+      min-width 0
 
     .card-heading
-      font-size 1.5em
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+      font-size 1.2em
       margin 0
+      a
+        color primary-color-dark
+        &:hover
+          color primary-color-darker
 
     .card-keywords
+      color secondary-color-darker
       font-size .8em
       font-style italic
     
     .card-content
       align-self start
       font-size .8em
-      grid-area bottom
       margin 0
 </style>

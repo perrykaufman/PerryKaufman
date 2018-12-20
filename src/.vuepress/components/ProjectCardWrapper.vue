@@ -15,6 +15,7 @@ export default {
     display grid
     gap 10px
     grid auto-flow max-content / 1fr
+    margin-top 20px
 
   @media all and (min-width 450px)
     .project-card-wrapper
