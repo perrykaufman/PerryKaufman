@@ -19,7 +19,7 @@ sidebar-shadow(shadow)
 .sidebar
   background sidebar-background-color
   font-size 1.3rem
-  height 100% - header-height
+  height 'calc(100% - %s)' % header-height
   left -1 * sidebar-width
   overflow-y auto
   position fixed
