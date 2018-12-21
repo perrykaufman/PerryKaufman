@@ -32,16 +32,16 @@ const cards = [
     title: 'Personal Website',
     url: 'https://github.com/perrykaufman/PerryKaufman',
     image: 'personalwebsite',
-    keywords: ['vue.js', 'stylus', 'grid', 'webpack'],
-    description: 'I created this website using a static site generator called Vuepress! Each page is made up of Vue components from the custom theme I created.'
+    keywords: ['vue.js', 'stylus', 'webpack'],
+    description: 'This website uses a Vue.js powered static site generator called Vuepress. I created a custom theme using Stylus and Vue components.'
   },
   {
     key: 1,
     title: 'Clean Slate Theme',
     url: 'https://github.com/perrykaufman/cleanslate',
     image: 'cleanslate',
-    keywords: ['wordpress', 'php', 'flexbox', 'javascript'],
-    description: 'A responsive Wordpress theme created for the Clean Slate program of YWCA McLean County. Supports the WooCommerce plugin to allow for ecommerce.'
+    keywords: ['wordpress', 'php', 'css', 'javascript'],
+    description: 'A responsive Wordpress theme developed for the Clean Slate program of YWCA McLean County. Includes support for the WooCommerce plugin to allow for ecommerce.'
   },
   {
     key: 2,
@@ -49,7 +49,7 @@ const cards = [
     url: 'https://jsfiddle.net/pdkaufm/d0jrsfvt/',
     image: 'reactlist',
     keywords: ['react.js', 'sass'],
-    description: 'A list application made with React.js and SCSS. My first project using React.'
+    description: 'A basic list application made with React.js and SASS. My first project using React.'
   },
   {
     key: 3,
@@ -57,7 +57,7 @@ const cards = [
     url: 'https://jsfiddle.net/pdkaufm/5ocmvktr/',
     image: 'draganddrop',
     keywords: ['javascript', 'sass'],
-    description: 'A list application that allows items to be added, removed, and reordered. If the list is long enough to create a scroll bar, the page can be pulled by dragging an item to the top or bottom of the page.'
+    description: 'A list application that allows items to be reordered by clicking and dragging. If the list overflows the page, it can be scrolled by dragging an item to the top or bottom of the page.'
   },
   {
     key: 4,
@@ -65,22 +65,22 @@ const cards = [
     url: 'https://jsfiddle.net/pdkaufm/v5kaps0c/',
     image: 'gw2apcalc',
     keywords: ['javascript', 'css', 'rest'],
-    description: 'Uses account data from the Guild Wars 2 API to calculate the total achievement points (AP) earned by an account.'
+    description: 'Uses account data from the Guild Wars 2 REST API to calculate the total achievement points (AP) earned by an account.'
   },
   {
     key: 5,
     title: 'Chat UI',
     url: 'https://jsfiddle.net/pdkaufm/gjy2jdfk/',
     image: 'chatui',
-    keywords: ['javascript', 'flexbox'],
-    description: 'A simple chat application with a \'chatbot\' that repeats whatever the user says. The chatbot could easily be substituted with code receiving/sending responses to a server.'
+    keywords: ['javascript', 'css'],
+    description: 'A simple chat application with a \'chatbot\' that repeats whatever you enter. The chatbot could easily be substituted with code receiving/sending responses to a server.'
   },
   {
     key: 6,
     title: 'Tic-Tac-Toe',
     url: 'https://jsfiddle.net/pdkaufm/kyzwm637/',
     image: 'tictactoe',
-    keywords: ['javascript', 'grid', 'html5'],
+    keywords: ['javascript', 'css', 'html5'],
     description: 'A two player Tic-Tac-Toe game using the HTML5 drag/drop API, and a custom event mixin.'
   },
   {
@@ -89,7 +89,7 @@ const cards = [
     url: 'https://github.com/perrykaufman/GW2Profile',
     image: 'gw2profile',
     keywords: ['vue.js', 'webpack', 'firebase', 'rest'],
-    description: 'An application that allows a user to create a profile showcasing their Guild Wars 2 account. This was a project I completed to learn how to create a Single Page App with Vue.'
+    description: 'A single page application that allows a user to create a profile showcasing their Guild Wars 2 account. This was my first application using Vue.'
   }
 ]
 
