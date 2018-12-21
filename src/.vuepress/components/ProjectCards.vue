@@ -1,20 +1,31 @@
 <template>
   <div class="project-card-grid">
+
     <form class="project-card-filter" @submit.prevent>
       <input v-model.trim="input" type="text" placeholder="filter projects"/>
     </form>
-    <ProjectCard v-for="card in displayedCards"
-      :key="card.key"
-      :title="card.title"
-      :url="card.url"
-      :image="card.image"
-      :keywords="card.keywords"
-      :description="card.description"
-      />
+
+    <article v-for="card in displayedCards" class="project-card">
+      <a class="card-image" :href="card.url" target="_blank">
+        <picture >
+          <img v-if="card.image" :src="require('projects/images/' + card.image + '.png')" :alt="card.title.toLowerCase() + ' preview image'" />
+        </picture>
+      </a>
+      <header class="card-header">
+        <a class="card-heading" :href="card.url" target="_blank">
+          <h1 >{{card.title}}</h1>
+        </a>
+        <span v-if="card.keywords && card.keywords.length > 0" class="card-keywords">{{card.keywords.join(', ')}}</span>
+      </header>
+      <p class="card-content">{{card.description}}</p>
+    </article>
+
   </div>
 </template>
 
 <script>
+
+/* Card Config */
 const cards = [
   {
     key: 0,
@@ -62,7 +73,7 @@ const cards = [
     url: 'https://jsfiddle.net/pdkaufm/gjy2jdfk/',
     image: 'chatui',
     keywords: ['javascript', 'flexbox'],
-    description: 'A simple chat application with a \'chatbot\' that repeats whatever the user says. The chatbot could easily be substituted with code receiving/sending responses to a server'
+    description: 'A simple chat application with a \'chatbot\' that repeats whatever the user says. The chatbot could easily be substituted with code receiving/sending responses to a server.'
   },
   {
     key: 6,
@@ -78,10 +89,11 @@ const cards = [
     url: 'https://github.com/perrykaufman/GW2Profile',
     image: 'gw2profile',
     keywords: ['vue.js', 'webpack', 'firebase', 'rest'],
-    description: 'An application that allows a user to create a profile showcasing their Guild Wars 2 account. This was a project I completed to learn how to create a Single Page App with Vue'
+    description: 'An application that allows a user to create a profile showcasing their Guild Wars 2 account. This was a project I completed to learn how to create a Single Page App with Vue.'
   }
 ]
 
+/* Component */
 export default {
   data() {
     return {
@@ -91,9 +103,11 @@ export default {
   },
   computed: {
     displayedCards() {
+      const input = this.input.toLowerCase()
       return this.cards.filter(card => {
-        const input = this.input.toLowerCase()
-        return card.keywords.some(word => word.toLowerCase().includes(input)) || card.title.toLowerCase().includes(input)
+        return card.keywords.some(word => word.toLowerCase().includes(input))
+          || card.title.toLowerCase().includes(input)
+          || card.description.toLowerCase().includes(input)
       })
     }
   }
@@ -103,6 +117,10 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/palette.styl'
 
+  /* sizes */
+  card-padding = 10px
+
+  /* project card grid */
   .project-card-grid
     display grid
     font-size 1em
@@ -126,7 +144,58 @@ export default {
       &:focus
         border-color primary-color-dark
 
+  /* project card */
+  .project-card
+    background gray-color
+    border-radius 5px
+    box-shadow 3px 3px 5px gray-color-darker
+    display grid
+    font-size 1em
+    grid auto-flow max-content / 1fr
+    grid-gap card-padding * .5
+    margin 0
+    padding card-padding
+    width 100%
+  
+    .card-image
+      align-self start
+      display block
+      img
+        margin 0
 
+    .card-header
+      align-self center
+      min-width 0
+
+    .card-heading
+      display block
+      text-decoration none
+      h1
+        color primary-color-dark
+        font-size 1.2em
+        margin 0
+        overflow hidden
+        text-align center
+        text-decoration underline
+        text-overflow ellipsis
+        white-space nowrap
+      &:hover h1
+        color primary-color-darker
+        text-decoration none
+
+    .card-keywords
+      color secondary-color-dark
+      display block
+      font-size .8em
+      font-style italic
+      text-align center
+    
+    .card-content
+      align-self start
+      font-size .8em
+      margin 0
+
+  /* media */
   @media all and (min-width 450px)
     .project-card-grid
       grid-template-columns 1fr 1fr
