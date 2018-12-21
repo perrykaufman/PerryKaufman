@@ -4,13 +4,7 @@ My name is **Perry Kaufman** and I created this website to showcase some of my p
 
 ## About Me
 
-I graduated from Illinois State University in the Summer of 2018 and am currently seeking full time employment. I am primarily interested in front-end developement with JavaScript, however I am also considering other developement roles using other languages such as Java and C#.
-
-### Hobbies and Interests
-
-I enjoy reading both fiction and nonfiction, however I prefer to listen to audiobooks and podcasts as I can listen while busy with work or chores. My favorite genre of fiction is science fiction, particuarly by authors who strive for scientific accuracy in their work. For nonfiction, I enjoy books, podcasts, and articles about history, current events, poliics, and science.
-
-I also like to stay active and enjoy running, hiking, and seeing new places.
+I graduated from Illinois State University in the summer of 2018 and am currently seeking full-time employment. I am primarily interested in front-end developement with JavaScript, however I am also open to developement roles with other languages such as Java and C#.
 
 ### Education
 #### Illinois State University
@@ -36,35 +30,13 @@ _January 2017 - May 2018_
 * Graded assignments for Dr. Kyoungwon Suh’s computer architecture course
 
 ### Technology and Tools
-#### Proficient
-* Java
-* JavaScript (ES6)
-* HTML
-* CSS
-* JSON
-* Markdown
-
-#### Intermediate
-* Vue.js
-* jQuery
-* SQL
-* XML
-* SASS
-* Firebase
-* REST
-* J2EE
-* Jasmine
-* JUnit
-* Webpack
-* npm
-* Regular Expressions
-
-#### Novice
-* React.js
-* C/C++
-* Node.js
-* C#/.NET
-* PHP
+* **Languages:** JavaScript, Java, C#, PHP
+* **Frameworks/Libraries:** Vue.js, React.js, Node.js, jQuery, .NET
+* **Database:** SQL, Firebase
+* **Styling:** CSS, SASS, Stylus
+* **Testing:** Browser Dev Tools, Jasmine, JUnit
+* **Tools:**  Git, NPM, Webpack, Regex
+* **Other:** HTTP, REST, JSON, XML
 
 ### Knowledge and Skills
 * Object-Oriented design principles
