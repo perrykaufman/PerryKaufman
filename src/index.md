@@ -4,7 +4,7 @@ My name is **Perry Kaufman** and I created this website to showcase some of my p
 
 ## About Me
 
-I graduated from Illinois State University in the summer of 2018 and am currently seeking full-time employment. I am primarily interested in front-end developement with JavaScript, however I am also open to developement roles with other languages such as Java and C#.
+I graduated from Illinois State University in the summer of 2018 and am currently seeking full-time employment. I am primarily interested in front-end development with JavaScript, however I am also open to development roles with other languages such as Java and C#.
 
 ### Education
 #### Illinois State University
@@ -46,4 +46,4 @@ _January 2017 - May 2018_
 * Strong written and verbal communication
 
 ### Projects and Experience
-Samples of my work can be found on the [Projects](/projects/) page. Most of my programming experience at Illinois State and Heartland was with Java, however I have also completed assignments with C, C++, PHP, and JavaScript. Java was used in most of the core computer science courses and web developement courses I took at ISU. I have also spent a lot of time outside class focusing on gaining experience with front-end web developement, particuarly with JavaScript, which is my favorite programming language.
+Samples of my work can be found on the [Projects](/projects/) page. Most of my programming experience at Illinois State and Heartland was with Java, however I have also completed assignments with C, C++, PHP, and JavaScript. Java was used in most of the core computer science courses and web development courses I took at ISU. I have also spent a lot of time outside class focusing on gaining experience with front-end web development, particuarly with JavaScript, which is my favorite programming language.
