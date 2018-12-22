@@ -31,7 +31,7 @@ module.exports = {
         path: 'projects/'
       }
     ],
-    footer: 'Created by Perry Kaufman with Vuepress. 2018.',
+    footer: 'Created by Perry Kaufman with Vuepress. 2018',
     sidebar: {
       'reference/': {
         title: 'Reference',
