@@ -9,7 +9,7 @@ export const DEFAULT = '*';
 export function isGroupArray(config) {
   if (!config || !(config instanceof Array)) return false;
   return config.every((cur) => {
-    return cur instanceof Object;
+    return cur instanceof Object && cur.children;
   });
 }
 
@@ -49,18 +49,17 @@ export function isPathArray(config) {
  */
 export function processPathArray(config, pages, root, base) {
   const sidebar = [];
-  config.forEach((configPath) => {
-    let path = configPath;
+  config.forEach((item) => {
+    let path = (item.path || item.path === '') ? item.path : item; 
     if (root || base) path = util.resolvePath(root, base, path);
-    
+
     const page = util.getPage(path, pages);
-    
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
 
-    sidebar.push({
-      title: page.title,
-      link: page.path
-    });
+    const title = item.title ? item.title : page.title;
+    const link = page.path;
+    
+    sidebar.push({title, link});
   });
 
   return sidebar;

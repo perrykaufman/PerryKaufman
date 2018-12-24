@@ -38,26 +38,26 @@ module.exports = {
         items: [{
             title: '',
             children: [
-              '',
-              'html',
-              'css'
+              {title: 'Introduction', path: ''},
+              {title: 'HTML', path: 'html'},
+              {title: 'CSS', path: 'css'}
             ]
           },
           {
             title: 'JavaScript',
             base: 'javascript',
             children: [
-              'vanilla',
-              'frameworks',
-              'node'
+              {title: 'Vanilla', path: 'vanilla'},
+              {title: 'Frameworks', path: 'frameworks'},
+              {title: 'Node.js', path: 'node'}
             ]
           },
           {
             title: 'Tools',
             base: 'tools',
             children: [
-              'git',
-              'regex'
+              {title: 'Git', path: 'git'},
+              {title: 'Regex', path: 'regex'}
             ]
           }
         ]

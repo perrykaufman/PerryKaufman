@@ -3,7 +3,7 @@
 A sidebar config is _null_ if there is no sidebar. Otherwise, a **sidebar object** or a **sidebar paths object** can be specified.
 
 ```
-<sidebar-config> = null || <sidebar> || <sidebar-paths>
+<sidebar-config> = null | <sidebar> | <sidebar-paths>
 ```
 
 ## Sidebar Paths Object
@@ -25,26 +25,28 @@ A **sidebar object** specifies the title, optional base, and **sidebar items**. 
 
 ```
 <sidebar> = {
-    title: <string>,
+    title: <string> (optional),
     base: <string> (optional),
-    items: [<path>, ...] || [<group>, ...]
+    items: [<sidebar-item>, ...] | [<group>, ...]
   }
 ```
 
-## Sidebar Items
+## Sidebar Contents
 
-The **sidebar items** can either be an array of **groups**, or an array of **paths**. A group specifies a set of pages to be displayed together with a title.
+A **sidebar** can either be an array of **groups** with sub-items, or an array of **sidebar items**. A group specifies a set of pages to be listed together with a title.
 
-A **group** can have an optional base to specify a shared directory for the pages in the group. The children property specifies **path array** for the group.
+A **group** can have an optional base to specify a shared directory for the pages in the group. The children property specifies **sidebar item array** for the group.
 
-A **path array** contains the relative paths of all the pages in the group (e.g. "/path/to/page" or "page").
+A **sidebar item array** contains the title and relative paths of all the pages in the group (e.g. "/path/to/page" or "page").
 
 ```
 <group> = {
     title: <string>,
     base: <string> (optional),
-    children: [<path>, ...]
+    children: [<sidebar-item>, ...]
   }
+
+<sidebar-item> = {title: <string>, path: <string>} | <path>
 
 <path> = <string>
 ```
