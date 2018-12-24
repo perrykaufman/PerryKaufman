@@ -8,3 +8,4 @@ Welcome to my reference material. I use this portion of my site mostly to store 
 * [Alligator.io](https://alligator.io/): Front-end Web development blog.
 * [Front-End Checklist](https://frontendchecklist.io/): A useful checklist for preparing a site for deployment.
 * [Optimizilla](http://optimizilla.com/): A basic and free image compression tool.
+* [Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap): An overview of the paths you can take to become a web developer.
