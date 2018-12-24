@@ -1,5 +1,5 @@
 ---
-  title: Introduction
+  title: Resources and Guides for Web Development
 ---
 
 # Introduction

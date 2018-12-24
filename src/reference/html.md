@@ -1,5 +1,5 @@
 ---
-  title: HTML
+  title: HTML Resources and Guides
 ---
 
 # HTML

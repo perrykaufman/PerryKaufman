@@ -1,5 +1,5 @@
 ---
-  title: Regex
+  title: Regular Expressions Resources and Guides
 ---
 
 # Regular Expressions

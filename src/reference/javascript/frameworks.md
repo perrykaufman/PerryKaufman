@@ -1,5 +1,5 @@
 ---
-Title: Frameworks
+  title: JavaScript Framework Resources and Guides
 ---
 
 # Frameworks

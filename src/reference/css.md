@@ -1,5 +1,5 @@
 ---
-  title: CSS
+  title: CSS Resources and Guides
 ---
 
 # CSS
