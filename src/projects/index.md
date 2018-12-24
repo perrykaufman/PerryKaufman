@@ -1,5 +1,5 @@
 ---
-  title: Projects
+  title: Projects and Example Code
 ---
 
 # Projects
