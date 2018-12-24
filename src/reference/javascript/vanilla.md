@@ -1,3 +1,7 @@
+---
+  title: Vanilla
+---
+
 # Vanilla
 
 ## Guides

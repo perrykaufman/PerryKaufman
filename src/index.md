@@ -1,3 +1,7 @@
+---
+  title: Personal Website of Perry Kaufman - Web Developer
+---
+
 # Welcome!
 
 My name is **Perry Kaufman** and I created this website to showcase some of my projects and to help organize reference material for languages and technologies I am learning. I made this website using a custom theme for [Vuepress](https://vuepress.vuejs.org/): a static site generator powered by Vue.

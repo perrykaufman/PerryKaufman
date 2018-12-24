@@ -1,3 +1,7 @@
+---
+  title: Regex
+---
+
 # Regular Expressions
 
 ## Cheatsheet

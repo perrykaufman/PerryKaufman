@@ -1,3 +1,7 @@
+---
+  title: Introduction
+---
+
 # Introduction
 
 Welcome to my reference material. I use this portion of my site mostly to store cheatsheets and resources for the various languages and tools I have learned how to use.
