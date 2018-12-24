@@ -47,7 +47,7 @@ module.exports = {
             title: 'JavaScript',
             base: 'javascript',
             children: [
-              {title: 'Vanilla', path: 'vanilla'},
+              {title: 'Vanilla', path: ''},
               {title: 'Frameworks', path: 'frameworks'},
               {title: 'Node.js', path: 'node'}
             ]
