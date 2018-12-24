@@ -50,9 +50,10 @@ export function isPathArray(config) {
 export function processPathArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((item) => {
-    let path = (item.path || item.path === '') ? item.path : item; 
-    if (root || base) path = util.resolvePath(root, base, path);
-
+    let path = (item.path || item.path === '') ? item.path : item;
+    if (path === '') path = util.resolveBase(root, base)
+    else if (root || base) path = util.resolvePath(root, base, path);
+    
     const page = util.getPage(path, pages);
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
 
