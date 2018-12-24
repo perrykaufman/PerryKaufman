@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   title: 'Perry Kaufman',
-  description: 'my personal website',
+  description: 'The personal website of Perry Kaufman, a web developer interested in front-end and back-end development with JavaScript. This website has my resume, projects, and reference material.',
   markdown: {
     anchor: {
       permalink: false,
