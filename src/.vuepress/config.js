@@ -12,8 +12,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        'projects': path.resolve(__dirname, '../projects'),
-        'styles': path.resolve(__dirname, './theme/styles')
+        'Public': path.resolve(__dirname, './public'),
+        'ThemeStyles': path.resolve(__dirname, './theme/styles')
       }
     }
   },

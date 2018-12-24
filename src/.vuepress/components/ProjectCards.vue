@@ -8,7 +8,7 @@
     <article v-for="card in displayedCards" class="project-card">
       <a class="card-image" :href="card.url" target="_blank">
         <picture >
-          <img v-if="card.image" :src="require('projects/images/' + card.image + '.png')" :alt="card.title.toLowerCase() + ' preview image'" />
+          <img v-if="card.image" :src="require('Public/images/projects/' + card.image + '.png')" :alt="card.title.toLowerCase() + ' preview image'" />
         </picture>
       </a>
       <header class="card-header">
@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '~styles/palette.styl'
+  @import '~ThemeStyles/palette.styl'
 
   /* sizes */
   card-padding = 10px
