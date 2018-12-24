@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import store from './store'
-import {processNav} from './scripts/nav.js';
+import store from '../store'
+import {processNav} from '../scripts/nav.js';
 import NavigationItem from './NavigationItem.vue';
 import NavigationGroup from './NavigationGroup.vue';
 
@@ -47,4 +47,4 @@ export default {
 }
 </script>
 
-<style src="./styles/nav.styl" />
+<style src="../styles/nav.styl" />

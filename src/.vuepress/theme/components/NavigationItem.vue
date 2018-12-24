@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import store from './store';
-import {isPage, isParentPage} from './scripts/util.js';
+import store from '../store';
+import {isPage, isParentPage} from '../scripts/util.js';
 
 export default {
   props: {

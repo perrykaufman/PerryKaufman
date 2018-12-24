@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import store from './store';
+import store from '../store';
 
 export default {
   methods: {
@@ -19,4 +19,4 @@ export default {
 }
 </script>
 
-<style src="./styles/sidebar.styl" />
+<style src="../styles/sidebar.styl" />

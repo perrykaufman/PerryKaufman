@@ -11,9 +11,9 @@
 
 <script>
 import FooterSection from './FooterSection.vue';
-import store from './store'
-import { processSidebar, findSidebar } from "./scripts/sidebar.js";
-import SidebarMask from './SidebarMask';
+import store from '../store'
+import { processSidebar, findSidebar } from "../scripts/sidebar.js";
+import SidebarMask from './SidebarMask.vue';
 import SidebarMenu from "./SidebarMenu.vue";
 
 export default {
@@ -46,5 +46,5 @@ export default {
 };
 </script>
 
-<style src="./styles/main.styl" />
+<style src="../styles/main.styl" />
 

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import store from './store';
+import store from '../store';
 import NavigationMenu from './NavigationMenu.vue';
 
 export default {
@@ -30,4 +30,4 @@ export default {
 }
 </script>
 
-<style src="./styles/header.styl" />
+<style src="../styles/header.styl" />
