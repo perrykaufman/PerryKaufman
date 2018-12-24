@@ -12,24 +12,16 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        'Public': path.resolve(__dirname, './public'),
-        'ThemeStyles': path.resolve(__dirname, './theme/styles')
+        Public: path.resolve(__dirname, './public'),
+        ThemeStyles: path.resolve(__dirname, './theme/styles')
       }
     }
   },
   themeConfig: {
-    nav: [{
-        title: 'Home',
-        path: ''
-      },
-      {
-        title: 'Reference',
-        path: 'reference/'
-      },
-      {
-        title: 'Projects',
-        path: 'projects/'
-      }
+    nav: [
+      {title: 'Home',  path: ''},
+      {title: 'Reference', path: 'reference/'},
+      {title: 'Projects', path: 'projects/'}
     ],
     footer: 'Created by Perry Kaufman with Vuepress. 2018',
     sidebar: {
