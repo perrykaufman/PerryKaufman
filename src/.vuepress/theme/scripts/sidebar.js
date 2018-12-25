@@ -24,7 +24,7 @@ export function processGroupArray(config, pages, root, base) {
     const groupBase = base ? util.resolveBase(base, group.base) : group.base;
     const groupPathArray = group.children;
 
-    const children = processPathArray(groupPathArray, pages, root, groupBase);
+    const children = processItemArray(groupPathArray, pages, root, groupBase);
     if (children.length == 0) return;
     sidebar.push({
       title,
@@ -37,27 +37,27 @@ export function processGroupArray(config, pages, root, base) {
 /*
  * Checks if every element of an array is a string.
  */
-export function isPathArray(config) {
+export function isItemArray(config) {
   if (!config || !(config instanceof Array)) return false;
   return config.every((cur) => {
-    return typeof cur == 'string';
+    return cur instanceof Object && cur.title && (cur.path || cur.path === '');
   });
 }
 
 /*
  * Generates an array of sidebar elements from a config and array of pages.
  */
-export function processPathArray(config, pages, root, base) {
+export function processItemArray(config, pages, root, base) {
   const sidebar = [];
   config.forEach((item) => {
-    let path = (item.path || item.path === '') ? item.path : item;
+    let path = item.path;
     if (path === '') path = util.resolveBase(root, base)
     else if (root || base) path = util.resolvePath(root, base, path);
     
     const page = util.getPage(path, pages);
     if (!page) throw new Error(`Error: Sidebar path '${path}' was not found.`);
 
-    const title = item.title ? item.title : page.title;
+    const title = item.title;
     const link = page.path;
     
     sidebar.push({title, link});
@@ -94,10 +94,10 @@ export function processSidebar(config, pages) {
       items: processGroupArray(config.items, pages, '/', config.base)
     };
   }
-  else if (config.items && isPathArray(config.items)) {
+  else if (config.items && isItemArray(config.items)) {
     sidebars[DEFAULT] = {
       title: config.title,
-      items: processPathArray(config.items, pages, '/', config.base)
+      items: processItemArray(config.items, pages, '/', config.base)
     }
   }
   else {
@@ -111,10 +111,10 @@ export function processSidebar(config, pages) {
           title: sidebar.title,
           items: processGroupArray(sidebar.items, pages, root, sidebar.base)
         }
-      else if (isPathArray(sidebar.items))
+      else if (isItemArray(sidebar.items))
         sidebars[root] = {
           title: sidebar.title,
-          items: processPathArray(sidebar.items, pages, root, sidebar.base)
+          items: processItemArray(sidebar.items, pages, root, sidebar.base)
         }
     })
   }

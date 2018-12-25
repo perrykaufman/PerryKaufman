@@ -35,9 +35,9 @@ A **sidebar object** specifies the title, optional base, and **sidebar items**. 
 
 A **sidebar** can either be an array of **groups** with sub-items, or an array of **sidebar items**. A group specifies a set of pages to be listed together with a title.
 
-A **group** can have an optional base to specify a shared directory for the pages in the group. The children property specifies **sidebar item array** for the group.
+A **group** can have an optional base to specify a shared directory for the pages in the group. The children property specifies an array of **sidebar items** for the group.
 
-A **sidebar item array** contains the title and relative paths of all the pages in the group (e.g. "/path/to/page" or "page").
+A **sidebar item** contains the title and path of an item in the sidebar (e.g. "/path/to/page" or "page").
 
 ```
 <group> = {
@@ -46,7 +46,5 @@ A **sidebar item array** contains the title and relative paths of all the pages 
     children: [<sidebar-item>, ...]
   }
 
-<sidebar-item> = {title: <string>, path: <string>} | <path>
-
-<path> = <string>
+<sidebar-item> = {title: <string>, path: <string>}
 ```
