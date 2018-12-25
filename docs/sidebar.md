@@ -31,7 +31,7 @@ A **sidebar object** specifies the title, optional base, and **sidebar items**. 
   }
 ```
 
-## Sidebar Contents
+## Sidebar Groups and Items
 
 A **sidebar** can either be an array of **groups** with sub-items, or an array of **sidebar items**. A group specifies a set of pages to be listed together with a title.
 
