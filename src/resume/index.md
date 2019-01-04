@@ -1,5 +1,6 @@
 ---
   title: Personal Website of Perry Kaufman - Web Developer
+  home: true
 ---
 
 # Welcome!
