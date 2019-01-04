@@ -20,6 +20,7 @@ module.exports = {
   themeConfig: {
     nav: [
       {title: 'Home',  path: ''},
+      {title: 'Resume', path: 'resume/'},
       {title: 'Reference', path: 'reference/'},
       {title: 'Projects', path: 'projects/'}
     ],
