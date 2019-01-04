@@ -3,13 +3,15 @@
     <sidebar-mask/>
     <sidebar-menu :sidebar="sidebar"/>
     <main class="main">
-      <Content/>
+      <Home v-if="$page.frontmatter.home" />
+      <Content v-else />
     </main>
     <footer-section />
   </div>
 </template>
 
 <script>
+import Home from './Home.vue'
 import FooterSection from './FooterSection.vue';
 import store from '../store'
 import { processSidebar, findSidebar } from "../scripts/sidebar.js";
@@ -18,6 +20,7 @@ import SidebarMenu from "./SidebarMenu.vue";
 
 export default {
   components: {
+    Home,
     FooterSection,
     SidebarMask,
     SidebarMenu
