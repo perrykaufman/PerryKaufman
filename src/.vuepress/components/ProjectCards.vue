@@ -8,7 +8,7 @@
     <article v-for="card in displayedCards" class="project-card">
       <a class="card-image" :href="card.url" target="_blank">
         <picture >
-          <img v-if="card.image" :src="'/images/projects/' + card.image + '.png'" :alt="card.title.toLowerCase() + ' preview image'" />
+          <img v-if="card.image" :src="'/projects/' + card.image + '.png'" :alt="card.title.toLowerCase() + ' preview image'" />
         </picture>
       </a>
       <header class="card-header">
