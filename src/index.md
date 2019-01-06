@@ -1,6 +1,20 @@
 ---
   title: Personal Website of Perry Kaufman - Web Developer
-  home: true
+  home:
+    title: Perry Kaufman
+    desc: A web developer specializing in JavaScript
+    portrait: https://via.placeholder.com/500
+    background: images/home/background.png
+    panels:
+      - title: Resume
+        desc: A summary of my experience, knowledge, and skills.
+        link: resume/
+      - title: Reference
+        desc: A collection of resources and cheatsheets for technologies I am learning.
+        link: reference/
+      - title: Projects
+        desc: A selection of projects and other samples of code I written.
+        link: projects/
 
 ---
 

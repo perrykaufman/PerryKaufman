@@ -1,17 +1,34 @@
 <template>
   <div class="home">
-    <div class="home-header">top</div>
+    <header class="home-header">
+      <picture class="home-header-portrait">
+        <img :src="frontmatter.portrait" :alt="'photo of ' + frontmatter.title.toLowerCase()">
+      </picture>
+      <div class="home-panel">
+        <h1 class="home-panel-title">{{frontmatter.title}}</h1>
+        <p class="home-panel-desc">{{frontmatter.desc}}</p>
+      </div>
+    </header>
     <Content />
-    <div class="home-footer">bottom</div>
+    <ul class="home-panels">
+      <li class="home-panel" v-for="panel in frontmatter.panels">
+        <router-link class="home-panel-link" :to="panel.link">
+          <h1 class="home-panel-title">{{panel.title}}</h1>
+          <p class="home-panel-desc">{{panel.desc}}</p>
+        </router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  
+  computed: {
+    frontmatter() {
+      return this.$page.frontmatter.home;
+    }
+  }
 }
 </script>
 
-<style lang="stylus">
-
-</style>
+<style src="../styles/home.styl" />

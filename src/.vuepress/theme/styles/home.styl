@@ -1,0 +1,78 @@
+@import palette
+
+panel-padding = 10px
+
+.home-header
+  align-items center
+  background secondary-color-lighter
+  display grid
+  gap panel-padding
+  grid auto-flow min-content / 1fr
+  justify-items center
+  padding panel-padding * 2
+  max-height 750px
+  .home-panel
+    background gray-color
+    box-shadow none
+    padding panel-padding * 2
+
+.home-header-portrait
+    img
+      border-radius 50%
+      max-width 400px
+      width 100%
+  
+.home-panel-title
+  margin 0
+
+.home-panel-desc
+  font-size 1em
+  margin 0
+
+.home-panels
+  display grid
+  gap panel-padding
+  grid auto-flow 1fr / 1fr
+  list-style none
+  padding 0 panel-padding
+
+.home-panel
+  border-radius 5px
+  box-shadow 3px 3px 3px gray-color
+
+.home-panel-link
+  background primary-color-lighter
+  display block
+  color inherit
+  height 100%
+  padding 2*panel-padding panel-padding
+  text-decoration none
+  transition .15s all ease-in-out
+  &:hover
+    background primary-color-light
+
+.home-panel-title
+  font-size 2em
+
+.home-panel-desc
+  font-size 1em
+
+@media all and (min-width 800px)
+  .home-header
+    grid auto-flow 1fr / 1fr 1fr
+    height 50vh
+    .home-panel-title
+      font-size 2.5em
+
+  .home-header-portrait
+    justify-self end
+
+  .home-panels
+    grid auto-flow 1fr / 1fr 1fr 1fr
+
+@media all and (min-width 1200px)
+  .home-panels
+    padding 0
+  
+  .home-panel-desc
+    font-size 1.2em
