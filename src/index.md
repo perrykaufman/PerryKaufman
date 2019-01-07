@@ -4,7 +4,7 @@
     title: Perry Kaufman
     desc: A web developer specializing in JavaScript
     portrait: /portrait.jpg
-    background: true
+    background: /background.jpg
     panels:
       - title: Resume
         desc: A summary of my experience, knowledge, and skills.

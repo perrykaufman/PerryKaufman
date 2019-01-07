@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <header :class="{'home-header': true, 'home-background': frontmatter.background}">
+    <header :class="{'home-header': true, 'home-background': frontmatter.background}" :style="`background-image: url('${frontmatter.background}')`">
       <picture class="home-header-portrait">
         <img :src="frontmatter.portrait" :alt="'photo of ' + frontmatter.title.toLowerCase()">
       </picture>
