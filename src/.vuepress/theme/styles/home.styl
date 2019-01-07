@@ -4,23 +4,30 @@ panel-padding = 10px
 
 .home-header
   align-items center
-  background secondary-color-lighter
+  background gray-color
   display grid
   gap panel-padding
   grid auto-flow min-content / 1fr
   justify-items center
   padding panel-padding * 2
-  max-height 750px
+  position relative
+  min-height 'calc(100vh - %s)' % header-height
+  &.home-background
+    background-attachment fixed
+    background-image url('/background.jpg')
+    background-position center top
+    background-repeat no-repeat
   .home-panel
-    background gray-color
+    background rgba(primary-color, 0.9)
     box-shadow none
     padding panel-padding * 2
 
 .home-header-portrait
-    img
-      border-radius 50%
-      max-width 400px
-      width 100%
+  img
+    border 5px solid rgba(primary-color, 0.9)
+    border-radius 50%
+    max-width 500px
+    width 100%
   
 .home-panel-title
   margin 0
@@ -60,7 +67,6 @@ panel-padding = 10px
 @media all and (min-width 800px)
   .home-header
     grid auto-flow 1fr / 1fr 1fr
-    height 50vh
     .home-panel-title
       font-size 2.5em
 
@@ -71,8 +77,16 @@ panel-padding = 10px
     grid auto-flow 1fr / 1fr 1fr 1fr
 
 @media all and (min-width 1200px)
+  .home-header
+    border-radius 0 0 5px 5px
+
   .home-panels
     padding 0
   
   .home-panel-desc
     font-size 1.2em
+
+@media all and (min-height 900px)
+  .home-header
+    min-height initial
+    height 700px

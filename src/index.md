@@ -3,8 +3,8 @@
   home:
     title: Perry Kaufman
     desc: A web developer specializing in JavaScript
-    portrait: https://via.placeholder.com/500
-    background: images/home/background.png
+    portrait: /portrait.jpg
+    background: true
     panels:
       - title: Resume
         desc: A summary of my experience, knowledge, and skills.
