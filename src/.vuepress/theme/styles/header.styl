@@ -23,17 +23,28 @@ header-hover-color = primary-color-darkest
   width 100%
   z-index 2
 
+.logo
+  height 100%
+  max-height 100%
+  padding-left 10px
+  img
+    border 2px solid header-background-color
+    border-radius 50%
+    max-height 100%
+
+.logo-link
+  display block
+  height 100%
+  text-decoration none
+  > .header-title
+    color header-symbol-color
+  &:hover > .header-title
+    color header-hover-color
+
 .header-title
   font-size 2rem
   margin 0
   padding-left 5px
-
-.header-title
-  > a
-    color header-symbol-color
-    text-decoration none
-  &:hover > a
-      color header-hover-color
 
 /* menu icon */
 .menu-icon
