@@ -90,6 +90,14 @@ const cards = [
     image: 'gw2profile',
     keywords: ['vue.js', 'webpack', 'firebase', 'rest'],
     description: 'A single page application that allows a user to create a profile showcasing their Guild Wars 2 account. This was my first application using Vue.'
+  },
+  {
+    key: 8,
+    title: 'NodePractice',
+    url: 'https://github.com/perrykaufman/NodePractice',
+    image: 'nodepractice',
+    keywords: ['node.js', 'javascript', 'rest'],
+    description: 'A couple of small projects I completed to learn the basics of Node.js.'
   }
 ]
 
