@@ -25,7 +25,7 @@ module.exports = {
       {title: 'Projects', path: 'projects/'}
     ],
     footer: 'Created by Perry Kaufman with Vuepress. 2018',
-    logo: '/logo.jpg',
+    logo: '/PK_logo.jpg',
     sidebar: {
       'reference/': {
         title: 'Reference',
