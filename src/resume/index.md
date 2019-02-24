@@ -32,17 +32,17 @@ _January 2017 - May 2018_
 * Graded assignments for Dr. Kyoungwon Suh’s computer architecture course
 
 ## Technology and Tools
-* **Languages:** JavaScript, Java, C#, PHP
-* **Frameworks/Libraries:** Vue.js, React.js, Node.js, jQuery, .NET
-* **Database:** SQL, Firebase
-* **Styling:** CSS, SASS, Stylus
-* **Testing:** Browser Dev Tools, Jasmine, JUnit
-* **Tools:**  Git, NPM, Webpack, Regex
-* **Other:** HTTP, REST, JSON, XML
+| **Skill Level:** |**Proficient**|**Familiar**|
+|--|--|--|
+| **Languages:** | JavaScript, Java, SQL | C#, PHP |
+| **Frameworks/Libraries:** | Vue.js, jQuery | React.js, Node.js, .NET, JSF |
+| **Tools/Testing:** | Git, NPM, Browser Dev Tools | Webpack, Jasmine, JUnit |
+| **Web:** | HTML, CSS, JSON, REST | SASS, Stylus, XML |
 
 ## Knowledge and Skills
 * Object-Oriented design principles
 * Common data structures and sorting algorithms
+* Relational databases
 * Agile development principles
 * Enthusiasm to learn new technologies and solve problems
 * Strong written and verbal communication
