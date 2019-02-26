@@ -17,6 +17,8 @@ panel-padding = 10px
     background-repeat no-repeat
   .home-panel
     background primary-color
+    border none
+    border-radius 5px
     box-shadow none
     padding panel-padding * 2
 
@@ -42,11 +44,11 @@ panel-padding = 10px
   padding 0 panel-padding
 
 .home-panel
-  border-radius 5px
+  border 3px solid primary-color-dark
   box-shadow 3px 3px 3px gray-color
 
 .home-panel-link
-  background primary-color-lighter
+  background primary-color-lightest
   display block
   color inherit
   height 100%
@@ -54,7 +56,7 @@ panel-padding = 10px
   text-decoration none
   transition .15s all ease-in-out
   &:hover
-    background primary-color-light
+    background primary-color-lighter
 
 .home-panel-title
   font-size 2em
@@ -75,9 +77,6 @@ panel-padding = 10px
     grid auto-flow 1fr / 1fr 1fr 1fr
 
 @media all and (min-width 1200px)
-  .home-header
-    border-radius 0 0 5px 5px
-
   .home-panels
     padding 0
   
