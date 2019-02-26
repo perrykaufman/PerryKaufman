@@ -5,20 +5,18 @@
       <input v-model.trim="input" type="text" placeholder="filter projects"/>
     </form>
 
-    <article v-for="card in displayedCards" class="project-card">
-      <a class="card-image" :href="card.url" target="_blank">
-        <picture >
-          <img v-if="card.image" :src="'/projects/' + card.image + '.png'" :alt="card.title.toLowerCase() + ' preview image'" />
-        </picture>
-      </a>
+    <a v-for="card in displayedCards" class="project-card" :href="card.url" target="_blank">
+      <picture class="card-image">
+        <img v-if="card.image" :src="'/projects/' + card.image + '.png'" :alt="card.title.toLowerCase() + ' preview image'" />
+      </picture>
       <header class="card-header">
-        <a class="card-heading" :href="card.url" target="_blank">
-          <h1 >{{card.title}}</h1>
-        </a>
+        <h1 class="card-heading">
+          {{card.title}}
+        </h1>
         <span v-if="card.keywords && card.keywords.length > 0" class="card-keywords">{{card.keywords.join(', ')}}</span>
       </header>
       <p class="card-content">{{card.description}}</p>
-    </article>
+    </a>
 
   </div>
 </template>
@@ -125,8 +123,12 @@ export default {
 <style lang="stylus" scoped>
   @import '~ThemeStyles/palette.styl'
 
+  /* colors */
+  card-border-color = primary-color-dark
+
   /* sizes */
   card-padding = 10px
+  card-border-width = 3px
 
   /* project card grid */
   .project-card-grid
@@ -154,22 +156,28 @@ export default {
 
   /* project card */
   .project-card
-    background gray-color
-    border-radius 5px
+    background primary-color-lightest
+    border card-border-width solid card-border-color
     box-shadow 3px 3px 5px gray-color-darker
+    color black-color
+    cursor pointer
     display grid
     font-size 1em
     grid auto-flow max-content / 1fr
     grid-gap card-padding * .5
     margin 0
-    padding card-padding
+    text-decoration none
+    transition .2s all ease-in-out
     width 100%
+    &:hover
+      background primary-color-lighter
+      color black-color
   
     .card-image
       align-self start
+      border-bottom card-border-width solid card-border-color
       display block
-      img
-        margin 0
+      margin 0
 
     .card-header
       align-self center
@@ -178,18 +186,13 @@ export default {
     .card-heading
       display block
       text-decoration none
-      h1
-        color primary-color-dark
-        font-size 1.2em
-        margin 0
-        overflow hidden
-        text-align center
-        text-decoration underline
-        text-overflow ellipsis
-        white-space nowrap
-      &:hover h1
-        color primary-color-darker
-        text-decoration none
+      color black-color
+      font-size 1.4em
+      margin 0
+      overflow hidden
+      text-align center
+      text-overflow ellipsis
+      white-space nowrap
 
     .card-keywords
       color secondary-color-dark
@@ -201,6 +204,7 @@ export default {
     .card-content
       align-self start
       font-size .8em
+      padding 0 card-padding card-padding card-padding
       margin 0
 
   /* media */
