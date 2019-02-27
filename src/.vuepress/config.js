@@ -16,6 +16,12 @@ module.exports = {
     anchor: {
       permalink: false,
       permalinkBefore: false
+    },
+    config(md) {
+      md.use(md => {
+        md.renderer.rules.table_open = () => '<div style="overflow: auto"><table>'
+        md.renderer.rules.table_close = () => '</table></div>'
+      })
     }
   },
   configureWebpack: {

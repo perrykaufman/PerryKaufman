@@ -11,7 +11,7 @@
   "author": "Perry Kaufman",
   "license": "ISC",
   "dependencies": {
-    "vuepress": "^0.14.8"
+    "vuepress": "^0.14.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
