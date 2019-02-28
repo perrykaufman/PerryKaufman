@@ -62,6 +62,13 @@ module.exports = {
             ]
           },
           {
+            title: '.NET',
+            base: 'dotnet',
+            children: [
+              {title: '.NET Core', path: 'dotnetcore'}
+            ]
+          },
+          {
             title: 'Tools',
             base: 'tools',
             children: [
