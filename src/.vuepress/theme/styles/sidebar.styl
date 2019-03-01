@@ -19,7 +19,8 @@ sidebar-shadow(shadow)
 /* sidebar */
 .sidebar
   background sidebar-background-color
-  border-right 3px solid sidebar-border-color
+  display flex
+  flex-flow column nowrap
   font-size 1.3rem
   height 'calc(100% - %s)' % header-height
   left -1 * sidebar-width
@@ -62,6 +63,8 @@ sidebar-shadow(shadow)
   padding-left 5px
 
 .sidebar-list-wrapper
+  border-right 3px solid sidebar-border-color
+  flex 1
   padding 10px
 
 .sidebar-link
