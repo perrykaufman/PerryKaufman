@@ -3,6 +3,7 @@
 /* block colors */
 sidebar-background-color = primary-color-lightest
 sidebar-shadow-color = gray-color
+sidebar-border-color = primary-color-dark
 
 /* font colors */
 sidebar-heading-color = primary-color-darkest
@@ -18,6 +19,7 @@ sidebar-shadow(shadow)
 /* sidebar */
 .sidebar
   background sidebar-background-color
+  border-right 3px solid sidebar-border-color
   font-size 1.3rem
   height 'calc(100% - %s)' % header-height
   left -1 * sidebar-width
