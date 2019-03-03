@@ -1,5 +1,7 @@
 call npm run build
 
+if %errorlevel% neq 0 echo "project build failed" & exit /b
+
 cd src/.vuepress/dist
 
 call git init
