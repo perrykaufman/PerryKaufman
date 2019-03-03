@@ -1,23 +1,24 @@
 <template>
-  <div class="project-card-grid">
-
+  <div class="project-cards">
     <form class="project-card-filter" @submit.prevent>
       <input v-model.trim="input" type="text" placeholder="filter projects"/>
     </form>
-
-    <a v-for="card in displayedCards" class="project-card" :href="card.url" target="_blank">
-      <picture class="card-image">
-        <img v-if="card.image" :src="'/projects/' + card.image + '.png'" :alt="card.title.toLowerCase() + ' preview image'" />
-      </picture>
-      <header class="card-header">
-        <h1 class="card-heading">
-          {{card.title}}
-        </h1>
-        <span v-if="card.keywords && card.keywords.length > 0" class="card-keywords">{{card.keywords.join(', ')}}</span>
-      </header>
-      <p class="card-content">{{card.description}}</p>
-    </a>
-
+    <ul class="project-card-grid">
+      <li v-for="card in displayedCards" class="project-card-wrapper">
+        <a class="project-card" :href="card.url" target="_blank">
+          <picture class="card-image">
+            <img v-if="card.image" :src="'/projects/' + card.image + '.png'" :alt="card.title.toLowerCase() + ' preview image'" />
+          </picture>
+          <header class="card-header">
+            <h1 class="card-heading">
+              {{card.title}}
+            </h1>
+            <span v-if="card.keywords && card.keywords.length > 0" class="card-keywords">{{card.keywords.join(', ')}}</span>
+          </header>
+          <p class="card-content">{{card.description}}</p>
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -137,12 +138,13 @@ export default {
     gap 10px
     grid auto-flow max-content / 1fr
     margin 20px 0
+    padding 0
 
   .project-card-filter
     align-items center
     display flex
-    grid-column span 1
     justify-content center
+    margin 10px 0
     input
       border 2px solid gray-color-dark
       border-radius 5px
@@ -153,8 +155,16 @@ export default {
       width 100%
       &:focus
         border-color primary-color-dark
+        outline 0
+        outline none
 
   /* project card */
+  .project-card-wrapper
+    font-size 1em
+    list-style none
+    &::before
+      content none
+  
   .project-card
     background primary-color-lightest
     border card-border-width solid card-border-color
@@ -162,9 +172,9 @@ export default {
     color black-color
     cursor pointer
     display grid
-    font-size 1em
     grid auto-flow max-content / 1fr
-    grid-gap card-padding * .5
+    gap card-padding * .5
+    height 100%
     margin 0
     text-decoration none
     transition .2s all ease-in-out
@@ -172,7 +182,7 @@ export default {
     &:hover
       background primary-color-lighter
       color black-color
-  
+
     .card-image
       align-self start
       border-bottom card-border-width solid card-border-color
