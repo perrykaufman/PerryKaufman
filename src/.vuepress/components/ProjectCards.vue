@@ -221,11 +221,4 @@ export default {
     
     .project-card-filter
       grid-column span 3
-
-  @media all and (min-width 1350px)
-    .project-card-grid
-      grid-template-columns 1fr 1fr 1fr 1fr
-
-    .project-card-filter
-      grid-column span 4
 </style>
