@@ -10,31 +10,31 @@ I graduated from Illinois State University in the summer of 2018 and am currentl
 
 ## Education
 ### Illinois State University
-_Bachelor's degree in Computer Science - August 2018_
-
-Cumulative GPA: 3.75 
+**Bachelor's degree in Computer Science**
+* Graduated August 2018
+* Cumulative GPA: 3.75 
 
 ### Heartland Community College
-_Associate’s degree in Science - May 2012_
-
-Cumulative GPA: 3.81
+**Associate’s degree in Science**
+* Graduated May 2012
+* Cumulative GPA: 3.81
 
 ## Work Experience
 ### Library Assistant at Normal Public Library
-_June 2009 - Current_
+**June 2009 - Present**
 * Processed and shelved items in the library collection
 * Provided quality customer service to the public in person and over the phone
 * Developed a staff manual to document procedures and protocols
 * Assisted in training new employees
 
 ### Student Office Assistant at Illinois State University
-_January 2017 - May 2018_
+**January 2017 - May 2018**
 * Graded assignments for Dr. Kyoungwon Suh’s computer architecture course
 
 ## Technology and Tools
 | **Skill Level:** |**Proficient**|**Familiar**|
 |--|--|--|
-| **Languages:** | JavaScript, Java, SQL | C#, PHP |
+| **Languages:** | JavaScript, Java, SQL | C#, C++, PHP |
 | **Frameworks/Libraries:** | Vue.js, jQuery | React.js, Node.js, .NET, JSF |
 | **Tools/Testing:** | Git, NPM, Browser Dev Tools | Webpack, Jasmine, JUnit |
 | **Web:** | HTML, CSS, JSON, REST | SASS, Stylus, XML |
