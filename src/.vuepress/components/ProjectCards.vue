@@ -207,7 +207,7 @@ export default {
     .card-keywords
       color secondary-color-dark
       display block
-      font-size .8em
+      font-size .9em
       font-style italic
       text-align center
     
