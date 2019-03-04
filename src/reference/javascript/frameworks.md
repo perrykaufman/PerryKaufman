@@ -4,6 +4,16 @@
 
 # Frameworks
 
+## Ember.js
+### Guides
+* [Getting Started](https://guides.emberjs.com/release/getting-started/quick-start/)
+* [Official Tutorial](https://guides.emberjs.com/release/tutorial/ember-cli/)
+* [API Documentation](https://emberjs.com/api/ember/release)
+
+### Project Guides
+* [Live Updating League Table](https://youtu.be/vYakop2d2RI) by Gavin Joyce
+* [Painting Game](https://youtu.be/N4KrBuO0RRE) by Gavin Joyce
+
 ## Vue.js
 * [Official Guide](https://vuejs.org/v2/guide/)
 * [API](https://vuejs.org/v2/api/)
