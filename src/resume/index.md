@@ -1,5 +1,5 @@
 ---
-  title: Resume of Perry Kaufman - Web Developer
+  title: Resume of Perry Kaufman - Front-end Web Developer
 ---
 
 # Resume

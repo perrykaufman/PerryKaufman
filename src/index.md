@@ -1,8 +1,8 @@
 ---
-  title: Personal Website of Perry Kaufman - Web Developer
+  title: Personal Website of Perry Kaufman - Front-end Web Developer
   home:
     title: Perry Kaufman
-    desc: A web developer specializing in JavaScript
+    desc: Front-end Web Developer
     portrait: /portrait.jpg
     background: /background.jpg
     panels:

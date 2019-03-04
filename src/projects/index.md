@@ -1,5 +1,5 @@
 ---
-  title: Projects and Example Code
+  title: Projects and Example Code by Perry Kaufman - Front-end Web Developer
 ---
 
 # Projects
