@@ -12,7 +12,7 @@ I graduated from Illinois State University in the summer of 2018 and am currentl
 ### Illinois State University
 **Bachelor's degree in Computer Science**
 * Graduated August 2018
-* Cumulative GPA: 3.75 
+* Cumulative GPA: 3.75
 
 ### Heartland Community College
 **Associate’s degree in Science**
