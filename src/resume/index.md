@@ -32,19 +32,21 @@ I graduated from Illinois State University in the summer of 2018 and am currentl
 * Graded assignments for Dr. Kyoungwon Suh’s computer architecture course
 
 ## Technology and Tools
-| **Skill Level:** |**Proficient**|**Familiar**|
+| **Skill Level:** | **Proficient** | **Familiar** |
 |--|--|--|
 | **Languages:** | JavaScript, Java, SQL | C#, C++, PHP |
 | **Frameworks/Libraries:** | Vue.js, jQuery | React.js, Node.js, .NET, JSF |
+| **Software** | Word, Excel | Photoshop, GIMP 2 |
 | **Tools/Testing:** | Git, NPM, Browser Dev Tools | Webpack, Jasmine, JUnit |
 | **Web:** | HTML, CSS, JSON, REST | SASS, Stylus, XML |
 
 ## Knowledge and Skills
-* Object-Oriented design principles
-* Common data structures and sorting algorithms
-* Relational databases
+* Object-oriented/functional programming
 * Agile development principles
-* Enthusiasm to learn new technologies and solve problems
+* Common data structures and sorting algorithms
+* UX/UI design principles
+* Relational databases
+* Enthusiasm to learn and solve problems
 * Strong written and verbal communication
 
 ## Projects and Experience
