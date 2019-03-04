@@ -124,6 +124,10 @@ export default {
 <style lang="stylus" scoped>
   @import '~ThemeStyles/palette.styl'
 
+  outline()
+    outline none
+    outline 0
+
   /* colors */
   card-border-color = primary-color-dark
 
@@ -162,6 +166,7 @@ export default {
   .project-card-wrapper
     font-size 1em
     list-style none
+    position relative
     &::before
       content none
   
@@ -178,10 +183,16 @@ export default {
     margin 0
     text-decoration none
     transition .2s all ease-in-out
+    left 50%
+    position relative 
+    top 50%
+    transform translate(-50%, -50%)
     width 100%
-    &:hover
+    &:hover, &:focus
       background primary-color-lighter
       color black-color
+      outline none
+      transform translate(-50%, -50%) scale(1.025)
 
     .card-image
       align-self start
