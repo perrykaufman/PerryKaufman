@@ -11,7 +11,7 @@ panel-padding = 10px
   justify-items center
   padding panel-padding * 2
   position relative
-  min-height 'calc(100vh - %s)' % header-height
+  min-height 650px
   &.home-background
     background-position center top
     background-repeat no-repeat
@@ -83,7 +83,7 @@ panel-padding = 10px
   .home-panel-desc
     font-size 1.2em
 
-@media all and (min-height 650px)
+@media all and (max-height 650px)
   .home-header
-    min-height initial
-    height 650px
+    height initial
+    min-height 'calc(100vh - %s)' % header-height

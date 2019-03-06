@@ -176,6 +176,7 @@ export default {
     box-shadow 3px 3px 5px gray-color-darker
     color black-color
     cursor pointer
+    display block
     display grid
     grid auto-flow max-content / 1fr
     gap card-padding * .5
@@ -183,16 +184,16 @@ export default {
     margin 0
     text-decoration none
     transition .2s all ease-in-out
-    left 50%
+    /*left 50%
     position relative 
     top 50%
-    transform translate(-50%, -50%)
+    transform translate(-50%, -50%)*/
     width 100%
     &:hover, &:focus
       background primary-color-lighter
       color black-color
       outline none
-      transform translate(-50%, -50%) scale(1.025)
+      /*transform translate(-50%, -50%) scale(1.025)*/
 
     .card-image
       align-self start
