@@ -6,7 +6,7 @@
 
 ## About Me
 
-I graduated from Illinois State University in the summer of 2018 and am currently seeking full-time employment. I am primarily interested in front-end development with JavaScript, however I am also open to development roles with other languages such as Java and C#.
+I graduated from Illinois State University in the summer of 2018 and am currently seeking full-time employment. I am primarily interested in web development with JavaScript, however, I am also interested in development roles with other languages such as Java and C#.
 
 ## Education
 ### Illinois State University
