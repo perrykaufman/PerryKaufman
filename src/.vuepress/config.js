@@ -72,6 +72,7 @@ module.exports = {
             title: 'Tools',
             base: 'tools',
             children: [
+              {title: 'Webpack', path: 'webpack'},
               {title: 'Git', path: 'git'},
               {title: 'Regex', path: 'regex'}
             ]
