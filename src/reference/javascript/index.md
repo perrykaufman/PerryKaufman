@@ -6,6 +6,7 @@
 
 ## Concepts
 * [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+* [Mixins](https://javascript.info/mixins)
 
 ## Guides
 * [Learn ES6](https://babeljs.io/docs/en/learn.html)
