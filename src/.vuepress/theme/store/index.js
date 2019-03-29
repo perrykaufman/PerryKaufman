@@ -8,8 +8,8 @@ export default new Vue({
     sidebarOpen: false
   },
   created() {
-    this.$on('close-sidebar', this.closeSidebar);
-    this.$on('toggle-sidebar', this.toggleSidebar);
+    this.$on("close-sidebar", this.closeSidebar);
+    this.$on("toggle-sidebar", this.toggleSidebar);
   },
   methods: {
     closeSidebar() {

@@ -1,7 +1,10 @@
 <template>
-  <div class="main-wrapper" :class="{'no-sidebar': !isSidebar, 'sidebar-open': sidebarOpen}">
-    <sidebar-mask/>
-    <sidebar-menu :sidebar="sidebar"/>
+  <div
+    class="main-wrapper"
+    :class="{ 'no-sidebar': !isSidebar, 'sidebar-open': sidebarOpen }"
+  >
+    <sidebar-mask />
+    <sidebar-menu :sidebar="sidebar" />
     <main class="main">
       <Home v-if="$page.frontmatter.home" />
       <Content v-else />
@@ -11,11 +14,11 @@
 </template>
 
 <script>
-import Home from './Home.vue'
-import FooterSection from './FooterSection.vue';
-import store from '../store'
+import Home from "./Home.vue";
+import FooterSection from "./FooterSection.vue";
+import store from "../store";
 import { processSidebar, findSidebar } from "../scripts/sidebar.js";
-import SidebarMask from './SidebarMask.vue';
+import SidebarMask from "./SidebarMask.vue";
 import SidebarMenu from "./SidebarMenu.vue";
 
 export default {
@@ -28,7 +31,7 @@ export default {
   data() {
     return {
       sidebars: {}
-    }
+    };
   },
   computed: {
     isSidebar() {
@@ -44,10 +47,12 @@ export default {
     }
   },
   created() {
-    this.sidebars = processSidebar(this.$site.themeConfig.sidebar, this.$site.pages)
+    this.sidebars = processSidebar(
+      this.$site.themeConfig.sidebar,
+      this.$site.pages
+    );
   }
 };
 </script>
 
 <style src="../styles/main.styl" />
-

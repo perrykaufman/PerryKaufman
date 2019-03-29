@@ -1,6 +1,6 @@
 <template>
-  <li class="sidebar-item" :class="{current: isCurrent}">
-    <h3 class="sidebar-group-header" v-if="group.title">{{group.title}}</h3>
+  <li class="sidebar-item" :class="{ current: isCurrent }">
+    <h3 v-if="group.title" class="sidebar-group-header">{{ group.title }}</h3>
     <ul class="sidebar-sub-list">
       <template v-for="item in group.children">
         <sidebar-item :item="item" />
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import SidebarItem from './SidebarItem.vue';
+import SidebarItem from "./SidebarItem.vue";
 
 export default {
   components: {
@@ -21,8 +21,9 @@ export default {
       required: true,
       type: Object,
       validator(group) {
-        return typeof group.title == 'string'
-          && group.children instanceof Array;
+        return (
+          typeof group.title == "string" && group.children instanceof Array
+        );
       }
     }
   },
@@ -31,5 +32,5 @@ export default {
       return false;
     }
   }
-}
+};
 </script>

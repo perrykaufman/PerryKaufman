@@ -1,12 +1,17 @@
 <template>
-  <li class="sidebar-item" :class="{current: isCurrent}">
-    <router-link class="sidebar-link" :to="item.link" @click.native="closeSidebar">{{item.title}}</router-link>
+  <li class="sidebar-item" :class="{ current: isCurrent }">
+    <router-link
+      class="sidebar-link"
+      :to="item.link"
+      @click.native="closeSidebar"
+      >{{ item.title }}</router-link
+    >
   </li>
 </template>
 
 <script>
 import { isPage } from "../scripts/util.js";
-import store from '../store';
+import store from "../store";
 
 export default {
   props: {
@@ -25,7 +30,7 @@ export default {
   },
   methods: {
     closeSidebar() {
-      store.$emit('close-sidebar');
+      store.$emit("close-sidebar");
     }
   }
 };
