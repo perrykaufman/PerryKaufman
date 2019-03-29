@@ -17,5 +17,6 @@
   "eslint.autoFixOnSave": true,
   "editor.formatOnSave": false,
   "git.ignoreLimitWarning": true,
+  "javascript.validate.enable": false,
   "vetur.validation.template": false
 }
