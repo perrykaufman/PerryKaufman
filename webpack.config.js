@@ -1,26 +1,26 @@
-const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+/* eslint-env node*/
+
+const path = require("path");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
-  mode: 'none',
+  mode: "none",
   module: {
-    rules: [{
+    rules: [
+      {
         test: /.vue$/,
-        loader: 'vue-loader',
+        loader: "vue-loader",
         options: {
           loaders: {}
         }
       },
       {
         test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
+        use: ["vue-style-loader", "css-loader"]
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
         options: {
           presets: ["env"] //TODO: Add specific target.
@@ -28,24 +28,22 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name: '[name].[ext]?[hash]'
+          name: "[name].[ext]?[hash]"
         }
       }
     ]
   },
-  plugins: [
-    new VueLoaderPlugin()
-  ],
+  plugins: [new VueLoaderPlugin()],
   resolve: {
     alias: {
-      Layout: path.resolve(__dirname, 'src/.vuepress/theme/Layout.vue'),
-      Src: path.resolve(__dirname, 'src/'),
-      Test: path.resolve(__dirname, 'test/'),
-      Theme: path.resolve(__dirname, 'src/.vuepress/theme/'),
-      Util: path.resolve(__dirname, 'src/.vuepress/theme/util.js')
+      Layout: path.resolve(__dirname, "src/.vuepress/theme/Layout.vue"),
+      Src: path.resolve(__dirname, "src/"),
+      Test: path.resolve(__dirname, "test/"),
+      Theme: path.resolve(__dirname, "src/.vuepress/theme/"),
+      Util: path.resolve(__dirname, "src/.vuepress/theme/util.js")
     },
-    extensions: ['.js', '.vue']
+    extensions: [".js", ".vue"]
   }
-}
+};
