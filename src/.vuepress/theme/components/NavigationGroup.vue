@@ -19,7 +19,7 @@
 
 <script>
 import NavigationItem from "./NavigationItem.vue";
-import { isParentPage } from "../scripts/util.js";
+import { isParentPage } from "../lib/util.js";
 
 export default {
   components: {

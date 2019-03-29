@@ -17,7 +17,7 @@
 import Home from "./Home.vue";
 import FooterSection from "./FooterSection.vue";
 import store from "../store";
-import { processSidebar, findSidebar } from "../scripts/sidebar.js";
+import { processSidebar, findSidebar } from "../lib/sidebar.js";
 import SidebarMask from "./SidebarMask.vue";
 import SidebarMenu from "./SidebarMenu.vue";
 

@@ -16,7 +16,7 @@
 
 <script>
 import store from "../store";
-import { processNav } from "../scripts/nav.js";
+import { processNav } from "../lib/nav.js";
 import NavigationItem from "./NavigationItem.vue";
 import NavigationGroup from "./NavigationGroup.vue";
 
