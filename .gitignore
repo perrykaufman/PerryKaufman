@@ -1,8 +1,5 @@
 # Dependency directories
 node_modules/
 
-# vscode
-.vscode/
-
 # vuepress build output
 src/.vuepress/dist/
