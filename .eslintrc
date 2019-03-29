@@ -3,6 +3,7 @@
   "extends": [
     "plugin:vue/recommended",
     "plugin:prettier/recommended",
+    "prettier/vue",
     "eslint:recommended"
   ],
   "plugins": ["prettier"],
