@@ -142,148 +142,125 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~ThemeStyles/palette.styl';
+@import '~ThemeStyles/palette.styl'
 
 outline() {
-  outline: none;
-  outline: 0;
+  outline none
+  outline 0
 }
 
 /* colors */
-card-border-color = primary-color-dark;
+card-border-color = primary-color-dark
 /* sizes */
-card-padding = 10px;
-card-border-width = 3px;
+card-padding = 1rem
+card-border-width = .3rem
 
 /* project card grid */
-.project-card-grid {
-  display: grid;
-  font-size: 1em;
-  gap: 10px;
-  grid: auto-flow max-content / 1fr;
-  margin: 20px 0;
-  padding: 0;
-}
+.project-card-grid
+  display grid
+  font-size 2rem
+  gap 1rem
+  grid auto-flow max-content / 1fr
+  margin 2rem 0
+  padding 0
 
-.project-card-filter {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
 
-  input {
-    border: 2px solid gray-color-dark;
-    border-radius: 5px;
-    font-size: 1.1em;
-    max-width: 500px;
-    padding: 2px 5px;
-    transition: 0.25s all ease-in-out;
-    width: 100%;
+.project-card-filter
+  align-items center
+  display flex
+  justify-content center
+  margin 1rem 0
 
-    &:focus {
-      border-color: primary-color-dark;
-      outline: 0;
-      outline: none;
-    }
-  }
-}
+  input
+    border .2rem solid gray-color-dark
+    border-radius .5rem
+    font-size 2.2rem
+    max-width 50rem
+    padding .2rem .5rem
+    transition 0.25s all ease-in-out
+    width 100%
+
+    &:focus
+      border-color primary-color-dark
+      outline 0
+      outline none
 
 /* project card */
-.project-card-wrapper {
-  font-size: 1em;
-  list-style: none;
-  position: relative;
-
-  &::before {
-    content: none;
-  }
-}
-
-.project-card {
-  background: primary-color-lightest;
-  border: card-border-width solid card-border-color;
-  box-shadow: 3px 3px 5px gray-color-darker;
-  color: black-color;
-  cursor: pointer;
-  display: block;
-  display: grid;
-  grid: auto-flow max-content / 1fr;
-  gap: card-padding * 0.5;
-  height: 100%;
-  margin: 0;
-  text-decoration: none;
-  transition: 0.2s all ease-in-out;
-  /* left 50%
+.project-card-wrapper
+  font-size 2rem
+  list-style none
   position relative
-  top 50%
-  transform translate(-50%, -50%) */
-  width: 100%;
 
-  &:hover, &:focus {
-    background: primary-color-lighter;
-    color: black-color;
-    outline: none;
-    /* transform translate(-50%, -50%) scale(1.025) */
-  }
+  &::before
+    content none
 
-  .card-image {
-    align-self: start;
-    border-bottom: card-border-width solid card-border-color;
-    display: block;
-    margin: 0;
-  }
+.project-card
+  background primary-color-lightest
+  border card-border-width solid card-border-color
+  box-shadow .3rem .3rem .5rem gray-color-darker
+  color black-color
+  cursor pointer
+  display block
+  display grid
+  grid auto-flow max-content / 1fr
+  gap card-padding * 0.5
+  height 100%
+  margin 0
+  text-decoration none
+  transition 0.2s all ease-in-out
+  width 100%
 
-  .card-header {
-    align-self: center;
-    min-width: 0;
-  }
+  &:hover, &:focus
+    background primary-color-lighter
+    color black-color
+    outline none
 
-  .card-heading {
-    display: block;
-    text-decoration: none;
-    color: black-color;
-    font-size: 1.4em;
-    margin: 0;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  .card-image
+    align-self start
+    border-bottom card-border-width solid card-border-color
+    display block
+    margin 0
 
-  .card-keywords {
-    color: secondary-color-dark;
-    display: block;
-    font-size: 0.9em;
-    font-style: italic;
-    text-align: center;
-  }
+  .card-header
+    align-self center
+    min-width 0
 
-  .card-content {
-    align-self: start;
-    font-size: 0.8em;
-    padding: 0 card-padding card-padding card-padding;
-    margin: 0;
-  }
-}
+  .card-heading
+    display block
+    text-decoration none
+    color black-color
+    font-size 2.8rem
+    margin 0
+    overflow hidden
+    text-align center
+    text-overflow ellipsis
+    white-space nowrap
+
+  .card-keywords
+    color secondary-color-dark
+    display block
+    font-size 1.6rem
+    font-style italic
+    text-align center
+
+  .card-content
+    align-self start
+    font-size 1.8rem
+    padding 0 card-padding card-padding card-padding
+    margin 0
 
 /* media */
-@media all and (min-width: 450px) {
-  .project-card-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+@media all and (min-width 40em)
+  .project-card-grid
+    grid-template-columns 1fr 1fr
 
-  .project-card-filter {
-    grid-column: span 2;
-  }
-}
+  .project-card-filter
+    grid-column span 2
 
-@media all and (min-width: 950px) {
-  .project-card-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+@media all and (min-width 60em)
+  .project-card-grid
+    grid-template-columns 1fr 1fr 1fr
 
-  .project-card-filter {
-    grid-column: span 3;
-  }
-}
+  .project-card-filter
+    grid-column span 3
 </style>
