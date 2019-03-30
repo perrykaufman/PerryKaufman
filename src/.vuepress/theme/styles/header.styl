@@ -18,6 +18,7 @@ header-hover-color = primary-color-darkest
   flex-flow row nowrap
   justify-content space-between
   min-width: min-page-width
+  padding 0 .8rem
   position fixed
   top 0
   width 100%
@@ -26,7 +27,6 @@ header-hover-color = primary-color-darkest
 .logo
   height 100%
   max-height 100%
-  padding-left 1rem
   img
     border .2rem solid header-background-color
     border-radius 50%
@@ -47,53 +47,56 @@ header-hover-color = primary-color-darkest
   padding-left .5rem
 
 /* menu icon */
-.menu-icon
+.menu-button
+  font-size 3.6rem
   background transparent
   border none
   cursor pointer
   display block
-  height 4.8rem
-  position relative
-  overflow hidden
-  text-indent 1000rem
-  width 4rem
-  white-space nowrap
-  &::before
-    background header-symbol-color
-    box-shadow 0 1rem 0 header-symbol-color
-    content ''
-    height .5rem
-    left 15%
-    position absolute
-    top 1.15rem
-    transition all .15s ease-in-out
-    width 70%
-  &::after
-    background header-symbol-color
-    bottom 1.15rem
-    content ''
-    height .5rem
-    left 15%
-    position absolute
-    transition all .15s ease-in-out
-    width 70%
-  &:hover
+  padding 0
+  
+  .menu-icon
+    display block
+    height 1em
+    position relative
+    overflow hidden
+    text-indent 1000rem
+    width 1.1em
+    white-space nowrap
     &::before
-      background header-hover-color
-      box-shadow 0 1rem 0 header-hover-color
+      background header-symbol-color
+      box-shadow 0 .375em 0 header-symbol-color
+      content ''
+      left 0
+      height .25em
+      position absolute
+      top 0
+      transition all .15s ease-in-out
+      width 100%
     &::after
-      background header-hover-color
-  &.sidebar-open::before
-    box-shadow none
-    height .4rem
-    top 50%
-    transform translateY(-50%) rotate(-45deg)
-  &.sidebar-open::after
-    bottom 50%
-    height .4rem
-    transform translateY(50%) rotate(45deg)
+      background header-symbol-color
+      bottom 0
+      content ''
+      height .25em
+      left 0
+      position absolute
+      transition all .15s ease-in-out
+      width 100%
+    &:hover
+      &::before
+        background header-hover-color
+        box-shadow 0 .375em 0 header-hover-color
+      &::after
+        background header-hover-color
+    ^[0].sidebar-open ^[1..1]::before
+      box-shadow none
+      top 50%
+      transform translateY(-50%) rotate(-45deg)
+    ^[0].sidebar-open ^[1..1]::after
+      bottom 50%
+      transform translateY(50%) rotate(45deg)
 
 /* media */
 @media all and (min-width 75em)
-  .menu-icon
+  .menu-button
     display none

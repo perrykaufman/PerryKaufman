@@ -12,11 +12,11 @@
       </h1>
     </router-link>
     <button
-      class="menu-icon"
+      class="menu-button"
       :class="{ 'sidebar-open': sidebarOpen }"
       @click="toggle()"
     >
-      Toggle Menu
+      <span class="menu-icon">Toggle Menu</span>
     </button>
     <navigation-menu :type="'header'" />
   </header>
