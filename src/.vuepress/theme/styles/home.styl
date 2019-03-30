@@ -28,13 +28,6 @@ panel-padding = 1rem
     border-radius 50%
     max-width 50rem
     width 100%
-  
-.home-panel-title
-  margin 0
-
-.home-panel-desc
-  font-size 2rem
-  margin 0
 
 .home-panels
   display grid
@@ -60,15 +53,17 @@ panel-padding = 1rem
 
 .home-panel-title
   font-size 3.6rem
+  margin 0
+  text-align center
 
 .home-panel-desc
   font-size 2rem
+  margin 0
+  text-align center
 
 @media all and (min-width 50em)
   .home-header
     grid auto-flow 1fr / 1fr 1fr
-    /*.home-panel-title
-      font-size 2.5em*/
 
   .home-header-portrait
     justify-self end
@@ -79,9 +74,6 @@ panel-padding = 1rem
 @media all and (min-width 75em)
   .home-panels
     padding 0
-  
-  /*.home-panel-desc
-    font-size 1.8rem*/
 
 @media all and (max-height 40em)
   .home-header
