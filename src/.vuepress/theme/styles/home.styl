@@ -1,6 +1,6 @@
 @import palette
 
-panel-padding = 10px
+panel-padding = 1rem
 
 .home-header
   align-items center
@@ -11,29 +11,29 @@ panel-padding = 10px
   justify-items center
   padding panel-padding * 2
   position relative
-  min-height 650px
+  min-height 65rem
   &.home-background
     background-position center top
     background-repeat no-repeat
   .home-panel
     background primary-color
     border none
-    border-radius 5px
+    border-radius .5rem
     box-shadow none
     padding panel-padding * 2
 
 .home-header-portrait
   img
-    border 5px solid primary-color
+    border .5rem solid primary-color
     border-radius 50%
-    max-width 500px
+    max-width 50rem
     width 100%
   
 .home-panel-title
   margin 0
 
 .home-panel-desc
-  font-size 1em
+  font-size 2rem
   margin 0
 
 .home-panels
@@ -44,8 +44,8 @@ panel-padding = 10px
   padding 0 panel-padding
 
 .home-panel
-  border 3px solid primary-color-dark
-  box-shadow 3px 3px 3px gray-color
+  border .3rem solid primary-color-dark
+  box-shadow .3rem .3rem .3rem gray-color
 
 .home-panel-link
   background primary-color-lightest
@@ -59,16 +59,16 @@ panel-padding = 10px
     background primary-color-lighter
 
 .home-panel-title
-  font-size 2em
+  font-size 3.6rem
 
 .home-panel-desc
-  font-size 1em
+  font-size 2rem
 
-@media all and (min-width 800px)
+@media all and (min-width 50em)
   .home-header
     grid auto-flow 1fr / 1fr 1fr
-    .home-panel-title
-      font-size 2.5em
+    /*.home-panel-title
+      font-size 2.5em*/
 
   .home-header-portrait
     justify-self end
@@ -76,14 +76,14 @@ panel-padding = 10px
   .home-panels
     grid auto-flow 1fr / 1fr 1fr 1fr
 
-@media all and (min-width 1200px)
+@media all and (min-width 75em)
   .home-panels
     padding 0
   
-  .home-panel-desc
-    font-size 1.2em
+  /*.home-panel-desc
+    font-size 1.8rem*/
 
-@media all and (max-height 650px)
+@media all and (max-height 40em)
   .home-header
     height initial
     min-height 'calc(100vh - %s)' % header-height

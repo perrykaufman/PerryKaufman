@@ -9,19 +9,16 @@ nav-symbol-color = primary-color-darker
 nav-hover-color = primary-color-darkest
 
 /* sizes */
-sub-icon-size = .75em
+sub-icon-size = 1.2rem
 
 /* mixins */
 rotate-icon()
   transform translate(-50%, -25%) rotate(-135deg)
 
 /* nav */
-.menu-nav
-  font-size 1rem
-
 .menu-item
   align-items center
-  border-bottom 1px solid nav-border-color
+  border-bottom .1rem solid nav-border-color
   display flex
   flex-flow row nowrap
 
@@ -30,7 +27,7 @@ rotate-icon()
   display block
   flex 1 0 auto
   font-weight 600
-  padding 5px
+  padding .5rem
   position relative
   text-decoration none
   transition all .07s ease-in-out
@@ -43,7 +40,7 @@ rotate-icon()
 
 .menu-list
   background nav-background-color
-  font-size 1.5em
+  font-size 3.2rem
   list-style none
   margin 0
   padding 0
@@ -55,14 +52,12 @@ rotate-icon()
   padding 0 0 0 10%
   overflow hidden
   transition all .25s ease-in-out
-  .menu-item
-    font-size .8em
-    &:last-of-type
-      border-bottom none
+  .menu-item:last-of-type
+    border-bottom none
 
 .menu-sub-list-open
   .menu-sub-list
-    max-height 1000px
+    max-height 100rem
   .sub-menu-icon::after
     rotate-icon()
 
@@ -71,18 +66,18 @@ rotate-icon()
   border none
   cursor pointer
   display block
-  height 3em
+  height 3rem
   overflow hidden
   margin 0
   padding 0
   position relative
-  text-indent 10000px
+  text-indent 1000rem
   white-space nowrap
   width sub-icon-size * 4
   &::after
     background transparent
-    border-right 2px solid nav-symbol-color
-    border-bottom 2px solid nav-symbol-color
+    border-right .2rem solid nav-symbol-color
+    border-bottom .2rem solid nav-symbol-color
     content ''
     display block
     height sub-icon-size
@@ -94,8 +89,8 @@ rotate-icon()
     width sub-icon-size
   &:hover::after
     background transparent
-    border-right 2px solid nav-hover-color
-    border-bottom 2px solid nav-hover-color
+    border-right .2rem solid nav-hover-color
+    border-bottom .2rem solid nav-hover-color
 
 /* header menu */
 .header-menu
@@ -111,7 +106,7 @@ rotate-icon()
     position relative
     &:hover
       .menu-sub-list
-        max-height 1000px
+        max-height 100rem
       .sub-menu-icon::after
         rotate-icon()
 
@@ -125,8 +120,8 @@ rotate-icon()
   .menu-item
   .menu-group
     height 100%
-    margin-right 5px
-    padding-right 5px
+    margin-right .5rem
+    padding-right .5rem
     width initial
 
   .menu-group > .menu-item
@@ -137,18 +132,18 @@ rotate-icon()
 
   .menu-sub-list
     background nav-background-color
-    border-bottom 2px solid nav-border-color
-    padding-right 10px
+    border-bottom .2rem solid nav-border-color
+    padding-right 1rem
     position absolute
     right 0
   
   .sub-menu-icon
-    font-size .4em
-    height 1.6em
-    width 1.6em
+    font-size .6rem
+    height 2rem
+    width 2rem
 
 /* media */
-@media all and (min-width 1200px)
+@media all and (min-width 75em)
   .header-menu.menu-nav
     display block
 

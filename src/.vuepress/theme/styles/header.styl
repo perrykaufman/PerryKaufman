@@ -12,7 +12,7 @@ header-hover-color = primary-color-darkest
 .header
   align-items center
   background header-background-color
-  border-bottom 2px solid header-border-color
+  border-bottom .2rem solid header-border-color
   display flex
   height header-height
   flex-flow row nowrap
@@ -26,9 +26,9 @@ header-hover-color = primary-color-darkest
 .logo
   height 100%
   max-height 100%
-  padding-left 10px
+  padding-left 1rem
   img
-    border 2px solid header-background-color
+    border .2rem solid header-background-color
     border-radius 50%
     max-height 100%
 
@@ -44,7 +44,7 @@ header-hover-color = primary-color-darkest
 .header-title
   font-size 2rem
   margin 0
-  padding-left 5px
+  padding-left .5rem
 
 /* menu icon */
 .menu-icon
@@ -52,27 +52,27 @@ header-hover-color = primary-color-darkest
   border none
   cursor pointer
   display block
-  height 48px
+  height 4.8rem
   position relative
   overflow hidden
-  text-indent 10000px
-  width 40px
+  text-indent 1000rem
+  width 4rem
   white-space nowrap
   &::before
     background header-symbol-color
-    box-shadow 0 10px 0 header-symbol-color
+    box-shadow 0 1rem 0 header-symbol-color
     content ''
-    height 5px
+    height .5rem
     left 15%
     position absolute
-    top 11.5px
+    top 1.15rem
     transition all .15s ease-in-out
     width 70%
   &::after
     background header-symbol-color
-    bottom 11.5px
+    bottom 1.15rem
     content ''
-    height 5px
+    height .5rem
     left 15%
     position absolute
     transition all .15s ease-in-out
@@ -80,20 +80,20 @@ header-hover-color = primary-color-darkest
   &:hover
     &::before
       background header-hover-color
-      box-shadow 0 10px 0 header-hover-color
+      box-shadow 0 1rem 0 header-hover-color
     &::after
       background header-hover-color
   &.sidebar-open::before
     box-shadow none
-    height 4px
+    height .4rem
     top 50%
     transform translateY(-50%) rotate(-45deg)
   &.sidebar-open::after
     bottom 50%
-    height 4px
+    height .4rem
     transform translateY(50%) rotate(45deg)
 
 /* media */
-@media all and (min-width 1200px)
+@media all and (min-width 75em)
   .menu-icon
     display none

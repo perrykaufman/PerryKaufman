@@ -27,51 +27,51 @@ content-code-font = mono-font
 
 .main
   flex 1 0 auto
-  max-width 950px
+  max-width 95rem
   transition all .25s ease-in-out
   width 100%
 
 /* content */
 .content
-  font-size 1rem
+  font-size 2rem
   margin auto
-  padding 5px 15px
+  padding .5rem 1.5rem
   width 100%
 
   h1
     color content-heading-color-1
-    font-size 2.2em
-    margin 0 0 20px 0
+    font-size 4.6rem
+    margin 0 0 2rem 0
 
   h2
-    border-bottom 1px solid gray-color
+    border-bottom .1rem solid gray-color
     color content-heading-color-2
-    font-size 1.6em
-    margin 0 0 5px 0
+    font-size 3.6rem
+    margin 0 0 .5rem 0
 
   h3
     color content-heading-color-3
-    font-size 1.2em
-    margin 0 0 2px 0
+    font-size 2.8rem
+    margin 0 0 .2rem 0
 
   h4
     color secondary-color-dark
-    font-size 1em
+    font-size 2.4rem
     margin 0
 
   h5
-    font-size 1em
+    font-size 2.2rem
     margin 0
 
-  .content h6
-    font-size 1em
+  h6
+    font-size 2rem
     margin 0
 
   p
-    margin 0 0 5px 0;
+    margin 0 0 .5rem 0;
     code
       display inline-block
-      padding 0 3px
+      padding 0 .3rem
       vertical-align bottom
 
   a
@@ -94,28 +94,28 @@ content-code-font = mono-font
 
   code
     background content-code-color
-    border-radius 5px
+    border-radius .5rem
     display block
     font-family content-code-font, monospace
     overflow-x auto
     max-width 100%
-    padding 10px
+    padding 1rem
     white-space nowrap
 
   ol
   ul
     list-style none
-    margin 0 0 10px 0
-    padding 0 0 0 25px
+    margin 0 0 1rem 0
+    padding 0 0 0 2.5rem
   
   ul>li
     position relative
     &::before
       color: content-list-color
       content: '● '
-      left -1em
+      left -1.6rem
       position absolute
-      width 1em
+      width 1.6rem
 
   ol
     counter-reset: list
@@ -131,7 +131,7 @@ content-code-font = mono-font
   th
     background-color white-color
     color content-table-header-color
-    font-size 1.2em
+    font-size 2rem
     text-align left
 
   tr
@@ -141,11 +141,11 @@ content-code-font = mono-font
 
   td
   th
-    padding 5px
+    padding .5rem
     vertical-align top
 
 /* media */
-@media all and (min-width 1200px)  
+@media all and (min-width 75em)  
   .main
     width 'calc(100% - %s)' % sidebar-static-width
     margin-left sidebar-static-width
