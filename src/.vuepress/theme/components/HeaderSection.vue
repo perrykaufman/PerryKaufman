@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <router-link class="logo-link" to="/">
+    <router-link class="logo-link" to="/" @click.native="closeSidebar">
       <picture v-if="$site.themeConfig.logo" class="logo">
         <img
           :src="$site.themeConfig.logo"
@@ -36,6 +36,9 @@ export default {
     }
   },
   methods: {
+    closeSidebar() {
+      store.$emit("close-sidebar");
+    },
     toggle() {
       store.$emit("toggle-sidebar");
     }
