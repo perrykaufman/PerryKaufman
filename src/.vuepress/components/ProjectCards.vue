@@ -197,6 +197,7 @@ card-border-width = .3rem
 .project-card
   background primary-color-lightest
   border card-border-width solid card-border-color
+  border-radius corner-radius
   box-shadow .3rem .3rem .5rem gray-color-darker
   color black-color
   cursor pointer
@@ -206,6 +207,7 @@ card-border-width = .3rem
   gap card-padding * 0.5
   height 100%
   margin 0
+  overflow hidden
   text-decoration none
   transition 0.2s all ease-in-out
   width 100%
