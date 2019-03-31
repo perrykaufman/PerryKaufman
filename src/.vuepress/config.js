@@ -65,7 +65,21 @@ module.exports = {
       { title: "Reference", path: "reference/" },
       { title: "Projects", path: "projects/" }
     ],
-    footer: "Created by Perry Kaufman with Vuepress. 2018",
+    footer: {
+      text: "Created by Perry Kaufman with Vuepress. 2018",
+      icons: [
+        {
+          name: "GitHub",
+          link: "https://github.com/perrykaufman",
+          img: "/icons/github.png"
+        },
+        {
+          name: "LinkedIn",
+          link: "https://www.linkedin.com/in/perry-kaufman/",
+          img: "/icons/linkedin.png"
+        }
+      ]
+    },
     logo: "/logo.jpg",
     sidebar: {
       "reference/": {
