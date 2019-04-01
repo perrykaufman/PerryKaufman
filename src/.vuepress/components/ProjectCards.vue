@@ -115,6 +115,15 @@ const cards = [
     keywords: ["node.js", "javascript", "rest"],
     description:
       "A couple of small projects I completed to learn the basics of Node.js."
+  },
+  {
+    key: 9,
+    title: "Sabetha Timer",
+    url: "https://github.com/perrykaufman/sabetha-timer",
+    image: "sabethatimer",
+    keywords: ["javascript", "sass", "webpack", "jasmine"],
+    description:
+      "A timer thay provides instructions for a boss fight in the video game Guild Wars 2"
   }
 ];
 
