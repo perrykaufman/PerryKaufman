@@ -6,7 +6,7 @@
     <ul class="project-card-grid">
       <li
         v-for="card in displayedCards"
-        :key="card.key"
+        :key="card.title"
         class="project-card-wrapper"
       >
         <a class="project-card" :href="card.url" target="_blank">
@@ -36,7 +36,6 @@
 /* Card Config */
 const cards = [
   {
-    key: 0,
     title: "Personal Website",
     url: "https://github.com/perrykaufman/PerryKaufman",
     image: "personalwebsite",
@@ -45,7 +44,6 @@ const cards = [
       "This website uses a Vue.js powered static site generator called Vuepress. I created a custom theme using Stylus and Vue components."
   },
   {
-    key: 1,
     title: "Clean Slate Theme",
     url: "https://github.com/perrykaufman/cleanslate",
     image: "cleanslate",
@@ -54,7 +52,6 @@ const cards = [
       "A responsive Wordpress theme developed for the Clean Slate program of YWCA McLean County. Includes support for the WooCommerce plugin to allow for ecommerce."
   },
   {
-    key: 2,
     title: "React List",
     url: "https://jsfiddle.net/pdkaufm/d0jrsfvt/",
     image: "reactlist",
@@ -63,7 +60,6 @@ const cards = [
       "A basic list application made with React.js and SASS. My first project using React."
   },
   {
-    key: 3,
     title: "Drag and Drop List",
     url: "https://jsfiddle.net/pdkaufm/5ocmvktr/",
     image: "draganddrop",
@@ -72,7 +68,6 @@ const cards = [
       "A list application that allows items to be reordered by clicking and dragging. If the list overflows the page, it can be scrolled by dragging an item to the top or bottom of the page."
   },
   {
-    key: 4,
     title: "GW2 AP Calculator",
     url: "https://jsfiddle.net/pdkaufm/v5kaps0c/",
     image: "gw2apcalc",
@@ -81,7 +76,6 @@ const cards = [
       "Uses account data from the Guild Wars 2 REST API to calculate the total achievement points (AP) earned by an account."
   },
   {
-    key: 5,
     title: "Chat UI",
     url: "https://jsfiddle.net/pdkaufm/gjy2jdfk/",
     image: "chatui",
@@ -90,7 +84,6 @@ const cards = [
       "A simple chat application with a 'chatbot' that repeats whatever you enter. The chatbot could easily be substituted with code receiving/sending responses to a server."
   },
   {
-    key: 6,
     title: "Tic-Tac-Toe",
     url: "https://jsfiddle.net/pdkaufm/kyzwm637/",
     image: "tictactoe",
@@ -99,7 +92,6 @@ const cards = [
       "A two player Tic-Tac-Toe game using the HTML5 drag/drop API, and a custom event mixin."
   },
   {
-    key: 7,
     title: "GW2Profile",
     url: "https://github.com/perrykaufman/GW2Profile",
     image: "gw2profile",
@@ -108,7 +100,6 @@ const cards = [
       "A single page application that allows a user to create a profile showcasing their Guild Wars 2 account. This was my first application using Vue."
   },
   {
-    key: 8,
     title: "NodePractice",
     url: "https://github.com/perrykaufman/NodePractice",
     image: "nodepractice",
@@ -117,7 +108,6 @@ const cards = [
       "A couple of small projects I completed to learn the basics of Node.js."
   },
   {
-    key: 9,
     title: "Sabetha Timer",
     url: "https://github.com/perrykaufman/sabetha-timer",
     image: "sabethatimer",
