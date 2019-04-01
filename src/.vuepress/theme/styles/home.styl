@@ -1,10 +1,19 @@
 @import palette
 
+/* colors */
+header-background-color = secondary-color-darker
+header-content-color = primary-color
+panel-border-color = primary-color-dark
+panel-background-color = primary-color-lightest
+panel-background-color-hover = primary-color-lighter
+shadow-color = gray-color-darker
+
+/* sizes */
 panel-padding = 1rem
 
 .home-header
   align-items center
-  background secondary-color-darker
+  background header-background-color
   display grid
   gap panel-padding
   grid auto-flow min-content / 1fr
@@ -16,14 +25,14 @@ panel-padding = 1rem
     background-position center top
     background-repeat no-repeat
   .home-panel
-    background primary-color
+    background header-content-color
     border none
     box-shadow none
     padding panel-padding * 2
 
 .home-header-portrait
   img
-    border .5rem solid primary-color
+    border .5rem solid header-content-color
     border-radius 50%
     max-width 50rem
     width 100%
@@ -36,13 +45,13 @@ panel-padding = 1rem
   padding 0 panel-padding
 
 .home-panel
-  border .3rem solid primary-color-dark
+  border .3rem solid panel-border-color
   border-radius corner-radius
-  box-shadow .3rem .3rem .3rem gray-color
+  box-shadow .3rem .3rem .3rem shadow-color
   overflow hidden
 
 .home-panel-link
-  background primary-color-lightest
+  background panel-background-color
   display block
   color inherit
   height 100%
