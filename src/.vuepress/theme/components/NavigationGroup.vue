@@ -11,7 +11,7 @@
     </div>
     <ul class="menu-sub-list">
       <template v-for="item in group.children">
-        <navigation-item :item="item" />
+        <navigation-item :key="item.title" :item="item" />
       </template>
     </ul>
   </li>

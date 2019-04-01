@@ -5,8 +5,8 @@
       <h2 v-if="sidebar.title" class="sidebar-header">{{ sidebar.title }}</h2>
       <ul class="sidebar-list">
         <template v-for="item in sidebar.items">
-          <sidebar-group v-if="item.children" :group="item" />
-          <sidebar-item v-else :item="item" />
+          <sidebar-group v-if="item.children" :key="item.title" :group="item" />
+          <sidebar-item v-else :key="item.title" :item="item" />
         </template>
       </ul>
     </div>

@@ -20,7 +20,11 @@
     </header>
     <Content />
     <ul class="home-panels">
-      <li v-for="panel in frontmatter.panels" class="home-panel">
+      <li
+        v-for="panel in frontmatter.panels"
+        :key="panel.title"
+        class="home-panel"
+      >
         <router-link class="home-panel-link" :to="panel.link">
           <h1 class="home-panel-title">{{ panel.title }}</h1>
           <p class="home-panel-desc">{{ panel.desc }}</p>

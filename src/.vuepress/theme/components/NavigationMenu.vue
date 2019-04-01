@@ -4,11 +4,12 @@
       <template v-for="item in menu">
         <navigation-group
           v-if="item.children"
+          :key="item.title"
           :group="item"
           :sidebar="isSidebar"
           :type="type"
         />
-        <navigation-item v-else :item="item" />
+        <navigation-item v-else :key="item.title" :item="item" />
       </template>
     </ul>
   </nav>

@@ -3,7 +3,7 @@
     <h3 v-if="group.title" class="sidebar-group-header">{{ group.title }}</h3>
     <ul class="sidebar-sub-list">
       <template v-for="item in group.children">
-        <sidebar-item :item="item" />
+        <sidebar-item :key="item.title" :item="item" />
       </template>
     </ul>
   </li>
