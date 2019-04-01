@@ -13,7 +13,7 @@
           <picture class="card-image">
             <img
               v-if="card.image"
-              :src="'/projects/' + card.image + '.png'"
+              :src="card.image"
               :alt="card.title.toLowerCase() + ' preview image'"
             />
           </picture>
@@ -38,7 +38,7 @@ const cards = [
   {
     title: "Personal Website",
     url: "https://github.com/perrykaufman/PerryKaufman",
-    image: "personalwebsite",
+    image: "/projects/personalwebsite.png",
     keywords: ["vue.js", "stylus", "webpack"],
     description:
       "This website uses a Vue.js powered static site generator called Vuepress. I created a custom theme using Stylus and Vue components."
@@ -46,7 +46,7 @@ const cards = [
   {
     title: "Clean Slate Theme",
     url: "https://github.com/perrykaufman/cleanslate",
-    image: "cleanslate",
+    image: "/projects/cleanslate.png",
     keywords: ["wordpress", "php", "css", "javascript"],
     description:
       "A responsive Wordpress theme developed for the Clean Slate program of YWCA McLean County. Includes support for the WooCommerce plugin to allow for ecommerce."
@@ -54,7 +54,7 @@ const cards = [
   {
     title: "React List",
     url: "https://jsfiddle.net/pdkaufm/d0jrsfvt/",
-    image: "reactlist",
+    image: "/projects/reactlist.png",
     keywords: ["react.js", "sass"],
     description:
       "A basic list application made with React.js and SASS. My first project using React."
@@ -62,7 +62,7 @@ const cards = [
   {
     title: "Drag and Drop List",
     url: "https://jsfiddle.net/pdkaufm/5ocmvktr/",
-    image: "draganddrop",
+    image: "/projects/draganddrop.png",
     keywords: ["javascript", "sass"],
     description:
       "A list application that allows items to be reordered by clicking and dragging. If the list overflows the page, it can be scrolled by dragging an item to the top or bottom of the page."
@@ -70,7 +70,7 @@ const cards = [
   {
     title: "GW2 AP Calculator",
     url: "https://jsfiddle.net/pdkaufm/v5kaps0c/",
-    image: "gw2apcalc",
+    image: "/projects/gw2apcalc.png",
     keywords: ["javascript", "css", "rest"],
     description:
       "Uses account data from the Guild Wars 2 REST API to calculate the total achievement points (AP) earned by an account."
@@ -78,7 +78,7 @@ const cards = [
   {
     title: "Chat UI",
     url: "https://jsfiddle.net/pdkaufm/gjy2jdfk/",
-    image: "chatui",
+    image: "/projects/chatui.png",
     keywords: ["javascript", "css"],
     description:
       "A simple chat application with a 'chatbot' that repeats whatever you enter. The chatbot could easily be substituted with code receiving/sending responses to a server."
@@ -86,7 +86,7 @@ const cards = [
   {
     title: "Tic-Tac-Toe",
     url: "https://jsfiddle.net/pdkaufm/kyzwm637/",
-    image: "tictactoe",
+    image: "/projects/tictactoe.png",
     keywords: ["javascript", "css", "html5"],
     description:
       "A two player Tic-Tac-Toe game using the HTML5 drag/drop API, and a custom event mixin."
@@ -94,7 +94,7 @@ const cards = [
   {
     title: "GW2Profile",
     url: "https://github.com/perrykaufman/GW2Profile",
-    image: "gw2profile",
+    image: "/projects/gw2profile.png",
     keywords: ["vue.js", "webpack", "firebase", "rest"],
     description:
       "A single page application that allows a user to create a profile showcasing their Guild Wars 2 account. This was my first application using Vue."
@@ -102,7 +102,7 @@ const cards = [
   {
     title: "NodePractice",
     url: "https://github.com/perrykaufman/NodePractice",
-    image: "nodepractice",
+    image: "/projects/nodepractice.png",
     keywords: ["node.js", "javascript", "rest"],
     description:
       "A couple of small projects I completed to learn the basics of Node.js."
@@ -110,7 +110,7 @@ const cards = [
   {
     title: "Sabetha Timer",
     url: "https://github.com/perrykaufman/sabetha-timer",
-    image: "sabethatimer",
+    image: "/projects/sabethatimer.png",
     keywords: ["javascript", "sass", "webpack", "jasmine"],
     description:
       "A timer thay provides instructions for a boss fight in the video game Guild Wars 2"
