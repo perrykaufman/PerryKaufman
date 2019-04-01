@@ -149,7 +149,14 @@ outline() {
 }
 
 /* colors */
+input-border-color = gray-color-dark
 card-border-color = primary-color-dark
+card-background-color = primary-color-lightest
+card-background-color-hover = primary-color-lighter
+card-text-color = black-color
+card-keyword-color = secondary-color-dark
+shadow-color = gray-color-darker
+
 /* sizes */
 card-padding = 1rem
 card-border-width = .3rem
@@ -171,7 +178,7 @@ card-border-width = .3rem
   margin 1rem 0
 
   input
-    border .2rem solid gray-color-dark
+    border .2rem solid input-border-color
     border-radius .5rem
     font-size 2.2rem
     max-width 50rem
@@ -180,7 +187,7 @@ card-border-width = .3rem
     width 100%
 
     &:focus
-      border-color primary-color-dark
+      border-color card-border-color
       outline 0
       outline none
 
@@ -194,10 +201,10 @@ card-border-width = .3rem
     content none
 
 .project-card
-  background primary-color-lightest
+  background card-background-color
   border card-border-width solid card-border-color
   border-radius corner-radius
-  box-shadow .3rem .3rem .5rem gray-color-darker
+  box-shadow .3rem .3rem .5rem shadow-color
   color black-color
   cursor pointer
   display block
@@ -212,8 +219,8 @@ card-border-width = .3rem
   width 100%
 
   &:hover, &:focus
-    background primary-color-lighter
-    color black-color
+    background card-background-color-hover
+    color card-text-color
     outline none
 
   .card-image
@@ -229,7 +236,7 @@ card-border-width = .3rem
   .card-heading
     display block
     text-decoration none
-    color black-color
+    color card-text-color
     font-size 2.8rem
     margin 0
     overflow hidden
@@ -238,7 +245,7 @@ card-border-width = .3rem
     white-space nowrap
 
   .card-keywords
-    color secondary-color-dark
+    color card-keyword-color
     display block
     font-size 1.6rem
     font-style italic
