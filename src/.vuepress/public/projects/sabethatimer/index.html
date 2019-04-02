@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sabetha Timer</title>
+  <link href="main.css" rel="stylesheet"></head>
+  <body class="unsupported">
+    <div class="sabtimer-mask"></div>
+    <div class="sabtimer-modal">
+      <h1>Sorry :(</h1>
+      <p>
+        Your browser does not support features needed by this app. To use this
+        timer, an up-to-date version of Chrome, Edge, Firefox, Opera, or Safari
+        is recommended.
+      </p>
+    </div>
+    <div class="container sabtimer">
+      <h1 class="sab-timer-title">Sabetha Timer</h1>
+      <p class="sab-timer-author">By Perry Kaufman</p>
+      <div class="sabtimer-display">
+        <span class="time"></span>
+      </div>
+
+      <form class="sabtimer-controls">
+        <fieldset class="sabtimer-buttons" name="main">
+          <button class="start button" name="start" type="submit">Start</button>
+          <button class="reset button" name="reset" type="button">Reset</button>
+        </fieldset>
+        <fieldset class="sabtimer-config" name="config">
+          <label for="voice">Voice</label>
+          <select name="voice" id="voice"></select>
+
+          <label for="countdown">Countdown</label>
+          <select name="countdown" id="countdown">
+            <option value="countdown" selected>5s Countdown</option>
+            <option value="none">No Countdown</option>
+          </select>
+
+          <label for="canons">Canon Names</label>
+          <select name="canons" id="canons">
+            <option value="direction">Direction</option>
+            <option value="symbol">Symbol</option>
+            <option value="custom">Custom</option>
+          </select>
+
+          <div class="canon-names">
+            <div class="row">
+              <div class="column">
+                <label for="canon1">1</label>
+                <input type="text" name="canon1" id="canon1" />
+              </div>
+              <div class="column">
+                <label for="canon2">2</label>
+                <input type="text" name="canon2" id="canon2" />
+              </div>
+              <div class="column">
+                <label for="canon3">3</label>
+                <input type="text" name="canon3" id="canon3" />
+              </div>
+              <div class="column">
+                <label for="canon4">4</label>
+                <input type="text" name="canon4" id="canon4" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <section class="sab-timer-desc">
+        <h2>How it works</h2>
+        <ul>
+          <li>Calls out each canon both 10 seconds in advance and as they spawn.</li>
+          <li>Begins with a 5 second countdown by default to allow for time to tab back into the game.</li>
+          <li>Timer starts with an additional 2 seconds to account for the time it takes to run onto the boss platform.</li>
+        </ul>
+      </section>
+
+      <a class="github-link" href="https://github.com/perrykaufman/sabetha-timer" target="_blank">
+        <img class="github-icon" src="images/github.png" alt="GitHub" />
+        <p class="github-text">View on GitHub</p>
+      </a>
+    </div>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>

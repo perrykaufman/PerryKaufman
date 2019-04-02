@@ -44,6 +44,14 @@ const cards = [
       "This website uses a Vue.js powered static site generator called Vuepress. I created a custom theme using Stylus and Vue components."
   },
   {
+    title: "Sabetha Timer",
+    url: "/projects/sabethatimer/",
+    image: "/projects/sabethatimer.png",
+    keywords: ["javascript", "sass", "webpack", "jasmine"],
+    description:
+      "A timer thay provides instructions for a boss fight in the video game Guild Wars 2"
+  },
+  {
     title: "Clean Slate Theme",
     url: "https://github.com/perrykaufman/cleanslate",
     image: "/projects/cleanslate.png",
@@ -106,14 +114,6 @@ const cards = [
     keywords: ["node.js", "javascript", "rest"],
     description:
       "A couple of small projects I completed to learn the basics of Node.js."
-  },
-  {
-    title: "Sabetha Timer",
-    url: "https://github.com/perrykaufman/sabetha-timer",
-    image: "/projects/sabethatimer.png",
-    keywords: ["javascript", "sass", "webpack", "jasmine"],
-    description:
-      "A timer thay provides instructions for a boss fight in the video game Guild Wars 2"
   }
 ];
 
